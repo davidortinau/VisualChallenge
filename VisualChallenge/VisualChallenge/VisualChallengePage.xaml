@@ -7,9 +7,22 @@
              Title="Edit Request"
              >
     
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"/>
+    </ContentPage.ToolbarItems>
+    
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior TextOverride="Cancel"></BackButtonBehavior>
+        <BackButtonBehavior TextOverride="Undo" IconOverride="{OnPlatform Android=blanky}"></BackButtonBehavior>
     </Shell.BackButtonBehavior>
+    
+    <Shell.TitleView>
+        <Label FontFamily="{OnPlatform iOS=Raleway Medium, Android=Raleway-Medium.ttf#Raleway-Medium}"
+               FontSize="18"
+               Text="Edit Request"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               />
+    </Shell.TitleView>
     
     <ContentPage.Resources>
         <StyleSheet>
@@ -17,13 +30,17 @@
                 .EntryLabel {
                     color: #999999;
                     font-size: 10;
-                    font-family: Raleway Bold, Raleway-Bold.ttf#Raleway Bold;
+                    font-family: "Raleway Bold", "Raleway-Bold.ttf#Raleway-Bold";
+                }
+                
+                .LabelSpacing {
+                    margin-top: 18;
                 }
             
                 ^Entry, ^Editor {
                     color: #999999;
                     font-size: 18;
-                    font-family: Raleway Regular, Raleway-Regular.ttf#Raleway Regular;
+                    font-family: "Raleway Regular", "Raleway-Regular.ttf#Raleway-Regular";
                     background-color: transparent;
                     border-color: black;
                 }
@@ -31,57 +48,82 @@
                 ^Picker {
                     color: #999999;
                     font-size: 18;
-                    font-family: Raleway Regular, Raleway-Regular.ttf#Raleway Regular;
+                    font-family: "Raleway Regular", "Raleway-Regular.ttf#Raleway-Regular";
                 }
                 
                 .actionButton {
                     background-color: #f05123;
                     color: white;
-                    font-family: Raleway Bold;
+                    font-family: "Raleway Bold", "Raleway-Bold.ttf#Raleway-Bold";
+                }
+                
+                .addImageButton  {
+                    border-color: #999999;
+                    border-radius:  0;
+                    border-width: 1;
+                    background-color: transparent;
+                    color: black;
+                    font-family: "Raleway Bold", "Raleway-Bold.ttf#Raleway-Bold";   
+                    padding: 40;                     
                 }
             ]]>
         </StyleSheet>
     </ContentPage.Resources>
     
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save"/>
-    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="{OnPlatform iOS=80}" />
+        </Grid.RowDefinitions>
     
-    <ScrollView>
-        <StackLayout Margin="21,30">
-
-            <Label Text="REQUEST TITLE" class="EntryLabel" />
-            <Entry Placeholder="Title" />
-            
-            <Label Text="PRIORITY" class="EntryLabel" />
-            <Picker />
-            
-            <Label class="EntryLabel">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>DETAILS</Span> <Span FontFamily="Raleway Regular" FontSize="10">(OPTIONAL)</Span>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Editor Placeholder="Clean bed, plant, shrubs, trim trees" />
-            
-            <Label Text="PHOTOS &amp; VIDEOS" class="EntryLabel" />
-            
-            <Button BorderColor="#999999" 
+        <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
+            <StackLayout Margin="21,30">
+    
+                <Label Text="REQUEST TITLE" class="EntryLabel" FontFamily="{OnPlatform Android=Raleway-Bold.ttf#Raleway-Bold}"/>
+                <Entry Placeholder="Title" FontFamily="{OnPlatform Android=Raleway-Regular.ttf#Raleway-Regular}" />
+                
+                <Label Text="PRIORITY" class="EntryLabel,LabelSpacing" FontFamily="{OnPlatform Android=Raleway-Bold.ttf#Raleway-Bold}"/>
+                <Entry Text="Standard"  IsReadOnly="True" FontFamily="{OnPlatform Android=Raleway-Regular.ttf#Raleway-Regular}"/>
+                
+                <Label class="EntryLabel,LabelSpacing" 
+                       FontFamily="{OnPlatform Android=Raleway-Bold.ttf#Raleway-Bold}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span>DETAILS </Span> 
+                            <Span FontSize="10" FontFamily="{OnPlatform iOS=Raleway Regular, Android=Raleway-Regular.ttf#Raleway-Regular}">(OPTIONAL)</Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Editor Placeholder="Clean bed, plant, shrubs, trim trees" 
+                        PlaceholderColor="#999999" 
+                        AutoSize="TextChanges" 
+                        FontFamily="{OnPlatform Android=Raleway-Regular.ttf#Raleway-Regular}" />
+                <BoxView HeightRequest="1" BackgroundColor="#000000" HorizontalOptions="Fill"/>
+                
+                <Label Text="PHOTOS &amp; VIDEOS" class="EntryLabel,LabelSpacing" FontFamily="{OnPlatform Android=Raleway-Bold.ttf#Raleway-Bold}"/>
+                
+                <Button 
                     Visual="Default"
-                    CornerRadius="0" 
-                    BorderWidth="1" 
-                    BackgroundColor="White"
-                    TextColor="Black"
                     ContentLayout="Top, 8"
                     Image="icon_camera" 
                     Text="ADD PHOTO OR VIDEO" 
-                    FontFamily="Raleway Bold" 
-                    HorizontalOptions="Fill" Padding="40" />
-
-            <Button class="actionButton" Text="CANCEL REQUEST" HeightRequest="46" />
-
-        </StackLayout>
-    </ScrollView>
+                    class="addImageButton"
+                    FontFamily="{OnPlatform Android=Raleway-Bold.ttf#Raleway-Bold}"
+                    HorizontalOptions="Fill" />
+    
+            </StackLayout>
+        </ScrollView>
+      
+        <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="#999999" HorizontalOptions="Fill"></BoxView>
+        <Button Grid.Row="2" 
+                class="actionButton" 
+                FontFamily="{OnPlatform Android=Raleway-Bold.ttf#Raleway-Bold}"
+                Text="CANCEL REQUEST" 
+                HeightRequest="46" 
+                Margin="21,10" />
+        
+    </Grid>
     
 </ContentPage>

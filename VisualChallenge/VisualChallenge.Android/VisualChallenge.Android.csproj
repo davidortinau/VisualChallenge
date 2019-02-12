@@ -91,7 +91,9 @@
     <AndroidResource Include="Resources\drawable\icon_tabbar_home.png" />
     <AndroidResource Include="Resources\drawable\icon_tabbar_profile.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\blanky.axml" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VisualChallenge\VisualChallenge.csproj">
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
@@ -102,6 +104,7 @@
     <AndroidAsset Include="Assets\Raleway-Bold.ttf" />
     <AndroidAsset Include="Assets\Raleway-Regular.ttf" />
     <AndroidAsset Include="Assets\Raleway-SemiBold.ttf" />
+    <AndroidAsset Include="Assets\Raleway-Medium.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

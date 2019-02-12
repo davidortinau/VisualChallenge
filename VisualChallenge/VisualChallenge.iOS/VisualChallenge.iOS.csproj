@@ -142,6 +142,7 @@
     <BundleResource Include="Resources\icon_tabbar_profile.png" />
     <BundleResource Include="Resources\icon_tabbar_profile%402x.png" />
     <BundleResource Include="Resources\icon_tabbar_profile%403x.png" />
+    <BundleResource Include="Resources\Raleway-Medium.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
