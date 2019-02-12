@@ -1,19 +1,87 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
+             Shell.NavBarIsVisible="true"
+             Title="Edit Request"
              >
+    
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior TextOverride="Cancel"></BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+    
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+                .EntryLabel {
+                    color: #999999;
+                    font-size: 10;
+                    font-family: Raleway Bold, Raleway-Bold.ttf#Raleway Bold;
+                }
+            
+                ^Entry, ^Editor {
+                    color: #999999;
+                    font-size: 18;
+                    font-family: Raleway Regular, Raleway-Regular.ttf#Raleway Regular;
+                    background-color: transparent;
+                    border-color: black;
+                }
+                
+                ^Picker {
+                    color: #999999;
+                    font-size: 18;
+                    font-family: Raleway Regular, Raleway-Regular.ttf#Raleway Regular;
+                }
+                
+                .actionButton {
+                    background-color: #f05123;
+                    color: white;
+                    font-family: Raleway Bold;
+                }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"/>
+    </ContentPage.ToolbarItems>
+    
+    <ScrollView>
+        <StackLayout Margin="21,30">
 
-    <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+            <Label Text="REQUEST TITLE" class="EntryLabel" />
+            <Entry Placeholder="Title" />
+            
+            <Label Text="PRIORITY" class="EntryLabel" />
+            <Picker />
+            
+            <Label class="EntryLabel">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span>DETAILS</Span> <Span FontFamily="Raleway Regular" FontSize="10">(OPTIONAL)</Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Editor Placeholder="Clean bed, plant, shrubs, trim trees" />
+            
+            <Label Text="PHOTOS &amp; VIDEOS" class="EntryLabel" />
+            
+            <Button BorderColor="#999999" 
+                    Visual="Default"
+                    CornerRadius="0" 
+                    BorderWidth="1" 
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    ContentLayout="Top, 8"
+                    Image="icon_camera" 
+                    Text="ADD PHOTO OR VIDEO" 
+                    FontFamily="Raleway Bold" 
+                    HorizontalOptions="Fill" Padding="40" />
 
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <Button class="actionButton" Text="CANCEL REQUEST" HeightRequest="46" />
 
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-    </FlexLayout>
+        </StackLayout>
+    </ScrollView>
     
 </ContentPage>
