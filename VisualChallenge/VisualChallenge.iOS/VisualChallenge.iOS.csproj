@@ -124,6 +124,25 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Raleway-Bold.ttf" />
+    <BundleResource Include="Resources\Raleway-Regular.ttf" />
+    <BundleResource Include="Resources\Raleway-SemiBold.ttf" />
+    <BundleResource Include="Resources\icon_camera.png" />
+    <BundleResource Include="Resources\icon_camera%402x.png" />
+    <BundleResource Include="Resources\icon_camera%403x.png" />
+    <BundleResource Include="Resources\icon_tabbar_addjob.png" />
+    <BundleResource Include="Resources\icon_tabbar_addjob%402x.png" />
+    <BundleResource Include="Resources\icon_tabbar_addjob%403x.png" />
+    <BundleResource Include="Resources\icon_tabbar_help.png" />
+    <BundleResource Include="Resources\icon_tabbar_help%402x.png" />
+    <BundleResource Include="Resources\icon_tabbar_help%403x.png" />
+    <BundleResource Include="Resources\icon_tabbar_home.png" />
+    <BundleResource Include="Resources\icon_tabbar_home%402x.png" />
+    <BundleResource Include="Resources\icon_tabbar_home%403x.png" />
+    <BundleResource Include="Resources\icon_tabbar_profile.png" />
+    <BundleResource Include="Resources\icon_tabbar_profile%402x.png" />
+    <BundleResource Include="Resources\icon_tabbar_profile%403x.png" />
+    <BundleResource Include="Resources\Raleway-Medium.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -140,7 +159,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\VisualChallenge\VisualChallenge.csproj">
-      <Project>{97CAB2B1-D85C-442E-AEFA-06FF5138B907}</Project>
+      <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
   </ItemGroup>
