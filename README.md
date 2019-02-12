@@ -34,7 +34,7 @@ For example, this sample app sets the Visual preference on the application `Shel
        Visual="Material">
 ```
 
-Any control may override this propogation by delcaring its own Visual preference:
+Any control may override this propogation by declaring its own Visual preference:
 
 ```
 <Button Visual="Default" ... />
