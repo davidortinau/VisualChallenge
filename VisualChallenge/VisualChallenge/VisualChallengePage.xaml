@@ -1,19 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#3F5D73">
 
-    <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-    </FlexLayout>
+    <StackLayout Margin="20">
+        
+        <Image
+            Margin="0,40,0,0"
+            Source="rxv_logo_white.png" />
+        <Entry
+            Style="{StaticResource baseSemiBoldEntryStyle}"
+            Margin="0,40,0,0"
+            PlaceholderColor="White"
+            BackgroundColor="Transparent"
+            Placeholder="Email Address" />
+        <Entry
+            Style="{StaticResource baseSemiBoldEntryStyle}"
+            Placeholder="Password"
+            PlaceholderColor="White"
+            BackgroundColor="Transparent"
+            IsPassword="true" />
+        <Button
+            Style="{StaticResource baseButtonStyle}"
+            Margin="0,30,0,0"
+            TextColor="White"
+            Text="Login"
+            CornerRadius="8"
+            HeightRequest="44"
+            BackgroundColor="#00AFDB" />
+        <Label
+            Style="{StaticResource baseBoldLabelStyle}"
+            Margin="0,20,0,0"
+            BackgroundColor="Transparent"
+            FontAttributes="Bold"
+            TextColor="White"
+            HorizontalOptions="CenterAndExpand"
+            Text="Forgot Password" />
+        
+    </StackLayout>
     
 </ContentPage>
