@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -86,13 +85,26 @@
     <AndroidResource Include="Resources\drawable-xhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\rxv_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\rxv_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\rxv_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\rxv_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\rxv_logo_white.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\VisualChallenge\VisualChallenge.csproj">
-      <Project>{97CAB2B1-D85C-442E-AEFA-06FF5138B907}</Project>
+      <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-mdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Branding-Bold.otf" />
+    <AndroidAsset Include="Assets\Branding-Medium.otf" />
+    <AndroidAsset Include="Assets\Branding-SemiBold.otf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
