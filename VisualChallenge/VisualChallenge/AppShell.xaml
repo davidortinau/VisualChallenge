@@ -8,8 +8,7 @@
        FlyoutBehavior="Disabled"
        Title="VisualChallenge"
        x:Class="VisualChallenge.AppShell"
-       Visual="Material"
-       >
+       Visual="Material">
 
     <!-- 
         Styles and Resources 
@@ -29,6 +28,7 @@
                 <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+         
         </ResourceDictionary>
     </Shell.Resources>
 

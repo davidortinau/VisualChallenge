@@ -10,11 +10,17 @@ namespace VisualChallenge
         public VisualChallengePage()
         {
             InitializeComponent();
+            BindingContext = new VisualViewModel();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Device.OpenUri(new Uri("https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual"));
+            if (!(e.Item is Items items))
+                return;
+
+            await DisplayAlert("The place", $"You selected {items.Description}", "ok");
+
+            (sender as ListView).SelectedItem = null;
         }
     }
 }
