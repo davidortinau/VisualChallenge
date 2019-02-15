@@ -39,3 +39,8 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+
+# nuget
+!nuget/**/*
+!/nuget/**/*
+!/nuget/
