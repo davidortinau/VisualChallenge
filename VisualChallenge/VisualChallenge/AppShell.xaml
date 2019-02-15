@@ -16,14 +16,38 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <!-- Global Colors -->
+            <Color
+				x:Key="primaryColor">#303030</Color>
+            <Color
+				x:Key="secondaryColor">#C9AE98</Color>
+            <Color
+				x:Key="validationColor">#FF3F56</Color>
+            <Color
+				x:Key="callToActionColor">#4E8B4F</Color>
+            <Color
+				x:Key="accentColor">White</Color>
+            <Color
+				x:Key="darkAccentColor">#7c6a5c</Color>
+            <Color
+        x:Key="orangeColor">#F15A29</Color>
+            <Color
+        x:Key="darkGrey">#50575D</Color>
+            <!-- Global Sizes -->
+            <x:Double
+				x:Key="mediumTextSize">20</x:Double>
+            <x:Double
+				x:Key="smallTextSize">14</x:Double>
+            <x:Double
+				x:Key="standardPadding">10</x:Double>
+
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource orangeColor}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
                 <Setter Property="Shell.ShellTitleColor" Value="White" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource orangeColor}" />
                 <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
@@ -33,7 +57,13 @@
     </Shell.Resources>
 
     <ShellItem>
-        <ShellSection>
+        <ShellSection Icon="tab_icon_home.png" Title="Calendar">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+        <ShellSection Icon="tab_icon_assignments.png" Title="Workload">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+        <ShellSection Icon="tab_icon_settings.png" Title="Settings">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
         </ShellSection>
     </ShellItem>
