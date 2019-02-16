@@ -30,9 +30,10 @@
                                 <!-- duplicated styles due to a bug -->
                                 <Grid.Resources>
                                     <ResourceDictionary>
+                                        <Color x:Key="NavigationPrimary">#29374A</Color>
                                         <Style TargetType="Frame">
                                             <Setter Property="Padding" Value="0" />
-                                            <Setter Property="BackgroundColor" Value="#29374A" />
+                                            <Setter Property="BackgroundColor" Value="{StaticResource NavigationPrimary}" />
                                         </Style>
                                         <Style TargetType="Label">
                                             <Setter Property="FontSize" Value="12" />
@@ -100,9 +101,10 @@
                                 <!-- duplicated styles due to a bug -->
                                 <Grid.Resources>
                                     <ResourceDictionary>
+                                        <Color x:Key="NavigationPrimary">#29374A</Color>
                                         <Style TargetType="Frame">
                                             <Setter Property="Padding" Value="0" />
-                                            <Setter Property="BackgroundColor" Value="#29374A" />
+                                            <Setter Property="BackgroundColor" Value="{StaticResource NavigationPrimary}" />
                                         </Style>
                                         <Style TargetType="Label">
                                             <Setter Property="FontSize" Value="12" />
