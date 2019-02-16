@@ -85,6 +85,13 @@
     <AndroidResource Include="Resources\drawable-xhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
+    <AndroidResource Include="Resources\drawable\thumbnail3.jpg" />
+    <AndroidResource Include="Resources\drawable\thumbnail7.jpg" />
+    <AndroidResource Include="Resources\drawable\thumbnail6.jpg" />
+    <AndroidResource Include="Resources\drawable\thumbnail2.jpg" />
+    <AndroidResource Include="Resources\drawable\thumbnail4.jpg" />
+    <AndroidResource Include="Resources\drawable\thumbnail1.jpg" />
+    <AndroidResource Include="Resources\drawable\thumbnail5.jpg" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
