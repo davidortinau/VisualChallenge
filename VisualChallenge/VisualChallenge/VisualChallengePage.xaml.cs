@@ -1,7 +1,4 @@
-﻿using System;
-
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace VisualChallenge
 {
@@ -10,11 +7,22 @@ namespace VisualChallenge
         public VisualChallengePage()
         {
             InitializeComponent();
+
+            BindingContext = new VisualChallengeViewModel();
+
+            scrollView.Scrolled += OnScroll;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            Device.OpenUri(new Uri("https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual"));
+            scrollView.ScrollToAsync(0, 0, false);
         }
+
+        void OnScroll(object sender, ScrolledEventArgs e)
+        {
+            if (e.ScrollY < Y)
+                scrollView.ScrollToAsync(0, 0, false);
+        }
+
     }
 }
