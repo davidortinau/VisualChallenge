@@ -51,3 +51,7 @@ Material is Google's modern design system that is popular not only on Android, b
 
 For more information, visit [material.io](https://material.io/).
 
+## Instructions on Updating your own project
+- Install https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/4.0.0.169046-pre5  into your ios project
+- Add FormsMaterial.Init() after the Forms.Init() call in your AppDelegate on ios
+
