@@ -2,9 +2,6 @@
 
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace VisualChallenge.Droid
@@ -12,18 +9,26 @@ namespace VisualChallenge.Droid
     [Activity(Label = "VisualChallenge", Icon = "@mipmap/icon", Theme = "@style/MainTheme.Launcher", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        internal static Activity Current { get; private set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            try
+            {
+                TabLayoutResource = Resource.Layout.Tabbar;
+                ToolbarResource = Resource.Layout.Toolbar;
 
-            //SetStatusBarColor(global::Android.Graphics.Color.Black);
+                //SetStatusBarColor(global::Android.Graphics.Color.Black);
+                Current = this;
+                base.OnCreate(savedInstanceState);
 
-            base.OnCreate(savedInstanceState);
-
-            global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+                global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
+                global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+                LoadApplication(new App());
+            }
+            catch (Exception ex )
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
         }
     }
 }

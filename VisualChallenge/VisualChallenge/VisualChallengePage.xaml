@@ -1,19 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
+             xmlns:efct="clr-namespace:VisualChallenge.Effect"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             Title="Visual Challenge">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="StackLayout" x:Key="MainStack">
+                <Setter Property="BackgroundColor" Value="Azure"/>
+                <Setter Property="Orientation" Value="Horizontal"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-    <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Text=" Scrolling -> "
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"/>
 
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-    </FlexLayout>
-    
+        <ScrollView Orientation="Horizontal"
+                    HorizontalScrollBarVisibility="Never"
+                    Grid.Row="1">
+            <StackLayout Orientation="Horizontal"
+                        BindableLayout.ItemsSource="{Binding GitHubs}"
+                            Style="{StaticResource MainStack}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="5,0">
+                            <Image Source="{Binding ImageUrl}"
+                                    HeightRequest="60"
+                                    WidthRequest ="60"/>
+                            <Label HorizontalTextAlignment="Center"
+                                    Text="{Binding Description}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+        <ListView  Grid.Row="2"
+                    Margin="10"
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="None"
+                    ItemsSource="{Binding Places}"
+                    ItemTapped="ListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Image Source="{Binding ImageUrl}"
+                                efct:CornerRadiusEffect.CornerRadius="30"
+                                Aspect="AspectFill"
+                                Margin="0,2.5"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>
