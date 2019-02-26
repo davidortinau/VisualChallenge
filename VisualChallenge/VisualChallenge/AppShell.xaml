@@ -16,7 +16,7 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#29374A</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
@@ -29,12 +29,37 @@
                 <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="0" />
+                <Setter Property="ColumnSpacing" Value="0" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+            <Style TargetType="StackLayout">
+                <Setter Property="Spacing" Value="0" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="BackgroundColor" Value="{StaticResource NavigationPrimary}" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+            </Style>
         </ResourceDictionary>
     </Shell.Resources>
 
     <ShellItem>
-        <ShellSection>
-            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        <ShellSection Title="Trending">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+        </ShellSection>
+        <ShellSection Title="Following">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+        </ShellSection>
+        <ShellSection Title="Profile">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}" />
         </ShellSection>
     </ShellItem>
 

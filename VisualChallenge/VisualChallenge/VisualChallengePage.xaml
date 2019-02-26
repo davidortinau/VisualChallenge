@@ -1,19 +1,156 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-    <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-    </FlexLayout>
+             BackgroundColor="#212C3D"
+             Title="Visual Challenge">
     
+    <ScrollView>
+        
+        <Grid>
+        
+            <Image Source="https://static.mixer.com/img/design/home-backgrounds/x-gradient.jpg" 
+                   Margin="-72,0"
+                   Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" />
+                   
+            <StackLayout Spacing="12">
+                
+                <!-- the main carousel -->
+                <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                ItemsSource="{Binding CarouselItems}" HeightRequest="{Binding CarouselItemHeight}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="6,12">
+
+                                <!-- duplicated styles due to a bug -->
+                                <Grid.Resources>
+                                    <ResourceDictionary>
+                                        <Color x:Key="NavigationPrimary">#29374A</Color>
+                                        <Style TargetType="Frame">
+                                            <Setter Property="Padding" Value="0" />
+                                            <Setter Property="BackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                                        </Style>
+                                        <Style TargetType="Label">
+                                            <Setter Property="FontSize" Value="12" />
+                                            <Setter Property="TextColor" Value="White" />
+                                            <Setter Property="FontAttributes" Value="Bold" />
+                                            <Setter Property="LineBreakMode" Value="TailTruncation" />
+                                        </Style>
+                                    </ResourceDictionary>
+                                </Grid.Resources>
+
+                                <Frame WidthRequest="{Binding ImageWidth}" Padding="6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="{Binding Thumbnail}" Aspect="AspectFill" Margin="-6"
+                                               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                                               Grid.ColumnSpan="3" Grid.RowSpan="3" />
+
+                                        <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                                                 Margin="-6" Color="#AA000000" />
+
+                                        <Image Source="{Binding Avatar}" WidthRequest="24" HeightRequest="24" 
+                                               Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" />
+                                        <Label Text="{Binding UserName}" Grid.Row="1" Grid.Column="1" />
+                                        <Label Text="{Binding GameName}" Grid.Row="2" Grid.Column="1" TextColor="Gray" />
+                                        <Label Text="{Binding ViewCount, StringFormat='👁️ {0}'}" Grid.Row="1" Grid.Column="2" />
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- the carousel indicators -->
+                <StackLayout BindableLayout.ItemsSource="{Binding CarouselItems}"
+                             Spacing="24" Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <BoxView WidthRequest="6" HeightRequest="6" CornerRadius="3" Color="Silver" />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+
+                <!-- top games -->
+                <StackLayout Orientation="Horizontal" Margin="6,12,6,0">
+                    <Label Text="Top Games" FontSize="14" HorizontalOptions="FillAndExpand" />
+                    <Label Text="See All" />
+                </StackLayout>
+                <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                ItemsSource="{Binding CarouselItems}" HeightRequest="140">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="6,6">
+
+                                <!-- duplicated styles due to a bug -->
+                                <Grid.Resources>
+                                    <ResourceDictionary>
+                                        <Color x:Key="NavigationPrimary">#29374A</Color>
+                                        <Style TargetType="Frame">
+                                            <Setter Property="Padding" Value="0" />
+                                            <Setter Property="BackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                                        </Style>
+                                        <Style TargetType="Label">
+                                            <Setter Property="FontSize" Value="12" />
+                                            <Setter Property="TextColor" Value="White" />
+                                            <Setter Property="FontAttributes" Value="Bold" />
+                                            <Setter Property="LineBreakMode" Value="TailTruncation" />
+                                        </Style>
+                                    </ResourceDictionary>
+                                </Grid.Resources>
+
+                                <Frame WidthRequest="80" Padding="6">
+                                    <StackLayout Spacing="6">
+                                        <Image Source="{Binding Thumbnail}" Aspect="AspectFill" Margin="-6,-6,-6,0"
+                                               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                        <Label Text="{Binding GameName}" HorizontalTextAlignment="Center" />
+                                        <Label Text="{Binding ViewCount, StringFormat='👁️ {0}'}" HorizontalTextAlignment="Center" TextColor="Gray" />
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- only on mixer -->
+                <StackLayout Orientation="Horizontal" Margin="6,12,6,0">
+                    <Label Text="Only on Mixer" FontSize="14" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                ItemsSource="{Binding CarouselItems}" HeightRequest="{Binding CarouselItemHeight}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="6,6">
+                                <Frame WidthRequest="{Binding ImageWidth}" Padding="6">
+                                    <Grid>
+                                        <Image Source="{Binding Thumbnail}" Aspect="AspectFill" Margin="-6"
+                                               VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                
+            </StackLayout>
+            
+        </Grid>
+        
+    </ScrollView>
 </ContentPage>
