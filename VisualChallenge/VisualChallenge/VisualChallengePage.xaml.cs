@@ -16,5 +16,22 @@ namespace VisualChallenge
         {
             Device.OpenUri(new Uri("https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual"));
         }
+
+        void Expand_Clicked(object sender, System.EventArgs e)
+        {
+            Global.IsVisible = true;
+            Neighbours.IsVisible = true;
+            NeighbourLabel.IsVisible = true;
+            Expand.IsVisible = false;
+        }
+
+        void Clear_Clicked(object sender, System.EventArgs e)
+        {
+            Global.IsVisible = false;
+            Neighbours.IsVisible = false;
+            NeighbourLabel.IsVisible = false;
+            Expand.IsVisible = true;
+            DateField.Text = String.Empty;
+        }
     }
 }

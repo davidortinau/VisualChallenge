@@ -5,15 +5,62 @@
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
-             Title="Visual Challenge"
+             Title="Geohash Cross"
              >
-
-    <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-    </FlexLayout>
-    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <WebView Source="https://www.openstreetmap.org/#map=12/-37.9975/144.5685" Grid.RowSpan="3" Grid.ColumnSpan="6"  Margin="-20,-50,-50,0"  /><!-- Real App uses a nuget to show maps, negative padding to hide un needed UI-->
+        <Frame Grid.ColumnSpan="6" Padding="5">
+            <Frame.Margin>
+                <OnPlatform Android="15" iOS="15,110,15,15"/><!-- Is there a cleaner way to make content start after nave bar when working with shell?-->
+            </Frame.Margin>
+            <Grid RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Entry Placeholder="Date" Keyboard="Numeric" Grid.ColumnSpan="2" x:Name="DateField"/><!--I would prefer to use a date picker here if it had a Visual renderer -->
+                <Button Text="×" Grid.Column="2" Clicked="Clear_Clicked"/>
+                <Label Text="Location" Grid.Row="1"/>
+                <Label Text="-37.769, 144.9231" Style="{StaticResource SmallLabel}" Grid.Row="2"/>
+                <Label Text="Hash" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+                <Label Text="-37.9616, 145.4355" Style="{StaticResource SmallLabel}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <Label Text="Distance" Grid.Row="3"/>
+                <Label Text="49.77km" Style="{StaticResource SmallLabel}" Grid.Row="4"/>
+                <Button Grid.Row="4" Text="..." Grid.Column="2" Clicked="Expand_Clicked" x:Name="Expand"/>
+                <Label x:Name="Neighbours" Text="Neighbours" Grid.Row="5" IsVisible="false"/>
+                <Switch x:Name="NeighbourLabel" Grid.Row="6" HorizontalOptions="Start" IsVisible="false"/>
+                <Button x:Name="Global" Text="Global" Grid.Row="5" Grid.Column="1" IsVisible="false"/>
+            </Grid>
+        </Frame>
+    </Grid>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SmallLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="TextColor" Value="#222222"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 </ContentPage>
