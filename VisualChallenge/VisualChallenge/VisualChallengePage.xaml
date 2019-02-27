@@ -1,19 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-    <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-    </FlexLayout>
+             Title="Visual Challenge">
+             
+    <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Padding="20" BackgroundColor="Teal" HeightRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+            <Label Text="Find Something" FontSize="32" TextColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" />
+            <Entry BackgroundColor="White" TextChanged="Handle_TextChanged" HorizontalOptions="FillAndExpand" VerticalOptions="End" />
+        </StackLayout>
+        
+        <ScrollView>
+            <CollectionView x:Name="Results">
+                <CollectionView.EmptyView>
+                    <Label HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="I give you nothing." />
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="20" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                            <Frame> <!-- Margin="20" didn't work -->
+                                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions='FillAndExpand' Orientation="Horizontal">
+                                    <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" />
+                                    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                                        <Label Text="{Binding Name}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" FontSize="24" />
+                                        <Label Text="{Binding ShortDescription}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="Gray" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        
+    </StackLayout>
     
 </ContentPage>
