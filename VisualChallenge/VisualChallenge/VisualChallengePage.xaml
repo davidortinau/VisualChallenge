@@ -8,12 +8,16 @@
              Title="Visual Challenge"
              >
 
-    <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+	<!-- If you decide to change out the flexlayout leave the scroll view here
+		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+	-->
+	<ScrollView>
+		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
 
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
 
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
+			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
 
-    </FlexLayout>
-    
+		</FlexLayout>
+	</ScrollView>
 </ContentPage>
