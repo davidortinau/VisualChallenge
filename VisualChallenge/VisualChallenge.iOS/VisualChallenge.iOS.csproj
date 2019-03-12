@@ -124,6 +124,8 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\magnify%402x.png" />
+    <BundleResource Include="Resources\compass%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,6 +137,9 @@
     <PackageReference Include="Xamarin.Forms" Version="4.0.1.206893" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.0.1.206893</Version>
+    </PackageReference>
+    <PackageReference Include="Sharpnado.Forms.HorizontalListView">
+      <Version>0.9.11</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

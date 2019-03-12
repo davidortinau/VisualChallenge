@@ -1,8 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualChallenge.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <Color x:Key="Dark">#262d3a</Color>
+            
+            <Style x:Key="CategoryLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style x:Key="CategoryLinkLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#3d60db" />
+            </Style>
+            
+            <Style x:Key="StoryCategoryLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="TextColor" Value="{StaticResource Dark}" />
+            </Style>
+            
+            <Style x:Key="StoryTitleLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="TextColor" Value="{StaticResource Dark}" />
+            </Style>  
+            
+            <DataTemplate x:Key="StoryListItemTemplate">
+                <ViewCell>
+                    <Grid Padding="0,0,0,20">
+                        <Frame Padding="0" CornerRadius="10">
+                            <Grid Padding="0" RowSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="4*" />
+                                    <RowDefinition Height="3*" />
+                                </Grid.RowDefinitions>
+                                <Image Aspect="AspectFill" Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill" 
+                                       Source="{Binding ImageUrl}" />
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1" Padding="12">
+                                    <Label Text="{Binding Category}" Style="{StaticResource StoryCategoryLabel}" />
+                                    <Label Text="{Binding Title}" Style="{StaticResource StoryTitleLabel}" />
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
