@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="VisualChallenge.SearchPage"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="White"
+             Title="Search">
+
+    <!-- If you decide to change out the flexlayout leave the scroll view here
+         Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+    -->
+    <ScrollView>
+        <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+            
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
