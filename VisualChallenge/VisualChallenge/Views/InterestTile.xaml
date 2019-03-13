@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       Padding="3"
+       HeightRequest="200"
+       x:Name="this"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="VisualChallenge.Views.InterestTile">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Image Aspect="AspectFill"
+               Grid.RowSpan="3"
+               Source="{Binding TopicImage, Source={x:Reference this}}" />
+
+        <BoxView BackgroundColor="#000000"
+                 Opacity="0.6"
+                 Grid.RowSpan="3" />
+
+        <ImageButton Grid.Row="0"
+                     Margin="8"
+                     BackgroundColor="Transparent"
+                     VerticalOptions="Start"
+                     HorizontalOptions="End">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                 Glyph="&#xE700;"
+                                 Size="18"
+                                 Color="White"/>
+            </ImageButton.Source>
+        </ImageButton>
+
+        <Label Text="{Binding Headline, Source={x:Reference this}}"
+               Grid.Row="1"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               TextColor="White"
+               FontSize="14"
+               FontAttributes="Bold"
+               />
+
+        <ImageButton
+            Grid.Row="2"
+            BackgroundColor="White"
+            VerticalOptions="End"
+                     HorizontalOptions="End">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                 Glyph="&#xE73D;"
+                                 Color="#333333" />
+            </ImageButton.Source>
+        </ImageButton>
+    </Grid>
+</Frame>

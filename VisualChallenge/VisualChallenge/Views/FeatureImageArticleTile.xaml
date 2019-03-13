@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualChallenge.Views.FeatureImageArticleTile"
+       Padding="0"
+       x:Name="this">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image BackgroundColor="Black"
+               Source="{Binding FeaturedImage, Source={x:Reference this}}"
+               Aspect="AspectFill"
+               MinimumHeightRequest="240"
+               HeightRequest="240"
+               Grid.RowSpan="3"
+               Grid.Row="0" />
+
+        <BoxView BackgroundColor="Black"
+                 Opacity="0.6"
+                 Grid.RowSpan="3"
+                 Grid.Row="0"
+                 HeightRequest="240"
+                 HorizontalOptions="Fill" />
+
+        <Label Grid.Row="1"
+               Margin="8">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding Category, Source={x:Reference this}}"
+                          FontSize="10"
+                          TextColor="White" />
+                    <Span Text="&#x000A;" />
+                    <Span Text="{Binding Headline, Source={x:Reference this}}"
+                          FontSize="22"
+                          FontAttributes="Bold"
+                          TextColor="White" />
+
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="{Binding Source, Source={x:Reference this}}"
+               Grid.Row="2"
+               Margin="8"
+               FontSize="10"
+               TextColor="White" />
+    </Grid>
+</Frame>

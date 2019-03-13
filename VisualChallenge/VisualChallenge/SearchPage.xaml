@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:VisualChallenge.Views"
+             x:Class="VisualChallenge.SearchPage"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="#f1f1f1"
+             >
+    <Shell.TitleView>
+        <StackLayout>
+            <Label Text="Explore"
+                   TextColor="Black"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   Margin="-10,14,0,0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style 
+                   TargetType="views:ExploreCategoryTile">
+                <Setter Property="FlexLayout.Basis"
+                        Value="33%" />
+            </Style>
+        </ResourceDictionary>
+        
+        <StyleSheet>
+            <![CDATA[
+            ExploreCategoryTile {
+                margin-bottom: 10;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <FlexLayout Margin="8"
+                    Direction="Row"
+                    Wrap="Wrap"
+                    JustifyContent="SpaceBetween"
+                    AlignContent="Start">
+
+            <views:ExploreCategoryTile Headline="AUTOS"
+                                TopicImage="https://loremflickr.com/320/240/cars?random=1"
+                                 />
+            <views:ExploreCategoryTile Headline="CAREER ADVICE" FlexLayout.Basis="33%"
+                                TopicImage="https://loremflickr.com/320/240/office?random=2"
+                                 />
+            <views:ExploreCategoryTile Headline="CELEBRITIES" FlexLayout.Basis="33%"
+                                TopicImage="https://loremflickr.com/320/240/celebrity?random=3"
+                                 />
+            <views:ExploreCategoryTile Headline="CREDIT"
+                                TopicImage="https://loremflickr.com/320/240/finance?random=4"
+                                 />
+            <views:ExploreCategoryTile Headline="CRIME"
+                                TopicImage="https://loremflickr.com/320/240/police?random=5"
+                                 />
+            <views:ExploreCategoryTile Headline="ENTERTAINMENT"
+                                TopicImage="https://loremflickr.com/320/240/music?random=6"
+                                 />
+            <views:ExploreCategoryTile Headline="FACT CHECK"
+                                TopicImage="https://loremflickr.com/320/240/news?random=7"
+                                 />
+            <views:ExploreCategoryTile Headline="FOOD &amp; DRINK"
+                                TopicImage="https://loremflickr.com/320/240/food?random=8"
+                                 />
+            <views:ExploreCategoryTile Headline="GOLF"
+                                TopicImage="https://loremflickr.com/320/240/golf?random=9"
+                                 />
+            <views:ExploreCategoryTile Headline="MONEY"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=10"
+                                 />
+            <views:ExploreCategoryTile Headline="SPORTS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=11"
+                                 />
+            <views:ExploreCategoryTile Headline="NEWS VIDEO"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=12"
+                                 />
+            <views:ExploreCategoryTile Headline="AUTOS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=13"
+                                 />
+            <views:ExploreCategoryTile Headline="NHL"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=14"
+                                 />
+            <views:ExploreCategoryTile Headline="TECHNOLOGY"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=15"
+                                 />
+
+            
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

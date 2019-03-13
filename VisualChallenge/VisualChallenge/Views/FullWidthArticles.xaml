@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="VisualChallenge.Views.FullWidthArticles"
+        Padding="0"
+        CornerRadius="0"
+        HeightRequest="100"
+        x:Name="this">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Label VerticalOptions="Start"
+               Margin="12">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding Headline, Source={x:Reference this}}"
+                          FontSize="18"
+                          TextColor="Black"
+                          FontAttributes="Bold" />
+
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="{Binding Source, Source={x:Reference this}}"
+               VerticalOptions="End"
+               Margin="12"
+               FontSize="10"
+               TextColor="Gray" />
+    </Grid>
+</Frame>
