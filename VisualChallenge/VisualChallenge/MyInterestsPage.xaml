@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:VisualChallenge.Views"
+             x:Class="VisualChallenge.MyInterestsPage"
+             Title="My Interests"
+             BackgroundColor="#f2f2f2"
+             >
+    <Shell.TitleView>
+        <StackLayout>
+            <Label Text="My Interests"
+                   TextColor="#171717"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   Margin="-10,14,0,0"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="views:InterestTile">
+                <Setter Property="FlexLayout.Basis"
+                        Value="33%" />
+            </Style>
+        </ResourceDictionary>
+
+        <StyleSheet>
+            <![CDATA[
+            InterestTile {
+                margin-bottom: 10;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <FlexLayout Margin="8" Direction="Row" Wrap="Wrap" JustifyContent="SpaceBetween" AlignContent="Start">
+            <views:InterestTile Headline="TOP&#x000A;NEWS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=1"
+                                 />
+            <views:InterestTile Headline="US&#x000A;NEWS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=2"
+                                 />
+            <views:InterestTile Headline="WORLD&#x000A;NEWS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=3"
+                                 />
+            <views:InterestTile Headline="GOOD&#x000A;NEWS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=4"
+                                 />
+            <views:InterestTile Headline="POLITICS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=5"
+                                 />
+            <views:InterestTile Headline="FACT&#x000A;CHECK"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=6"
+                                 />
+            <views:InterestTile Headline="OPINION"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=7"
+                                 />
+            <views:InterestTile Headline="CRIME"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=8"
+                                 />
+            <views:InterestTile Headline="ENTERTAINMENT"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=9"
+                                 />
+            <views:InterestTile Headline="MONEY"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=10"
+                                 />
+            <views:InterestTile Headline="SPORTS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=11"
+                                 />
+            <views:InterestTile Headline="NEWS&#x000A;VIDEO"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=12"
+                                 />
+            <views:InterestTile Headline="AUTOS"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=13"
+                                 />
+            <views:InterestTile Headline="NHL"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=14"
+                                 />
+            <views:InterestTile Headline="TECHNOLOGY"
+                                TopicImage="https://loremflickr.com/320/240/flag?random=15"
+                                 />
+
+            <Frame FlexLayout.Basis="100%"
+                   FlexLayout.AlignSelf="Start"
+                   FlexLayout.Shrink="0"
+                   FlexLayout.Grow="1"
+                   Margin="0,0,0,10"
+                   Padding="10">
+                <Grid VerticalOptions="Start"
+                      HorizontalOptions="Fill">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+
+                    <ImageButton Grid.Row="0"
+                                 Grid.Column="0"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 BackgroundColor="Transparent">
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                             Color="Black"
+                                             Size="64"
+                                             Glyph="&#xE721;" />
+                        </ImageButton.Source>
+                    </ImageButton>
+
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           VerticalOptions="CenterAndExpand"
+                           TextColor="Black">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Explore more Interests"
+                                      FontAttributes="Bold"
+                                      FontSize="18" />
+                                <Span Text="&#x000A;" />
+                                <Span Text="Foll Interests to read in My News. This helps us personalize your news experiences."
+                                      FontSize="14" />
+                            </FormattedString>
+                        </Label.FormattedText>
+
+                    </Label>
+
+                    <Button Text="Explore"
+                            BackgroundColor="Black"
+                            TextColor="White"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2" />
+                </Grid>
+            </Frame>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

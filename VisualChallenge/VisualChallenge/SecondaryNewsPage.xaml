@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:VisualChallenge.Views"
+             x:Class="VisualChallenge.SecondaryNewsPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#f2f2f2">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            .newsRow {
+                margin-bottom: 10;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <!-- If you decide to change out the flexlayout leave the scroll view here
+		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+	-->
+    <ScrollView>
+        <StackLayout>
+            <views:FeatureImageArticleTile
+                    Headline="Dogs are adorable and other things you wish you had more of in your life"
+                                           Category="TOP STORIES"
+                                           Source="Reuters - 1h"
+                                           FeaturedImage="https://loremflickr.com/320/240/dog?random=12" />
+
+            <FlexLayout Margin="8"
+                        Direction="Column"
+                        AlignContent="Center"
+                        JustifyContent="SpaceAround">
+                <FlexLayout HeightRequest="200"
+                            JustifyContent="SpaceBetween"
+                            class="newsRow">
+                    <views:HalfWidthArticleTile FlexLayout.Basis="49%"
+                                                FeaturedImage="https://loremflickr.com/160/80/dog?random=17"
+                                                Headline="Left Headline"
+                                                Source="People - 1hr" />
+                    <views:HalfWidthArticleTile FlexLayout.Basis="49%"
+                                                FeaturedImage="https://loremflickr.com/160/80/dog?random=18"
+                                                Headline="Right Headline"
+                                                Source="World News - 1hr" />
+                </FlexLayout>
+
+                <views:FullWidthArticles class="newsRow"
+                                         Headline="Fourth Article"
+                                         Source="People - 4h" />
+
+
+
+                <views:HorizontalNewsTile class="newsRow"
+                                          Headline="First Article"
+                                          Category="TOP STORIES"
+                                          Source="Reuters - 1h"
+                                          FeaturedImage="https://loremflickr.com/100/100/dog?random=19" />
+
+                <views:FeatureImageArticleTile class="newsRow"
+                                               Headline="Third Article"
+                                               Category="TOP STORIES"
+                                               Source="Reuters - 1h"
+                                               FeaturedImage="https://loremflickr.com/320/240/dog?random=20" />
+
+                
+                <views:HorizontalNewsTile class="newsRow"
+                                          Headline="Second Article"
+                                          Category="US"
+                                          Source="Associated Press - 2h"
+                                          FeaturedImage="https://loremflickr.com/100/100/dog?random=21" />
+                <views:HorizontalNewsTile class="newsRow"
+                                          Headline="Third Article"
+                                          Category="TOP STORIES"
+                                          Source="Reuters - 1h"
+                                          FeaturedImage="https://loremflickr.com/100/100/dog?random=22" />
+
+                <views:FullWidthArticles class="newsRow"
+                                         Headline="Fourth Article"
+                                         Source="People - 4h" />
+
+                <views:HorizontalNewsTile class="newsRow"
+                                          Headline="Third Article"
+                                          Category="TOP STORIES"
+                                          Source="Reuters - 1h"
+                                          FeaturedImage="https://loremflickr.com/100/100/dog?random=23" />
+
+                <views:FeatureImageArticleTile class="newsRow"
+                                               Headline="Third Article"
+                                               Category="TOP STORIES"
+                                               Source="Reuters - 1h"
+                                               FeaturedImage="https://loremflickr.com/320/240/dog?random=24" />
+
+                <FlexLayout HeightRequest="200"
+                            JustifyContent="SpaceBetween"
+                            class="newsRow">
+                    <views:HalfWidthArticleTile FlexLayout.Basis="49%"
+                                                FeaturedImage="https://loremflickr.com/160/80/dog?random=25"
+                                                Headline="Left Headline"
+                                                Source="People - 1hr" />
+                    <views:HalfWidthArticleTile FlexLayout.Basis="49%"
+                                                FeaturedImage="https://loremflickr.com/160/80/dog?random=26"
+                                                Headline="Right Headline"
+                                                Source="World News - 1hr" />
+                </FlexLayout>
+
+            </FlexLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

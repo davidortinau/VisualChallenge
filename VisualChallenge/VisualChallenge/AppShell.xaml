@@ -16,17 +16,17 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
+                <Setter Property="Shell.ShellBackgroundColor" Value="#F2F2F2" />
+                <Setter Property="Shell.ShellForegroundColor" Value="#171717" />
+                <Setter Property="Shell.ShellTitleColor" Value="#171717" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellUnselectedColor" Value="Silver" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="#F2F2F2" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="Red"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor"
+                        Value="#A0A0A0"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="Red"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
@@ -34,7 +34,60 @@
 
     <ShellItem>
         <ShellSection>
-            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+            <ShellSection.Icon>
+                <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                 Glyph="&#xE900;" />
+            </ShellSection.Icon>
+            <ShellContent Title="My News" 
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+            <ShellContent Title="Top News"
+                          ContentTemplate="{DataTemplate local:SecondaryNewsPage}" />
+            <ShellContent Title="US News"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+            <ShellContent Title="World News"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+            <ShellContent Title="Good News"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+            <ShellContent Title="Politics"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+            <ShellContent Title="Fact Check"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+            <ShellContent Title="Opinion"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+            <ShellContent Title="Crime"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+        </ShellSection>
+        <ShellSection>
+            <ShellSection.Icon>
+                <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                 Glyph="&#xE734;" />
+            </ShellSection.Icon>
+            <ShellContent Title="My Interests"
+                          ContentTemplate="{DataTemplate local:MyInterestsPage}" />
+        </ShellSection>
+        <ShellSection>
+            <ShellSection.Icon>
+                <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                 Glyph="&#xE721;" />
+            </ShellSection.Icon>
+            <ShellContent Title="Explore"
+                          ContentTemplate="{DataTemplate local:SearchPage}" />
+        </ShellSection>
+        <ShellSection>            
+            <ShellSection.Icon>
+                <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                 Glyph="&#xE707;" />
+            </ShellSection.Icon>
+            <ShellContent Title="Local"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+        </ShellSection>
+        <ShellSection>
+            <ShellSection.Icon>
+                <FontImageSource FontFamily="{StaticResource FabMDL2}"
+                                 Glyph="&#xE713;" />
+            </ShellSection.Icon>
+            <ShellContent Title="Settings"
+                          ContentTemplate="{DataTemplate local:VisualChallengePage}" />
         </ShellSection>
     </ShellItem>
 

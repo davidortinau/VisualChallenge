@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       Padding="0"
+       CornerRadius="0"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+             x:Class="VisualChallenge.Views.HalfWidthArticleTile"
+       x:Name="this">
+    <Grid HeightRequest="200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image BackgroundColor="Black"
+               Grid.Row="0"
+               Source="{Binding FeaturedImage, Source={x:Reference this}}"
+               Aspect="AspectFill"
+               HeightRequest="80" />
+
+        <Label VerticalOptions="Start"
+               Grid.Row="1"
+               Margin="12">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding Headline, Source={x:Reference this}}"
+                          d:Text="An amazing, fun, silly, stupid article."
+                          FontSize="18"
+                          TextColor="Black"
+                          FontAttributes="Bold" />
+
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Grid.Row="1"
+               Text="{Binding Source, Source={x:Reference this}}"
+               d:Text="Some Rag - 12h"
+               VerticalOptions="End"
+               Margin="12"
+               FontSize="10"
+               TextColor="Gray" />
+
+    </Grid>
+</Frame>

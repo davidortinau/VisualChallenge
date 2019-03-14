@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       Padding="3"
+       CornerRadius="0"
+       HeightRequest="200"
+       x:Name="this"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="VisualChallenge.Views.InterestTile">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />   
+        </Grid.RowDefinitions>
+
+        <Image Aspect="AspectFill"
+               Grid.RowSpan="3"
+               Source="{Binding TopicImage, Source={x:Reference this}}" />
+
+        <BoxView BackgroundColor="#000000"
+                 Opacity="0.6"
+                 Grid.RowSpan="3" />
+
+        <Label Grid.Row="0"
+               Margin="0,8,8,0"
+               FontFamily="{StaticResource FabMDL2}"
+                                 Text="&#xE700;"
+                                 FontSize="28"
+                                 TextColor="White"
+                     HorizontalOptions="End"/>
+
+        <Label Text="{Binding Headline, Source={x:Reference this}}"
+               d:Text="TOP&#x000A;NEWS"
+               Grid.Row="1"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               TextColor="White"
+               FontSize="14"
+               FontAttributes="Bold"
+               />
+
+        <Label Grid.Row="2" 
+               FontFamily="{StaticResource FabMDL2}"
+               Text="&#xE73D;"
+               TextColor="#f2f2f2"
+               FontSize="32"
+               HorizontalOptions="End"
+               VerticalOptions="End"/>
+    </Grid>
+</Frame>
