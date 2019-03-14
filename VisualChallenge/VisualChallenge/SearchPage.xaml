@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:VisualChallenge.Views"
              x:Class="VisualChallenge.SearchPage"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="#f1f1f1"
+             BackgroundColor="#f2f2f2"
              >
     <Shell.TitleView>
         <StackLayout>
             <Label Text="Explore"
-                   TextColor="Black"
+                   TextColor="#171717"
                    FontSize="24"
                    FontAttributes="Bold"
                    Margin="-10,14,0,0"
@@ -48,7 +48,7 @@
             <views:ExploreCategoryTile Headline="AUTOS"
                                 TopicImage="https://loremflickr.com/320/240/cars?random=1"
                                  />
-            <views:ExploreCategoryTile Headline="CAREER ADVICE" FlexLayout.Basis="33%"
+            <views:ExploreCategoryTile Headline="CAREER&#x000A;ADVICE" FlexLayout.Basis="33%"
                                 TopicImage="https://loremflickr.com/320/240/office?random=2"
                                  />
             <views:ExploreCategoryTile Headline="CELEBRITIES" FlexLayout.Basis="33%"
@@ -63,10 +63,10 @@
             <views:ExploreCategoryTile Headline="ENTERTAINMENT"
                                 TopicImage="https://loremflickr.com/320/240/music?random=6"
                                  />
-            <views:ExploreCategoryTile Headline="FACT CHECK"
+            <views:ExploreCategoryTile Headline="FACT&#x000A;CHECK"
                                 TopicImage="https://loremflickr.com/320/240/news?random=7"
                                  />
-            <views:ExploreCategoryTile Headline="FOOD &amp; DRINK"
+            <views:ExploreCategoryTile Headline="FOOD&#x000A;&amp;&#x000A;DRINK"
                                 TopicImage="https://loremflickr.com/320/240/food?random=8"
                                  />
             <views:ExploreCategoryTile Headline="GOLF"
@@ -78,7 +78,7 @@
             <views:ExploreCategoryTile Headline="SPORTS"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=11"
                                  />
-            <views:ExploreCategoryTile Headline="NEWS VIDEO"
+            <views:ExploreCategoryTile Headline="NEWS&#x000A;VIDEO"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=12"
                                  />
             <views:ExploreCategoryTile Headline="AUTOS"

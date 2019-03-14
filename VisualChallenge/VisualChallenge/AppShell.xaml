@@ -16,17 +16,16 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="#f1f1f1" />
-                <Setter Property="Shell.ShellForegroundColor" Value="Black" />
-                <Setter Property="Shell.ShellTitleColor" Value="Black" />
+                <Setter Property="Shell.ShellBackgroundColor" Value="#F2F2F2" />
+                <Setter Property="Shell.ShellForegroundColor" Value="#171717" />
+                <Setter Property="Shell.ShellTitleColor" Value="#171717" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.ShellUnselectedColor" Value="Silver" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="#f1f1f1" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="#F2F2F2" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="Red"/>
                 <Setter Property="Shell.ShellTabBarUnselectedColor"
-                        Value="Silver"/>
+                        Value="#A0A0A0"/>
                 <Setter Property="Shell.ShellTabBarTitleColor" Value="Red"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />

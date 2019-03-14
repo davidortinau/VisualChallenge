@@ -1,15 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
        Padding="3"
+       CornerRadius="0"
        HeightRequest="200"
        x:Name="this"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="VisualChallenge.Views.InterestTile">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="30" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />   
         </Grid.RowDefinitions>
 
         <Image Aspect="AspectFill"
@@ -20,20 +24,16 @@
                  Opacity="0.6"
                  Grid.RowSpan="3" />
 
-        <ImageButton Grid.Row="0"
-                     Margin="8"
-                     BackgroundColor="Transparent"
-                     VerticalOptions="Start"
-                     HorizontalOptions="End">
-            <ImageButton.Source>
-                <FontImageSource FontFamily="{StaticResource FabMDL2}"
-                                 Glyph="&#xE700;"
-                                 Size="18"
-                                 Color="White"/>
-            </ImageButton.Source>
-        </ImageButton>
+        <Label Grid.Row="0"
+               Margin="0,8,8,0"
+               FontFamily="{StaticResource FabMDL2}"
+                                 Text="&#xE700;"
+                                 FontSize="28"
+                                 TextColor="White"
+                     HorizontalOptions="End"/>
 
         <Label Text="{Binding Headline, Source={x:Reference this}}"
+               d:Text="TOP&#x000A;NEWS"
                Grid.Row="1"
                VerticalOptions="Center"
                HorizontalOptions="Center"
@@ -44,16 +44,12 @@
                FontAttributes="Bold"
                />
 
-        <ImageButton
-            Grid.Row="2"
-            BackgroundColor="White"
-            VerticalOptions="End"
-                     HorizontalOptions="End">
-            <ImageButton.Source>
-                <FontImageSource FontFamily="{StaticResource FabMDL2}"
-                                 Glyph="&#xE73D;"
-                                 Color="#333333" />
-            </ImageButton.Source>
-        </ImageButton>
+        <Label Grid.Row="2" 
+               FontFamily="{StaticResource FabMDL2}"
+               Text="&#xE73D;"
+               TextColor="#f2f2f2"
+               FontSize="32"
+               HorizontalOptions="End"
+               VerticalOptions="End"/>
     </Grid>
 </Frame>

@@ -1,14 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:VisualChallenge.Views"
              x:Class="VisualChallenge.MyInterestsPage"
              Title="My Interests"
+             BackgroundColor="#f2f2f2"
              >
     <Shell.TitleView>
         <StackLayout>
             <Label Text="My Interests"
-                   TextColor="Black"
+                   TextColor="#171717"
                    FontSize="24"
                    FontAttributes="Bold"
                    Margin="-10,14,0,0"
@@ -38,22 +39,22 @@
 
     <ScrollView>
         <FlexLayout Margin="8" Direction="Row" Wrap="Wrap" JustifyContent="SpaceBetween" AlignContent="Start">
-            <views:InterestTile Headline="TOP NEWS"
+            <views:InterestTile Headline="TOP&#x000A;NEWS"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=1"
                                  />
-            <views:InterestTile Headline="US NEWS"
+            <views:InterestTile Headline="US&#x000A;NEWS"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=2"
                                  />
-            <views:InterestTile Headline="WORLD NEWS"
+            <views:InterestTile Headline="WORLD&#x000A;NEWS"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=3"
                                  />
-            <views:InterestTile Headline="GOOD NEWS"
+            <views:InterestTile Headline="GOOD&#x000A;NEWS"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=4"
                                  />
             <views:InterestTile Headline="POLITICS"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=5"
                                  />
-            <views:InterestTile Headline="FACT CHECK"
+            <views:InterestTile Headline="FACT&#x000A;CHECK"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=6"
                                  />
             <views:InterestTile Headline="OPINION"
@@ -71,7 +72,7 @@
             <views:InterestTile Headline="SPORTS"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=11"
                                  />
-            <views:InterestTile Headline="NEWS VIDEO"
+            <views:InterestTile Headline="NEWS&#x000A;VIDEO"
                                 TopicImage="https://loremflickr.com/320/240/flag?random=12"
                                  />
             <views:InterestTile Headline="AUTOS"

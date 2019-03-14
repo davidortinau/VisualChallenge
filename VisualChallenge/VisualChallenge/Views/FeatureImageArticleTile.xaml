@@ -1,8 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualChallenge.Views.FeatureImageArticleTile"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
        Padding="0"
+       CornerRadius="0"
        x:Name="this">
     <Grid>
         <Grid.RowDefinitions>
@@ -12,6 +16,7 @@
         </Grid.RowDefinitions>
 
         <Image BackgroundColor="Black"
+               d:Source="https://loremflickr.com/320/240/dog?random=1"
                Source="{Binding FeaturedImage, Source={x:Reference this}}"
                Aspect="AspectFill"
                MinimumHeightRequest="240"
@@ -31,10 +36,12 @@
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="{Binding Category, Source={x:Reference this}}"
+                          d:Text="CATEGORY"
                           FontSize="10"
                           TextColor="White" />
                     <Span Text="&#x000A;" />
                     <Span Text="{Binding Headline, Source={x:Reference this}}"
+                          d:Text="The headline of what this article is all about."
                           FontSize="22"
                           FontAttributes="Bold"
                           TextColor="White" />
@@ -43,6 +50,7 @@
             </Label.FormattedText>
         </Label>
         <Label Text="{Binding Source, Source={x:Reference this}}"
+               d:Text="AP - 4h"
                Grid.Row="2"
                Margin="8"
                FontSize="10"

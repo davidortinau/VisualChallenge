@@ -1,8 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         x:Class="VisualChallenge.Views.FullWidthArticles"
-        Padding="0"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d" 
+       Padding="0"
         CornerRadius="0"
         HeightRequest="100"
         x:Name="this">
@@ -16,6 +19,7 @@
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="{Binding Headline, Source={x:Reference this}}"
+                          d:Text="Did you see what they just did?!"
                           FontSize="18"
                           TextColor="Black"
                           FontAttributes="Bold" />
@@ -24,6 +28,7 @@
             </Label.FormattedText>
         </Label>
         <Label Text="{Binding Source, Source={x:Reference this}}"
+               d:Text="Believe It or Not - 30m"
                VerticalOptions="End"
                Margin="12"
                FontSize="10"
