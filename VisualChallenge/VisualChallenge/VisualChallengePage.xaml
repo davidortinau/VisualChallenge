@@ -6,18 +6,59 @@
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
              Title="Visual Challenge"
+             x:Name="Root"
              >
 
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <ScrollView Padding="0, 0, 0, 20">
+        <StackLayout VerticalOptions="StartAndExpand"
+                     Spacing="5">
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <!-- todo - it would be nice to have little clips on either side of the prev and next item -->
+            <CarouselView x:Name="CarouselView"
+                          ItemsSource="{Binding Images}"
+                          HeightRequest="200"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                          Margin="10">
+                <CarouselView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal"
+                                     SnapPointsAlignment="Center"
+                                     SnapPointsType="Mandatory"/>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" CornerRadius="3" HasShadow="False">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BindingContext.SelectItem, Source={x:Reference Root}}"
+                                                      CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                            <Image Source="{Binding .}" />
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         Margin="10, 0"
+                         Spacing="40">
+                
+                <Entry x:Name="Title" Placeholder="Name" BackgroundColor="White" />
 
-		</FlexLayout>
-	</ScrollView>
+                <!-- Unable to set placeholder. Add Entry hack if we have time -->
+                <DatePicker x:Name="Date" BackgroundColor="White" />
+
+                <Editor x:Name="Description" AutoSize="TextChanges" Placeholder="Description" BackgroundColor="White" />
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                    <Button Text="Save" Clicked="Save_Clicked" />
+                    <Button Text="Reset" Clicked="Reset_Clicked" />
+                </StackLayout>
+                
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
