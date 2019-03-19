@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
@@ -6,6 +6,7 @@
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
              Title="Visual Challenge"
+             Visual="Material"
              x:Name="Root"
              >
 
@@ -15,8 +16,8 @@
     <ScrollView Padding="0, 0, 0, 20">
         <StackLayout VerticalOptions="StartAndExpand"
                      Spacing="5">
-
-            <!-- todo - it would be nice to have little clips on either side of the prev and next item -->
+                     
+            <!-- The CarouselView does not work on iOS -->
             <CarouselView x:Name="CarouselView"
                           ItemsSource="{Binding Images}"
                           HeightRequest="200"
@@ -48,6 +49,7 @@
                 <Entry x:Name="Title" Placeholder="Name" BackgroundColor="White" />
 
                 <!-- Unable to set placeholder. Add Entry hack if we have time -->
+                <!-- Unable to set background color -->
                 <DatePicker x:Name="Date" BackgroundColor="White" />
 
                 <Editor x:Name="Description" AutoSize="TextChanges" Placeholder="Description" BackgroundColor="White" />

@@ -16,12 +16,13 @@ namespace VisualChallenge
 
         private void Save_Clicked(object sender, EventArgs e)
         {
+            // DisplayAlert does not work on iOS when Visual=Material
             DisplayAlert("SAVE", "Save the form?", "OK", "Cancel");
         }
 
         private async void Reset_Clicked(object sender, EventArgs e)
         {
-
+            // DisplayAlert does not work on iOS when Visual=Material
             var isResetting = await DisplayAlert("RESET", "Reset the form?", "OK", "Cancel");
             if (isResetting)
             {

@@ -9,10 +9,6 @@ namespace VisualChallenge
         {
             InitializeComponent();
 
-#if DEBUG
-            HotReloader.Current.Start(this);
-#endif
-
             MainPage = new AppShell();
         }
 

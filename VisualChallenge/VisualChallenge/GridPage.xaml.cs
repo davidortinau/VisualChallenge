@@ -10,18 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace VisualChallenge
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GridPage : ContentPage, IReloadable
+	public partial class GridPage : ContentPage
 	{
 		public GridPage ()
 		{
 			InitializeComponent ();
             LoadLayout();
 		}
-
-        public void OnLoaded()
-        {
-            LoadLayout();
-        }
 
         private void LoadLayout()
         {
