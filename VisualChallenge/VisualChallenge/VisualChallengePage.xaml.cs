@@ -12,8 +12,6 @@ namespace VisualChallenge
         {
             InitializeComponent();
             BindingContext = new VisualChallengeViewModel();
-
-            //CarouselView.ItemsSource = new[] { "photo", "https://www.xpand-it.com/wp-content/uploads/2017/11/Xamarin-BootCamp-Portugal.png", "https://cdn.dribbble.com/users/50332/screenshots/5822811/monkey_barrel.png", "https://cdn.ttgtmedia.com/ITKE/cwblogs/open-source-insider/1onkey.png" };
         }
 
         private void Save_Clicked(object sender, EventArgs e)

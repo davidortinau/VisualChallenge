@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualChallenge.GridPage"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="White"
+             Title="Visual Challenge">
+
+    <ScrollView>
+        <FlexLayout x:Name="FlexLayout" 
+                    Margin="20" 
+                    Wrap="Wrap"
+                    VerticalOptions="Start"
+                    JustifyContent="SpaceEvenly"
+                    AlignItems="Center"/>
+    </ScrollView>
+</ContentPage>

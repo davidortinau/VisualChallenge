@@ -34,7 +34,7 @@
 
     <ShellItem>
         <ShellSection>
-            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:GridPage}"/>
         </ShellSection>
     </ShellItem>
 
