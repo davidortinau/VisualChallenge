@@ -124,6 +124,14 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\add%401.png" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\add%402.png" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\add%403.png" />
+    <ImageAsset Include="Assets.xcassets\photo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\photo.imageset\photo%401.png" />
+    <ImageAsset Include="Assets.xcassets\photo.imageset\photo%402.png" />
+    <ImageAsset Include="Assets.xcassets\photo.imageset\photo%403.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -143,5 +151,9 @@
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\add.imageset\" />
+    <Folder Include="Assets.xcassets\photo.imageset\" />
   </ItemGroup>
 </Project>
