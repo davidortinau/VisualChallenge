@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
@@ -12,12 +12,9 @@
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
 	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
+		<FlexLayout x:Name="Root" Margin="20" Direction="Column" AlignContent="Center" JustifyContent="Start">
+			<Label Text="Cheese visuals are great!" HorizontalTextAlignment="Center" Visual="Cheese" />
+            <Button Text="Click to add a Button" Margin="0, 10, 0, 10" Clicked="Button_Clicked" />         
 		</FlexLayout>
 	</ScrollView>
 </ContentPage>
