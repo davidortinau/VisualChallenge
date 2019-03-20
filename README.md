@@ -34,7 +34,7 @@ For example, this sample app sets the Visual preference on the application `Shel
        Visual="Material">
 ```
 
-Any control may override this propogation by delcaring its own Visual preference:
+Any control may override this propogation by declaring its own Visual preference:
 
 ```
 <Button Visual="Default" ... />
@@ -50,4 +50,8 @@ Read more about this at [https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
 Material is Google's modern design system that is popular not only on Android, but has lately found its way to iOS and the Web also. Google publishes a package of Material controls for iOS, and that's the starting point for the Xamarin.Forms native control renderers when you selected `Visual="Material"`.
 
 For more information, visit [material.io](https://material.io/).
+
+## Instructions on Updating your own project
+- Install https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/4.0.0.169046-pre5  into your ios project
+- Add FormsMaterial.Init() after the Forms.Init() call in your AppDelegate on ios
 
