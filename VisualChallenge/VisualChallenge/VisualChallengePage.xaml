@@ -1,23 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Class="VisualChallenge.VisualChallengePage" Shell.NavBarIsVisible="True" BackgroundColor="White" Title="Visual Challenge">
+    <!-- If you decide to change out the flexlayout leave the scroll view here
+         Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+    -->
+    <!--<ScrollView>-->
+    <Grid>
+        <Image Source="artist.jpg" Aspect="AspectFill" />
+        
+        <BoxView BackgroundColor="Black" Opacity="0.3" />
+        <FlexLayout Direction="Column" JustifyContent="End" AlignItems="Stretch">
+            <StackLayout Orientation="Horizontal" Margin="20" HorizontalOptions="FillAndExpand">
+                <!-- Tried nested <FlexLayout Direction="Row" Margin="20"> but breaks layout -->
+                
+                    <Image Source="Album.png"/>                
+                    
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Label Text="Roar" TextColor="White" FontAttributes="Bold" FontSize="30"/>
+                    <Label Text="Katy Perry" TextColor="White" />
+                    
+                    <FlexLayout Direction="Row" JustifyContent="SpaceEvenly" VerticalOptions="EndAndExpand">
+                        <!-- Had to use negative padding with ImageButton to avoid icon being shrunk -->
+                        <Button Visual="RoundButton" HeightRequest="40" WidthRequest="40" Image="Love.png" /> 
+                        <Button Visual="RoundButton" HeightRequest="40" WidthRequest="40" Image="Hate.png" />
+                    </FlexLayout>
+                    <ProgressBar HeightRequest="6" ProgressColor="DeepPink" Progress="0.5" BackgroundColor="#50FFFFFF" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout FlexLayout.AlignSelf="Center" Orientation="Horizontal">
+                <Button Visual="RoundButton" HeightRequest="50" WidthRequest="50" Image="Pause.png" Margin="20" />
+                <Button Visual="RoundButton" HeightRequest="50" WidthRequest="50" Image="Skip.png" Margin="20" />
+            </StackLayout>
+            <Label Text="About this artist" TextColor="White" Margin="20,40,20,20" />
+        </FlexLayout>
+    </Grid>
+    <!--</ScrollView>-->
 </ContentPage>
