@@ -1,0 +1,4 @@
+﻿<resources>
+    <dimen name="design_bottom_navigation_active_text_size">12sp</dimen>
+    <dimen name="design_bottom_navigation_active_icon_size">25dp</dimen>
+</resources>

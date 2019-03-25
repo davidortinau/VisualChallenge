@@ -114,16 +114,55 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <BundleResource Include="Resources\tab_about.png" />
-    <BundleResource Include="Resources\tab_about%402x.png" />
-    <BundleResource Include="Resources\tab_about%403x.png" />
-    <BundleResource Include="Resources\tab_feed.png" />
-    <BundleResource Include="Resources\tab_feed%402x.png" />
-    <BundleResource Include="Resources\tab_feed%403x.png" />
     <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="AppIcons.xcassets\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\tab_home.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\tab_home.imageset\baseline_home_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_home.imageset\baseline_home_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_home.imageset\baseline_home_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_search.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\tab_search.imageset\baseline_search_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_search.imageset\baseline_search_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_search.imageset\baseline_search_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_add.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\tab_favorites.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\tab_profile.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\tab_add.imageset\baseline_add_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_add.imageset\baseline_add_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_add.imageset\baseline_add_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_favorites.imageset\baseline_favorite_border_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_favorites.imageset\baseline_favorite_border_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_favorites.imageset\baseline_favorite_border_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_profile.imageset\baseline_person_outline_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_profile.imageset\baseline_person_outline_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\tab_profile.imageset\baseline_person_outline_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\new_picture.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\send_message.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\new_picture.imageset\baseline_photo_camera_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\new_picture.imageset\baseline_photo_camera_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\new_picture.imageset\baseline_photo_camera_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\send_message.imageset\baseline_send_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\send_message.imageset\baseline_send_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\send_message.imageset\baseline_send_black_36pt_3x.png" />
+    <BundleResource Include="Resources\mikeparker.jpg" />
+    <ImageAsset Include="AppIcons.xcassets\bookmark.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\more.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\comments.imageset\Contents.json" />
+    <ImageAsset Include="AppIcons.xcassets\bookmark.imageset\baseline_turned_in_not_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\bookmark.imageset\baseline_turned_in_not_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\bookmark.imageset\baseline_turned_in_not_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\more.imageset\baseline_more_horiz_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\more.imageset\baseline_more_horiz_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\more.imageset\baseline_more_horiz_black_36pt_3x.png" />
+    <ImageAsset Include="AppIcons.xcassets\comments.imageset\baseline_chat_bubble_outline_black_36pt_1x.png" />
+    <ImageAsset Include="AppIcons.xcassets\comments.imageset\baseline_chat_bubble_outline_black_36pt_2x.png" />
+    <ImageAsset Include="AppIcons.xcassets\comments.imageset\baseline_chat_bubble_outline_black_36pt_3x.png" />
+    <BundleResource Include="Resources\lake_louise_canada.jpg" />
+    <BundleResource Include="Resources\mt_rainier_milky_way.jpg" />
+    <BundleResource Include="Resources\queensland_australia.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -136,6 +175,9 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.0.1.206893</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -143,5 +185,17 @@
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppIcons.xcassets\tab_home.imageset\" />
+    <Folder Include="AppIcons.xcassets\tab_search.imageset\" />
+    <Folder Include="AppIcons.xcassets\tab_add.imageset\" />
+    <Folder Include="AppIcons.xcassets\tab_favorites.imageset\" />
+    <Folder Include="AppIcons.xcassets\tab_profile.imageset\" />
+    <Folder Include="AppIcons.xcassets\new_picture.imageset\" />
+    <Folder Include="AppIcons.xcassets\send_message.imageset\" />
+    <Folder Include="AppIcons.xcassets\bookmark.imageset\" />
+    <Folder Include="AppIcons.xcassets\more.imageset\" />
+    <Folder Include="AppIcons.xcassets\comments.imageset\" />
   </ItemGroup>
 </Project>

@@ -16,25 +16,37 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#FAFAFA</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellForegroundColor" Value="Black" />
+                <Setter Property="Shell.ShellTitleColor" Value="Black" />
+                <Setter Property="Shell.ShellDisabledColor" Value="#B4EEEEEE" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="#FFABABAB" />
                 <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#FFABABAB"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="Black"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
-
-    <ShellItem>
-        <ShellSection>
+    
+    <ShellItem Title="MainTabsView" Style="{StaticResource BaseStyle}" Icon="xamarin_logo.png">
+        <ShellSection Title="Home" Icon="tab_home.png">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+        <ShellSection Title="Search" Icon="tab_search.png">
+            <ShellContent />
+        </ShellSection>
+        <ShellSection Title="Add" Icon="tab_add.png">
+            <ShellContent />
+        </ShellSection>
+        <ShellSection Title="Favorites" Icon="tab_favorites.png">
+            <ShellContent />
+        </ShellSection>
+        <ShellSection Title="Profile" Icon="tab_profile.png">
+            <ShellContent />
         </ShellSection>
     </ShellItem>
 
