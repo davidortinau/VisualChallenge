@@ -1,23 +1,113 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
+    <ScrollView Padding="0,20,0,0">
+		<Grid Margin="20,20,0,20" 
+              RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+             <Frame Padding="0"
+                    Margin="0,0,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2">
+                 <SearchBar BackgroundColor="Transparent"
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Try 'Dominican Republic'"/>
+            </Frame>
+            
+             <Button Text="Dates"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                     Style="{StaticResource FilterButtonStyle}"/>
+            
+             <Button Text="{Binding GuestsQuantity, StringFormat=' {0} guest'}"
+                     HorizontalOptions="Start"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Style="{StaticResource FilterSelectedButtonStyle}"/> 
+            
+               <Label Text="What can we help you find, Charlin?"
+                      Style="{StaticResource TitleStyle}"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2"/>
+            
+            <ScrollView Grid.Row="3"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Padding="0"
+                        Orientation="Horizontal"
+                        HorizontalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal"
+                             BindableLayout.ItemsSource="{Binding PlaceTypes}">
+                   <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                         <Frame Padding="0,0,0,20"
+                                Margin="0,0,20,0" >
+                            <StackLayout>
+                                    <Image Source="{Binding Photo}"
+                                           HeightRequest="120"
+                                           Aspect="AspectFill"
+                                           WidthRequest="150"/>
+                                    <Label Text="{Binding Name}"
+                                           Style="{StaticResource DescriptionStyle}"/>
+                                </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+               </StackLayout>
+          </ScrollView>
+            
+            <Label Text="Places near your home"
+                   Style="{StaticResource TitleStyle}"
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"/>
+            
+           <ScrollView Grid.Row="5"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Orientation="Horizontal"
+                       HorizontalScrollBarVisibility="Never">
+            <StackLayout Orientation="Horizontal"
+                      BindableLayout.ItemsSource="{Binding Places}">
+               <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                       <Frame Padding="0,0,0,20"
+                              WidthRequest="150"
+                              Margin="0,0,20,0" >
+                            <StackLayout Spacing="5">
+                                    <Image Source="{Binding Photo}"
+                                           HeightRequest="120"
+                                           Aspect="AspectFill"
+                                           WidthRequest="150"/>
+                                     <Label Text="{Binding Tag}"
+                                            Style="{StaticResource TagStyle}"/>
+                                    <Label Text="{Binding Name}"
+                                           Style="{StaticResource DescriptionStyle}"/>
+                                </StackLayout>
+                        </Frame>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+           </StackLayout>
+         </ScrollView>
+		</Grid>
+     </ScrollView>
 </ContentPage>
