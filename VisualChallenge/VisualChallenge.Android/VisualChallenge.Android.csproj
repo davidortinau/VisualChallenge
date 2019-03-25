@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Sharpnado.Forms.HorizontalListView">
+      <Version>0.9.12</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.0.1.206893" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.0.1.206893</Version>
@@ -86,7 +89,9 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_share_white_24dp.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VisualChallenge\VisualChallenge.csproj">
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
