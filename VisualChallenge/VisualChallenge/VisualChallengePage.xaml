@@ -38,35 +38,31 @@
                     BackgroundColor="White"
                     HorizontalOptions="FillAndExpand"
                     Placeholder="First Name"
-                    Text="Vlad"
-                    Visual="Material" />
+                    Text="Vlad" />
                 <Entry
                     BackgroundColor="White"
                     HorizontalOptions="FillAndExpand"
                     Placeholder="Last Name"
-                    Text="Tyzun"
-                    Visual="Material" />
+                    Text="Tyzun" />
             </StackLayout>
 
             <Entry
                 BackgroundColor="White"
                 Placeholder="User name"
-                Text="vlad_tyzun"
-                Visual="Material" />
+                Text="vlad_tyzun" />
             <Entry
                 BackgroundColor="White"
                 Placeholder="Date of birth"
-                Text="11/08/1994"
-                Visual="Material" />
+                Text="11/08/1994" />
             <Entry
                 BackgroundColor="White"
                 Placeholder="Email"
-                Text="vladtyzun@gmail.com"
-                Visual="Material" />
+                Text="vladtyzun@gmail.com" />
 
             <Button
                 BackgroundColor="#3F8EE4"
                 CornerRadius="6"
+                FontAttributes="Bold"
                 FontSize="16"
                 HeightRequest="60"
                 Text="Next Step"
