@@ -8,7 +8,7 @@ namespace VisualChallenge
         public App()
         {
             InitializeComponent();
-            
+
             MainPage = new AppShell();
         }
 

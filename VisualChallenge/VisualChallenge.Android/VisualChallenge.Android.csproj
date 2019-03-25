@@ -85,6 +85,16 @@
     <AndroidResource Include="Resources\drawable-xhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\headphones.png" />
+    <AndroidResource Include="Resources\drawable\headphones.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\headphones.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\headphones.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\headphones.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\search.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

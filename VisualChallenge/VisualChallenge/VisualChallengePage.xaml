@@ -1,23 +1,153 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="true"
+             BackgroundColor="White">
+    
+    <Shell.TitleView>
+        <Grid Margin="0,0,16,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="headphones.png"
+                   WidthRequest="20"/>
+            <Label Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Times New Roman"
+                   FontAttributes="Bold"
+                   Text="Medium"/>
+            <Image Grid.Column="2"
+                   WidthRequest="20"
+                   Source="search.png"/>
+        </Grid>
+    </Shell.TitleView>
 
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+    <ScrollView Orientation="Vertical">
+        <StackLayout>
+        	<ScrollView Orientation="Horizontal">
+        		<FlexLayout>
+                    <Frame WidthRequest="280"
+                           HeightRequest="210"
+                           Margin="16,8,8,8"
+                           HasShadow="true">
+                        <FlexLayout Direction="Column">
+                            <Image Source="https://10daysofxamarin.files.wordpress.com/2019/03/chair-desk-furniture-1957477.jpg"
+                                   HeightRequest="100"
+                                   Margin="-20,-20,-20,0"
+                                   Aspect="AspectFill"/>
+                            <Label FontAttributes="Bold"
+                                   FontSize="18"
+                                   Margin="0,10,0,0"
+                                   Text="What if you worked from home every day?"/>
+                            <Label Text="Anne Authorwoman"
+                                   FontSize="13"
+                                   Margin="0,10,0,0"/>
+                            <Label Text="March 21 · 5 min read"
+                                   FontSize="13"
+                                   TextColor="Silver"
+                                   Margin="0,0,0,-10"/>
+                        </FlexLayout>
+                    </Frame>
+                    <Frame WidthRequest="280"
+                           HeightRequest="210"
+                           Margin="8"
+                           HasShadow="true">
+                        <FlexLayout Direction="Column">
+                            <Image Source="https://10daysofxamarin.files.wordpress.com/2019/03/adventure-automobile-car-849835.jpg"
+                                   HeightRequest="100"
+                                   Margin="-20,-20,-20,0"
+                                   Aspect="AspectFill"/>
+                            <Label FontAttributes="Bold"
+                                   FontSize="18"
+                                   Margin="0,10,0,0"
+                                   Text="On the hardships of traveling wherever you want."/>
+                            <Label Text="Mark Areyoukiddingme"
+                                   FontSize="13"
+                                   Margin="0,10,0,0"/>
+                            <Label Text="March 25 · 25 min read"
+                                   FontSize="13"
+                                   TextColor="Silver"
+                                   Margin="0,0,0,-10"/>
+                        </FlexLayout>
+                    </Frame>
+                    <Frame WidthRequest="280"
+                           HeightRequest="210"
+                           Margin="8,8,16,8"
+                           HasShadow="true">
+                        <FlexLayout Direction="Column">
+                            <Image Source="https://10daysofxamarin.files.wordpress.com/2019/03/alley-back-view-blur-1850628.jpg"
+                                   HeightRequest="100"
+                                   Margin="-20,-20,-20,0"
+                                   Aspect="AspectFill"/>
+                            <Label FontAttributes="Bold"
+                                   FontSize="18"
+                                   Margin="0,10,0,0"
+                                   Text="What I Learned When I Left SuperBigTechCompany."/>
+                            <Label Text="Arthur Richman"
+                                   FontSize="13"
+                                   Margin="0,10,0,0"/>
+                            <Label Text="December 15 · 4 min read"
+                                   FontSize="13"
+                                   TextColor="Silver"
+                                   Margin="0,0,0,-10"/>
+                        </FlexLayout>
+                    </Frame>
+        		</FlexLayout>
+        	</ScrollView>
+            <ListView x:Name="storiesListView"
+                      RowHeight="160"
+                      Margin="0,-40,0,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <FlexLayout Direction="Column"
+                                        Margin="16,0">
+                                <Label Text="{Binding Subject}"
+                                       FontSize="13"
+                                       TextColor="Silver"
+                                       Margin="0,10,0,0"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <FlexLayout Direction="Column">
+                                        <Label FontAttributes="Bold"
+                                               FontSize="18"
+                                               Text="{Binding Title}"/>
+                                        <Label Text="{Binding Subtitle}"
+                                               FontSize="13"
+                                               TextColor="Silver"/>
+                                    </FlexLayout>
+                                    <Image Grid.Column="1"
+                                           Aspect="AspectFill"
+                                           Source="{Binding ImageUrl}"
+                                           WidthRequest="75"
+                                           HeightRequest="75"/>
+                                </Grid>
+                                <Label Text="{Binding Publisher}"
+                                       Margin="0,10,0,0"
+                                       FontSize="13"/>
+                                <Label Text="{Binding FullDetails}"
+                                       FontSize="13"
+                                       TextColor="Silver"
+                                       Margin="0,0,0,-10"/>
+                            </FlexLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
