@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:VisualChallenge"
        RouteHost="companyname.com"
        RouteScheme="app"
@@ -8,34 +8,47 @@
        FlyoutBehavior="Disabled"
        Title="VisualChallenge"
        x:Class="VisualChallenge.AppShell"
-       Visual="Material"
-       >
+       Visual="Material">
 
     <!-- 
         Styles and Resources 
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
-            <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+            <Color x:Key="NavigationPrimary">#F15A24</Color>
+            <Style x:Key="BaseStyle"
+                   TargetType="Element">
+                <Setter Property="Shell.ShellBackgroundColor"
+                        Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellForegroundColor"
+                        Value="White" />
+                <Setter Property="Shell.ShellTitleColor"
+                        Value="White" />
+                <Setter Property="Shell.ShellDisabledColor"
+                        Value="#B4FFFFFF" />
+                <Setter Property="Shell.ShellUnselectedColor"
+                        Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor"
+                        Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarForegroundColor"
+                        Value="White" />
+                <Setter Property="Shell.ShellTabBarUnselectedColor"
+                        Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellTabBarTitleColor"
+                        Value="White" />
             </Style>
-            <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="ShellItem"
+                   BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
     <ShellItem>
+        <ShellSection Title="Random fact">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}" />
+        </ShellSection>
         <ShellSection>
-            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+            <ShellContent Title="Search facts"
+                          ContentTemplate="{DataTemplate local:SearchResultsPage}" />
         </ShellSection>
     </ShellItem>
-
 </Shell>

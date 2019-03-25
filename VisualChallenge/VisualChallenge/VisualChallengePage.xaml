@@ -3,21 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#D2E4FA"
+             Title="Chuck Norris facts">
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
+    <!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <ScrollView>
+        <StackLayout Padding="15"
+                     Spacing="15">
+            <Image Source="https://assets.chucknorris.host/img/chucknorris_logo_coloured_small.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <Grid VerticalOptions="FillAndExpand">
+                <StackLayout IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}">
+                    <Grid VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Category:"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start" />
+                        <Picker ItemsSource="{Binding Categories}"
+                                SelectedItem="{Binding Category, Mode=TwoWay}"
+                                Title="Select a category"
+                                Grid.Column="1" />
+                    </Grid>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+                    <Frame BackgroundColor="#8C6239"
+                           VerticalOptions="CenterAndExpand"
+                           HasShadow="True"
+                           CornerRadius="20"
+                           Padding="0">
+                        <StackLayout>
+                            <Label Text="{Binding RandomFact.Value, StringFormat='{}&#x201C;{0}&#x201D;'}"
+                                   FontAttributes="Italic"
+                                   TextColor="White"
+                                   Margin="15, 15, 15, 0" />
+                            <Image Source="{Binding RandomFact.IconUrl}"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="End"
+                                   Margin="0, 7, 5, 5" />
+                        </StackLayout>
+                    </Frame>
 
-		</FlexLayout>
-	</ScrollView>
+                    <Button Text="Next fact"
+                            BackgroundColor="#F15A24"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            Command="{Binding GetRandomFactCommand}" />
+                </StackLayout>
+
+                <ActivityIndicator IsVisible="{Binding IsBusy}"
+                                   IsRunning="{Binding IsBusy}"
+                                   WidthRequest="30"
+                                   HeightRequest="30"
+                                   Color="#F15A24"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
