@@ -2,22 +2,200 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:nado="clr-namespace:Sharpnado.Presentation.Forms.RenderedViews;assembly=Sharpnado.Presentation.Forms"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
+             BackgroundColor="GhostWhite"
+             Visual="Material"
+             Title="A Simple Favor"
              >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="ShareMenuItem" Order="Primary" Icon="ic_share_white_24dp" Text="Share" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
 	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+        <FlexLayout
+               Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+            <ContentView
+                HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                <Frame  
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    CornerRadius="2" HeightRequest="300" WidthRequest="200"
+                    Padding="0" Margin="0" HasShadow="True">
+                    <Image
+                        x:Name="imagePoster"
+                        Source = "{Binding Movie.Poster}"
+                        HeightRequest="300" WidthRequest="200"
+                        HorizontalOptions="Center"
+                        Aspect="AspectFill" />
+                </Frame>
+            </ContentView>
+            
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+            <Frame Margin="0,5" Padding="0" BackgroundColor="#25252F" CornerRadius="10" HasShadow="True">
+                <StackLayout Spacing="0" Padding="15">
+                    <Label Text="{Binding Movie.Title}" TextColor="White" FontSize="24" FontAttributes="Bold" />
+                    <Label Text="{Binding Movie.Director, StringFormat='By {0}'}" TextColor="LightGray" FontSize="14" HorizontalTextAlignment="Start" />
 
-		</FlexLayout>
-	</ScrollView>
+                    <ContentView Margin="0,15">
+                        <FlexLayout
+                                    Direction="Row"
+                                    JustifyContent="Center"
+                                    AlignItems="Center">
+                            <Label   Margin="5,0" TextColor="White" Text="{Binding Movie.Released}" FontSize="14" FontAttributes="Bold" />
+                            <BoxView Margin="5,0" Color="White" CornerRadius="10" WidthRequest="5" HeightRequest="5" />
+                            <Label   Margin="5,0" TextColor="White" Text="{Binding Movie.Runtime}" FontSize="14" FontAttributes="Bold" />
+                            <BoxView Margin="5,0" Color="White" CornerRadius="10" WidthRequest="5" HeightRequest="5" />
+                            <Frame   Margin="5,0" BackgroundColor="White" CornerRadius="5" Padding="2"  HasShadow="False" BorderColor="Transparent">
+                                <Frame BackgroundColor="#25252F" CornerRadius="3" Padding="2" HasShadow="False" BorderColor="Transparent">
+                                    <Label Text="{Binding Movie.Certification}" 
+                                            FontSize="14" FontAttributes="Bold" 
+                                            LineBreakMode="WordWrap" 
+                                            TextColor="White"
+                                            BackgroundColor="Transparent" />
+                                </Frame>
+                            </Frame>
+
+                        </FlexLayout>
+                    </ContentView>
+
+
+                    <Label Margin="0,15" Text="{Binding Movie.Overview}" TextColor="LightGray" FontSize="14" LineBreakMode="WordWrap" />
+
+                    <ContentView Margin="0,15">
+                        <FlexLayout
+                            BindableLayout.ItemsSource="{Binding Movie.Genres}"
+                            Direction="Row" Wrap="Wrap"
+                            JustifyContent="Start"
+                            AlignItems="Start" AlignContent="Stretch">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame HasShadow="True" Margin="5" Padding="10,4" BackgroundColor="#676EC8" CornerRadius="10">
+                                        <Label Text="{Binding .}" 
+                                                TextColor="White" Margin="0" LineBreakMode="NoWrap" FontSize="12"
+                                                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  
+                                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                    </Frame>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </FlexLayout>
+                    </ContentView>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="0,5" Padding="0" BackgroundColor="#25252F" CornerRadius="10">
+                <StackLayout Spacing="15"
+                    BackgroundColor="#25252F" Padding="0,15" Margin="0,0,0,10">
+                    <Label 
+                        Text="CASTING" TextColor="White"
+                        HorizontalTextAlignment="Start" 
+                        HorizontalOptions="FillAndExpand" 
+                        VerticalOptions="Start"  
+                        FontAttributes="Bold"
+                        Margin="15,0"/>
+                    <nado:HorizontalListView
+                                HeightRequest="285"
+                                CollectionPadding="15,0"
+                                ItemSpacing="5"
+                                ItemHeight="285"
+                                SnapStyle="None"
+                                ListLayout="Linear"
+                                ColumnCount="2"
+                                ItemsSource="{Binding Casting}"
+                                ViewCacheSize="2">
+                        <nado:HorizontalListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <FlexLayout
+                                        Padding="0" Direction="Column"
+                                        JustifyContent="Center"
+                                        VerticalOptions="FillAndExpand" 
+                                        HorizontalOptions="FillAndExpand">
+
+                                        <Image x:Name="imagePerson" Source="{Binding ProfilePhoto}"
+                                            Aspect="AspectFill"
+                                            HeightRequest="225" WidthRequest="150"
+                                            VerticalOptions="Start" />
+
+                                        <Label x:Name="labelName" Text="{Binding Name}"
+                                            HorizontalTextAlignment="Center" 
+                                            VerticalTextAlignment="Center"
+                                            TextColor="White"
+                                            FontSize="16" HeightRequest="30" LineBreakMode="TailTruncation"
+                                            VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                                        <Label x:Name="labelCharacter" Text="{Binding Character}"
+                                            HorizontalTextAlignment="Center" 
+                                            VerticalTextAlignment="Center"
+                                            TextColor="LightGray"
+                                            FontSize="12" HeightRequest="30" LineBreakMode="TailTruncation"
+                                            VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" />
+                                    </FlexLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </nado:HorizontalListView.ItemTemplate>
+                    </nado:HorizontalListView>
+                </StackLayout>
+            </Frame>
+            
+            <Frame Margin="0,5" Padding="0" BackgroundColor="#25252F" CornerRadius="10">
+                <StackLayout Spacing="15" BackgroundColor="#25252F" Padding="0,15" Margin="0,0,0,10">
+                    <Label Text="SIMILAR MOVIES" 
+                                TextColor="White"
+                                HorizontalTextAlignment="Start" 
+                                HorizontalOptions="FillAndExpand" 
+                                VerticalOptions="Start"  
+                                FontAttributes="Bold"
+                                Margin="15,0"/>
+
+                    <nado:HorizontalListView 
+                        HeightRequest="285"
+                        CollectionPadding="15,0"
+                        ItemSpacing="5"
+                        ItemHeight="285"
+                        SnapStyle="None"
+                        ItemsSource="{Binding Related}"
+                        ListLayout="Linear"
+                        ColumnCount="2"
+                        ViewCacheSize="2">
+                        <nado:HorizontalListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <FlexLayout
+                                        Padding="0"
+                                        JustifyContent="Center"
+                                        Direction="Column">
+
+                                        <Image Source="{Binding Poster}" Aspect="AspectFill"
+                                            HeightRequest="225" WidthRequest="150"
+                                            VerticalOptions="Start" />
+
+                                        <Label Text="{Binding Title}"
+                                            HorizontalTextAlignment="Center" 
+                                            VerticalTextAlignment="Center"
+                                            TextColor="White"
+                                            FontSize="16" HeightRequest="30" LineBreakMode="TailTruncation"
+                                            VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                                        <Label Text="{Binding Director, StringFormat='By {0}'}"
+                                            HorizontalTextAlignment="Center" 
+                                            VerticalTextAlignment="Center"
+                                            TextColor="LightGray"
+                                            FontSize="12" HeightRequest="30" LineBreakMode="TailTruncation"
+                                            VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" />
+                                    </FlexLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </nado:HorizontalListView.ItemTemplate>
+                    </nado:HorizontalListView>
+                </StackLayout>
+            </Frame>
+        </FlexLayout>
+
+
+    </ScrollView>
 </ContentPage>
