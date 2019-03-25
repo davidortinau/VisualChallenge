@@ -1,7 +1,5 @@
-﻿using System;
-
+﻿using VisualChallenge.Services;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace VisualChallenge
 {
@@ -10,11 +8,12 @@ namespace VisualChallenge
         public VisualChallengePage()
         {
             InitializeComponent();
-        }
 
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            Device.OpenUri(new Uri("https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual"));
+            var vm = new VisualChallengePageViewModel(
+                Refit.RestService.For<IChuckNorrisFactService>("https://api.chucknorris.io"));
+            BindingContext = vm;
+
+            vm.Initialize();
         }
     }
 }

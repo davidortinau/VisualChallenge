@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualChallenge.SearchResultsPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#D2E4FA"
+             Title="Chuck Norris facts">
+    <ScrollView>
+        <StackLayout Padding="15"
+                     Spacing="15">
+            <Image Source="https://assets.chucknorris.host/img/chucknorris_logo_coloured_small.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+            <Grid VerticalOptions="FillAndExpand">
+                <StackLayout IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}">
+
+                    <Entry Text="{Binding SearchQuery}"
+                           Placeholder="Search for facts"
+                           ReturnCommand="{Binding SearchFactsCommand}"
+                           Margin="0, 10, 0, 0" />
+
+                    <ListView ItemsSource="{Binding SearchResult.Result}"
+                              BackgroundColor="Transparent"
+                              SeparatorVisibility="None"
+                              HasUnevenRows="True"
+                              VerticalOptions="StartAndExpand">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="#8C6239"
+                                           VerticalOptions="CenterAndExpand"
+                                           Padding="0"
+                                           Margin="0, 0, 0, 10">
+                                        <StackLayout>
+                                            <Label Text="{Binding Value, StringFormat='{}&#x201C;{0}&#x201D;'}"
+                                                   FontAttributes="Italic"
+                                                   TextColor="White"
+                                                   Margin="15, 15, 15, 0" />
+                                            <Image Source="{Binding IconUrl}"
+                                                   HorizontalOptions="End"
+                                                   VerticalOptions="End"
+                                                   Margin="0, 7, 5, 5" />
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+                <ActivityIndicator IsVisible="{Binding IsBusy}"
+                                   IsRunning="{Binding IsBusy}"
+                                   WidthRequest="30"
+                                   HeightRequest="30"
+                                   Color="#F15A24"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
