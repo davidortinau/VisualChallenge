@@ -22,13 +22,11 @@ namespace VisualChallenge
 
         // Commands
         public ICommand GetRandomFactCommand { get; private set; }
-        public ICommand SearchFactsCommand { get; private set; }
 
         public VisualChallengePageViewModel(IChuckNorrisFactService factService)
         {
             _factService = factService;
             GetRandomFactCommand = new Command(ExecuteGetRandomFact);
-            SearchFactsCommand = new Command(ExecuteSearchFacts);
         }
 
         public async void Initialize()
@@ -56,12 +54,6 @@ namespace VisualChallenge
             {
                 IsBusy = false;
             }
-        }
-
-        void ExecuteSearchFacts()
-        {
-            //(Application.Current.MainPage as Shell)
-            //    .GoToAsync($"app://tailwindtraders/productcategory?id={typeId}", true);
         }
     }
 }
