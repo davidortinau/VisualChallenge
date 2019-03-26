@@ -8,15 +8,14 @@
        FlyoutBehavior="Disabled"
        Title="VisualChallenge"
        x:Class="VisualChallenge.AppShell"
-       Visual="Material"
-       >
+       Visual="Material"  >
 
     <!-- 
         Styles and Resources 
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#265C55</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />

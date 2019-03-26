@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualChallenge.ChatInputBarView">
+     <Grid RowSpacing="0" 
+           ColumnSpacing="0">
+               <Grid.RowDefinitions>
+                     <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+       <Frame Grid.Row="0" 
+              Padding="5,1"
+              BackgroundColor="White"
+              Margin="10,0"
+              Grid.Column="0"
+              CornerRadius="20">
+            <Entry x:Name="chatTextInput" 
+                   HeightRequest="40"
+                   Text="{Binding TextToSend}" 
+                   Margin="1"  
+                   Visual="Default"
+                   TextColor="Black" 
+                   Keyboard="Chat"  
+                   HorizontalOptions="FillAndExpand" 
+                   PlaceholderColor="LightGray"
+                   ReturnCommand="{Binding OnSendCommand}"
+                   Placeholder="Type a message"/>
+         </Frame>
+        <ImageButton Grid.Row="0"   
+                Grid.Column="1"
+                WidthRequest="50"
+                CornerRadius="25"
+                HeightRequest="50"
+                Padding="15"
+                BackgroundColor="{StaticResource NavBarColor}"
+                Source="ic_mic.png"/>
+    </Grid>
+</ContentView>

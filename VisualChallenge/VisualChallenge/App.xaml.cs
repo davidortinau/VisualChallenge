@@ -4,7 +4,7 @@ namespace VisualChallenge
 {
     public partial class App : Application
     {
-
+        public static string User { get; set; } = "Rendy";
         public App()
         {
             InitializeComponent();
