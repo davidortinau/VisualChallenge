@@ -52,6 +52,9 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.0.1.206893</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -85,6 +88,61 @@
     <AndroidResource Include="Resources\drawable-xhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\drawable\tab_home.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_home.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_home.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_home.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_home.png" />
+    <AndroidResource Include="Resources\drawable\tab_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_search.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_search.png" />
+    <AndroidResource Include="Resources\drawable\tab_add.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_add.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_add.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_add.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_add.png" />
+    <AndroidResource Include="Resources\drawable\tab_favorites.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_favorites.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_favorites.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_favorites.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_favorites.png" />
+    <AndroidResource Include="Resources\drawable\tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_profile.png" />
+    <AndroidResource Include="Resources\drawable\send_message.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\send_message.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\send_message.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\send_message.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\send_message.png" />
+    <AndroidResource Include="Resources\drawable\new_picture.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\new_picture.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\new_picture.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\new_picture.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\new_picture.png" />
+    <AndroidResource Include="Resources\drawable\mikeparker.jpg" />
+    <AndroidResource Include="Resources\drawable\comments.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\comments.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\comments.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\comments.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\comments.png" />
+    <AndroidResource Include="Resources\drawable\more.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable\bookmark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bookmark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bookmark.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bookmark.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bookmark.png" />
+    <AndroidResource Include="Resources\drawable\lake_louise_canada.jpg" />
+    <AndroidResource Include="Resources\drawable\mt_rainier_milky_way.jpg" />
+    <AndroidResource Include="Resources\drawable\queensland_australia.jpg" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -14,7 +14,6 @@ This is testing **Visual**, not your prowess as a mobile developer. I want to le
     - your feedback on what went well, and what didn't
     - what you would like to see us doing differently in support of this goal: same design on iOS and Android
 
-
 # What is Visual?
 
 Visual is a new way to declare the "visual" design system you want rendering your native controls. By default, controls are renderered the way Apple and Google created them. With Visual, you can choose Material as the design system that will then render the same on iOS and Android. 

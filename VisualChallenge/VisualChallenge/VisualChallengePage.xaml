@@ -1,23 +1,103 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+             xmlns:local="clr-namespace:VisualChallenge"
+             xmlns:xamci="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             Title="Home"
+             x:Class="VisualChallenge.VisualChallengePage">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <ImageButton Source="new_picture.png"
+                         HeightRequest="20"
+                         WidthRequest="20"
+                         BackgroundColor="Transparent"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="StartAndExpand" />
+            <Label Text="Snappy Snaps" 
+                   HorizontalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" 
+                   VerticalOptions="CenterAndExpand" 
+                   FontSize="22"
+                   FontAttributes="Italic Bold" />    
+            <ImageButton Source="send_message.png"
+                         HeightRequest="20"
+                         WidthRequest="20"
+                         BackgroundColor="Transparent"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="EndAndExpand">
+                <ImageButton.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="0, 0, 0, 0" />
+                        <On Platform="Android" Value="0, 0, 15, 0" />
+                    </OnPlatform>
+                </ImageButton.Margin>
+            </ImageButton>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+       <CollectionView x:Name="PostsCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,0,0,5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="300" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="15" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="35" />
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="35" />
+                            <ColumnDefinition Width="5" />
+                        </Grid.ColumnDefinitions>
+                        <xamci:CircleImage Grid.Column="1" Grid.RowSpan="2" Margin="0,5,0,0" Source="{Binding UserImage}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                        <Label Text="{Binding Username}" Style="{DynamicResource CaptionStyle}" FontAttributes="Bold" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0" Margin="0,0,0,-5" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalTextAlignment="End" VerticalOptions="End" />    
+                        <Label Text="{Binding PostTitle}" Style="{DynamicResource CaptionStyle}" TextColor="#FF8D8D8D" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" VerticalOptions="StartAndExpand">
+                            <Label.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="0, 0, 0, 0" />
+                                    <On Platform="Android" Value="0, -5, 0, 0" />
+                                </OnPlatform>    
+                            </Label.Margin> 
+                        </Label>    
+                        <ImageButton Source="more.png" Grid.Row="0" Grid.RowSpan="2" Grid.Column="5" Margin="0,5,0,0" BackgroundColor="Transparent" />
+                        <Image Source="{Binding PostImageUrl}" Aspect="AspectFill" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" />
+                        <ImageButton Source="tab_favorites.png" Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand" Aspect="AspectFill" BackgroundColor="Transparent" />
+                        <ImageButton Source="comments.png" Grid.Row="3" Margin="5,0" Grid.Column="2" BackgroundColor="Transparent" />
+                        <ImageButton Source="send_message.png" Grid.Row="3" Grid.Column="3" BackgroundColor="Transparent" />
+                        <ImageButton Source="bookmark.png" Grid.Row="3" Grid.Column="5" Aspect="AspectFill" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" />
+                        <Label Style="{DynamicResource CaptionStyle}" Text="{Binding LikeCountText}" FontAttributes="Bold" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="4" /> 
+                        <Label Style="{DynamicResource CaptionStyle}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" MaxLines="2" LineBreakMode="TailTruncation">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Username}" FontSize="Micro" FontAttributes="Bold" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding PostDetail}" FontSize="Micro" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Style="{DynamicResource CaptionStyle}" TextColor="#FF8D8D8D" Margin="0,0,0,0" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="View all " />
+                                    <Span Text="{Binding CommentCountText}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>   
+                        <Label Style="{DynamicResource CaptionStyle}" TextColor="#FF8D8D8D" Text="{Binding TimestampText}" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="7" /> 
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
 </ContentPage>
