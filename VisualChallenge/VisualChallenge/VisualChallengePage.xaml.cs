@@ -10,11 +10,13 @@ namespace VisualChallenge
         public VisualChallengePage()
         {
             InitializeComponent();
+
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            Device.OpenUri(new Uri("https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual"));
+            base.OnAppearing();
+            BindingContext = new VisualChallengePageVM();
         }
     }
 }

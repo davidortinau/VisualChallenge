@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using ButtonCircle.FormsPlugin.iOS;
 using Foundation;
 using UIKit;
 
@@ -22,6 +22,7 @@ namespace VisualChallenge.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            ButtonCircleRenderer.Init();
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
