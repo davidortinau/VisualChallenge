@@ -23,9 +23,9 @@ namespace VisualChallenge
                 new Post
                 {
                     ProfileName = "David Ortinau",
-                    ProfileImageUrl = "https://lh5.googleusercontent.com/-tACrxTCkr4w/AAAAAAAAAAI/AAAAAAAAABw/gQNWYdrs0CE/photo.jpg",
+                    ProfileImageUrl = "https://pbs.twimg.com/profile_images/812310411647205376/gxleSqEg_400x400.jpg",
                     PostedAgo = "5d",
-                    ProfileJobTitle = "Senior Program Manager, Mobile Dev Tools at Microsoft. Xamarin Mobile SDKs.",
+                    ProfileJobTitle = "Star Program Manager, Mobile Dev Tools at Microsoft.",
                     Description = "flurry of entries for the #XamarinForms Visual Challenge. Thanks for helping us improve things! Latest submissions from: @brunocaceiro @nitescua @Chard003 djlorent @Cheesebaron HobDev",
                     ImageUrl = "https://pbs.twimg.com/media/DYGwImfVAAE1cHJ.jpg",
                     LikesName = "Chris Hardy",
