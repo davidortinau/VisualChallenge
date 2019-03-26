@@ -37,8 +37,8 @@ namespace VisualChallenge
                 PostDetail = "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sed do eiusmod tempor incididunt",
                 PostImage = "lake_louise_canada",
                 LikeCountText = "234,510 likes",
-                CommentCountText = "2,717 comments",
-                TimestampText = "25 MINUTES AGO"
+                CommentCountText = "3,252 comments",
+                TimestampText = "42 MINUTES AGO"
             },
             new PostData
             {
@@ -47,8 +47,8 @@ namespace VisualChallenge
                 PostDetail = "pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ullamco laboris nisi ut aliquip",
                 PostImage = "queensland_australia",
                 LikeCountText = "234,510 likes",
-                CommentCountText = "2,717 comments",
-                TimestampText = "25 MINUTES AGO"
+                CommentCountText = "1,329 comments",
+                TimestampText = "1 HOUR AGO"
             }
         };
     }
