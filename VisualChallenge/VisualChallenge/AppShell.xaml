@@ -16,24 +16,33 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#ffffff</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
+                <Setter Property="Shell.ShellForegroundColor" Value="#3274ab" />
                 <Setter Property="Shell.ShellTitleColor" Value="White" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellUnselectedColor" Value="#a1a1a1" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="#3274ab"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#a1a1a1"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="#a1a1a1"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
     <ShellItem>
-        <ShellSection>
+        <ShellSection Icon="ic_nav_home_outline_32dp_Normal">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+        <ShellSection Icon="ic_nav_people_outline_32dp_Normal">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+               <ShellSection Icon="ic_nav_notifications_outline_32dp_Normal">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+               <ShellSection Icon="ic_nav_messaging_outline_32dp_Normal">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
         </ShellSection>
     </ShellItem>

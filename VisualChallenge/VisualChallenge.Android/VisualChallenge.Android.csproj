@@ -85,6 +85,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
+    <AndroidResource Include="Resources\drawable\ic_nav_home_outline_32dp_Normal.png" />
+    <AndroidResource Include="Resources\drawable\ic_nav_messaging_outline_32dp_Normal.png" />
+    <AndroidResource Include="Resources\drawable\ic_nav_messaging_outline_white_32dp_Normal.png" />
+    <AndroidResource Include="Resources\drawable\ic_nav_notifications_outline_32dp_Normal.png" />
+    <AndroidResource Include="Resources\drawable\ic_nav_people_outline_32dp_Normal.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
