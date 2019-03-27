@@ -1,23 +1,154 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+             xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             x:Class="VisualChallenge.VisualChallengePage" 
+             Shell.NavBarIsVisible="True" 
+             BackgroundColor="White" 
+             Title="Flights">
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" BackgroundColor="#B2B2B2" />
+            <FlexLayout Grid.Row="1" Margin="10" Direction="Column" AlignContent="Start" JustifyContent="Start" >
+                
+                <controls:SegmentedControl TintColor="#2458E2" SelectedSegment="0" Margin="0,10,0,10">
+                  <controls:SegmentedControl.Children>
+                    <controls:SegmentedControlOption Text="Roundtrip" />
+                    <controls:SegmentedControlOption Text="One way" />
+                    <controls:SegmentedControlOption Text="Multi-city" />
+                  </controls:SegmentedControl.Children>
+                </controls:SegmentedControl>
+                
+                <Frame Margin="0,5,0,5" BorderColor="#B2B2B2" Padding="0" CornerRadius="10">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_map" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" HorizontalOptions="Center" Opacity="0.5"/>
+                        <Entry Placeholder="Flying from" BackgroundColor="Transparent" Grid.Column="1" FontSize="20" TextColor="#051855" VerticalOptions="Center" Margin="-15,10,10,10"/>
+                    </Grid>
+                </Frame>
+                
+                <Frame Margin="0,5,0,5" BorderColor="#B2B2B2" Padding="0" CornerRadius="10">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_map" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" HorizontalOptions="Center" Opacity="0.5"/>
+                        <Entry Placeholder="Flying to" BackgroundColor="Transparent" Grid.Column="1" FontSize="20" TextColor="#051855" VerticalOptions="Center" Margin="-15,10,10,10"/>
+                    </Grid>
+                </Frame>
+                
+               <!-- <Frame Margin="0,5,0,5" BorderColor="#B2B2B2" Padding="0" CornerRadius="10">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.4*"/>
+                            <RowDefinition Height="0.6*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_map" Grid.RowSpan="2" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" HorizontalOptions="Center" Opacity="0.5"/>
+                        <Label Text="Flying to" Grid.Row="0" Grid.Column="1" FontSize="16" TextColor="#747B9B" VerticalOptions="End" Margin="0,10,0,0"/>
+                        <Label Text="Honolulu, HI" Grid.Row="1" Grid.Column="1" FontSize="22" TextColor="#051855" VerticalOptions="Start" Margin="0,5,0,5"/>
+                    </Grid>
+                </Frame>-->
+                
+                <Frame Margin="0,5,0,5" BorderColor="#B2B2B2" Padding="0" CornerRadius="10">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.4*"/>
+                            <RowDefinition Height="0.6*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_dates" Grid.RowSpan="2" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" HorizontalOptions="Center" Opacity="0.5"/>
+                        <Label Text="Select dates" Grid.Row="0" Grid.Column="1" FontSize="16" TextColor="#747B9B" VerticalOptions="End" Margin="0,10,0,0"/>
+                        <Label Text="Wed, Mar 27 - Thu, Mar 28" Grid.Row="1" Grid.Column="1" FontSize="22" TextColor="#051855" VerticalOptions="Start" Margin="0,5,0,5"/>
+                        <!--<DatePicker Grid.Row="1" Grid.Column="1" FontSize="22" TextColor="#051855" VerticalOptions="Start" Margin="0,5,5,5"/>-->
+                    </Grid>
+                </Frame>
+                
+                <Frame Margin="0,5,0,5" BorderColor="#B2B2B2" Padding="0" CornerRadius="10">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.4*"/>
+                            <RowDefinition Height="0.6*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_person" Grid.RowSpan="2" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" HorizontalOptions="Center" Opacity="0.5"/>
+                        <Label Text="Travelers" Grid.Row="0" Grid.Column="1" FontSize="16" TextColor="#747B9B" VerticalOptions="End" Margin="0,10,0,0"/>
+                        <Label Text="{Binding Value, StringFormat='{} {0} traveler(s)'}" BindingContext="{x:Reference Name=TravelersStepper}" Grid.Row="1" Grid.Column="1" FontSize="22" TextColor="#051855" VerticalOptions="Start" Margin="0,5,0,5"/>
+                        <Stepper x:Name="TravelersStepper" Minimum="1" Maximum="10" Grid.Column="2" Value="1" Grid.RowSpan="2" VerticalOptions="Center" Margin="10"/>
+                    </Grid>
+                </Frame>
+                
+                <Frame Margin="0,5,0,5" BorderColor="#B2B2B2" Padding="0" CornerRadius="10">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.4*"/>
+                            <RowDefinition Height="0.6*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_class" Grid.RowSpan="2" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" HorizontalOptions="Center" Opacity="0.5"/>
+                        <Label Text="Preferred class" Grid.Row="0" Grid.Column="1" FontSize="16" TextColor="#747B9B" VerticalOptions="End" Margin="0,0,0,0"/>
+                        <!--<Label Text="Economy" Grid.Row="1" Grid.Column="1" FontSize="22" TextColor="#051855" VerticalOptions="Start" Margin="0,5,0,5"/>-->
+                        <Picker SelectedIndex="0" BackgroundColor="Transparent" Grid.Column="1" Grid.Row="1" FontSize="20" TextColor="#051855" VerticalOptions="Center" Margin="-15,0,10,10">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                  <x:String>Economy</x:String>
+                                  <x:String>Premium Economy</x:String>
+                                  <x:String>Business</x:String>
+                                  <x:String>First class</x:String>
+                                </x:Array>
+                              </Picker.ItemsSource>
+                        </Picker>
+                    </Grid>
+                </Frame>
+                
+                <StackLayout Orientation="Horizontal" Margin="10" >
+                    <Label Text="optional" VerticalOptions="Center" TextColor="#48517C" FontSize="Small"/>
+                    <BoxView BackgroundColor="#B2B2B2" HeightRequest="0.5" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                </StackLayout>
+                
+               <Frame Margin="0,5,0,5" BorderColor="#B2B2B2" Padding="0" CornerRadius="10">
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.4*"/>
+                            <RowDefinition Height="0.6*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_nonstop" Grid.RowSpan="2" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" HorizontalOptions="Center" Opacity="0.5"/>
+                        <Label Text="Nonstop flights only" Grid.Row="0" Grid.Column="1" FontSize="16" TextColor="#747B9B" VerticalOptions="End" Margin="0,10,0,0"/>
+                        <Label  Text="{Binding IsToggled}" BindingContext="{x:Reference Name=NonStopSwitch}" Grid.Row="1" Grid.Column="1" FontSize="22" TextColor="#051855" VerticalOptions="Start" Margin="0,5,0,5"/>
+                        <Switch x:Name="NonStopSwitch" Grid.Column="2" Grid.RowSpan="2" VerticalOptions="Center" HorizontalOptions="Center" IsToggled="true" Margin="10"/>
+                    </Grid>
+                </Frame>
+                
+            </FlexLayout>
+            <Button Grid.Row="2" BackgroundColor="#2458E2" TextColor="White" FontSize="Medium" Text="Search" Margin="10" Padding="10"/>
+        </Grid>
+    </ScrollView>
 </ContentPage>
