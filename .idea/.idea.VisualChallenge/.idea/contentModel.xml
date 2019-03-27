@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/xamarin.forms/4.0.1.206893/build/MonoAndroid10" t="Include">
+      <e p="proguard.cfg" t="Include" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_VisualChallenge.1990500301.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Developer/Xamarin/android-sdk-macosx/platforms/android-27/data/res" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="VisualChallenge/VisualChallenge" t="IncludeRecursive">
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="AppShell.xaml" t="Include" />
+        <e p="AppShell.xaml.cs" t="Include" />
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GradientView.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="VisualChallenge.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="VisualChallenge.csproj" t="IncludeRecursive" />
+        <e p="VisualChallengePage.xaml" t="Include" />
+        <e p="VisualChallengePage.xaml.cs" t="Include" />
+      </e>
+      <e p="VisualChallenge/VisualChallenge.Android" t="IncludeRecursive">
+        <e p="Assets" t="Include">
+          <e p="AboutAssets.txt" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainActivity.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AndroidManifest.xml" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="AboutResources.txt" t="Include" />
+          <e p="drawable" t="Include">
+            <e p="launch_screen.axml" t="Include" />
+          </e>
+          <e p="drawable-hdpi" t="Include">
+            <e p="xamagon_preview.png" t="Include" />
+          </e>
+          <e p="drawable-xhdpi" t="Include">
+            <e p="xamagon_preview.png" t="Include" />
+          </e>
+          <e p="drawable-xxhdpi" t="Include">
+            <e p="xamagon_preview.png" t="Include" />
+          </e>
+          <e p="drawable-xxxhdpi" t="Include">
+            <e p="xamagon_preview.png" t="Include" />
+          </e>
+          <e p="layout" t="Include">
+            <e p="Tabbar.axml" t="Include" />
+            <e p="Toolbar.axml" t="Include" />
+          </e>
+          <e p="mipmap-anydpi-v26" t="Include">
+            <e p="icon.xml" t="Include" />
+            <e p="icon_round.xml" t="Include" />
+          </e>
+          <e p="mipmap-hdpi" t="Include">
+            <e p="icon.png" t="Include" />
+            <e p="launcher_foreground.png" t="Include" />
+          </e>
+          <e p="mipmap-mdpi" t="Include">
+            <e p="icon.png" t="Include" />
+            <e p="launcher_foreground.png" t="Include" />
+          </e>
+          <e p="mipmap-xhdpi" t="Include">
+            <e p="icon.png" t="Include" />
+            <e p="launcher_foreground.png" t="Include" />
+          </e>
+          <e p="mipmap-xxhdpi" t="Include">
+            <e p="icon.png" t="Include" />
+            <e p="launcher_foreground.png" t="Include" />
+          </e>
+          <e p="mipmap-xxxhdpi" t="Include">
+            <e p="icon.png" t="Include" />
+            <e p="launcher_foreground.png" t="Include" />
+          </e>
+          <e p="Resource.designer.cs" t="Include" />
+          <e p="values" t="Include">
+            <e p="colors.xml" t="Include" />
+            <e p="styles.xml" t="Include" />
+          </e>
+        </e>
+        <e p="VisualChallenge.Android.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="VisualChallenge/VisualChallenge.iOS" t="IncludeRecursive">
+        <e p="AppDelegate.cs" t="Include" />
+        <e p="Assets.xcassets" t="Include">
+          <e p="AppIcon.appiconset" t="Include">
+            <e p="Contents.json" t="Include" />
+            <e p="Icon1024.png" t="Include" />
+            <e p="Icon120.png" t="Include" />
+            <e p="Icon152.png" t="Include" />
+            <e p="Icon167.png" t="Include" />
+            <e p="Icon180.png" t="Include" />
+            <e p="Icon20.png" t="Include" />
+            <e p="Icon29.png" t="Include" />
+            <e p="Icon40.png" t="Include" />
+            <e p="Icon58.png" t="Include" />
+            <e p="Icon60.png" t="Include" />
+            <e p="Icon76.png" t="Include" />
+            <e p="Icon80.png" t="Include" />
+            <e p="Icon87.png" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entitlements.plist" t="Include" />
+        <e p="Info.plist" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="LaunchScreen.storyboard" t="Include" />
+          <e p="tab_about.png" t="Include" />
+          <e p="tab_about@2x.png" t="Include" />
+          <e p="tab_about@3x.png" t="Include" />
+          <e p="tab_feed.png" t="Include" />
+          <e p="tab_feed@2x.png" t="Include" />
+          <e p="tab_feed@3x.png" t="Include" />
+          <e p="xamarin_logo.png" t="Include" />
+          <e p="xamarin_logo@2x.png" t="Include" />
+          <e p="xamarin_logo@3x.png" t="Include" />
+        </e>
+        <e p="VisualChallenge.iOS.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="VisualChallenge.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

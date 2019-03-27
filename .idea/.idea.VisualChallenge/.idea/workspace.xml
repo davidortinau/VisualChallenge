@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29a9c1a4-a384-4ea9-82fb-07312451023e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.VisualChallenge/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.VisualChallenge/VisualChallenge.Android.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VisualChallenge/VisualChallenge/GradientView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisualChallenge/VisualChallenge.Android/VisualChallenge.Android.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VisualChallenge/VisualChallenge.Android/VisualChallenge.Android.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/AppDelegate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/VisualChallenge.iOS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/VisualChallenge.iOS.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallenge.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallenge.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+              <folding>
+                <marker date="1553729986646" expanded="true" signature="40:2196" ph="&lt;&lt;ScrollView&gt;&#10;&#9;&#9;&lt;FlexLayout Margin=&quot;20&quot; Direction=&quot;Column&quot; AlignContent=&quot;Center&quot; JustifyContent=&quot;SpaceAround&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;Label Text=&quot;Start Here&quot; FontSize=&quot;24&quot; HorizontalTextAlignment=&quot;Center&quot;/&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Text=&quot;Read More About Visual&quot; Clicked=&quot;Button_Clicked&quot; /&gt;&#10;&#10;&#9;&#9;&lt;/FlexLayout&gt;&#10;&#9;&lt;/ScrollView&gt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="575:756" ph="&lt;!--...--&gt;" />
+                <marker date="1553729986646" expanded="true" signature="760:2181" ph="&lt;&lt;ListView.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;TextCell Text=&quot;{Binding DisplayName}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&lt;/ListView.ItemTemplate&gt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="858:2168" ph="&lt;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;TextCell Text=&quot;{Binding DisplayName}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/DataTemplate&gt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="885:2141" ph="&lt;&lt;TextCell Text=&quot;{Binding DisplayName}&quot; /&gt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="904:2122" ph="&lt;&lt;Grid RowSpacing=&quot;5&quot; ColumnSpacing=&quot;0&quot;&gt;&#10;                    &lt;Grid.RowDefinitions&gt;&#10;                        &lt;RowDefinition Height=&quot;*&quot;/&gt;&#10;                        &lt;RowDefinition Height=&quot;Auto&quot;/&gt;&#10;                    &lt;/Grid.RowDefinitions&gt;&#10;                        &#10;                    &lt;ffimageloading:CachedImage Aspect=&quot;AspectFill&quot; &#10;                                                Grid.RowSpan=&quot;2&quot; &#10;                                                HorizontalOptions=&quot;FillAndExpand&quot;&#10;                                                VerticalOptions=&quot;FillAndExpand&quot;&#10;                                                RetryCount=&quot;1&quot;&#10;                                                RetryDelay=&quot;2000&quot;&#10;                                                IsOpaque=&quot;true&quot;&#10;                                                CacheDuration=&quot;365&quot;&#10;                                                FadeAnimationForCachedImages=&quot;true&quot;&#10;                                                FadeAnimationEnabled=&quot;true&quot;&#10;                                                ErrorPlaceholder = &quot;hokone.jpg&quot;&#10;                                                Source=&quot;{Binding BackGroundImage}&quot; /&gt;&#10;                        &#10;                    &lt;controls:GradientView StartColor=&quot;White&quot; &#10;                                           EndColor=&quot;##3e6366&quot; &#10;                                           Grid.Row=&quot;0&quot;&#10;                                           Grid.RowSpan=&quot;2&quot;/&gt;&#10;                    &#10;                    &lt;Grid Margin=&quot;10&quot; RowSpacing=&quot;10&quot; ColumnSpacing=&quot;10&quot; Grid.Row=&quot;1&quot;&gt;&#10;                        &lt;Grid.RowDefinitions&gt;&#10;                            &lt;RowDefinition Height=&quot;Auto&quot;/&gt;&#10;                            &lt;RowDefinition Height=&quot;25&quot;/&gt;&#10;                        &lt;/Grid.RowDefinitions&gt;&#10;                        &lt;Grid.ColumnDefinitions&gt;&#10;                            &lt;ColumnDefinition Width=&quot;25&quot;/&gt;&#10;                            &lt;ColumnDefinition Width=&quot;*&quot;/&gt;&#10;                            &lt;ColumnDefinition Width=&quot;Auto&quot;/&gt;&#10;                        &lt;/Grid.ColumnDefinitions&gt;&#10;                            &#10;                        &lt;Label class=&quot;h2-clear&quot; Text=&quot;{Binding Title}&quot;  Grid.Row=&quot;0&quot; Grid.ColumnSpan=&quot;3&quot; LineBreakMode=&quot;WordWrap&quot;/&gt;&#10;                            &#10;                        &lt;circleview:CircleImage Source=&quot;{Binding ImageLink}&quot; Aspect=&quot;AspectFill&quot; Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; WidthRequest=&quot;25&quot; HeightRequest=&quot;25&quot; /&gt;&#10;                        &lt;Label class=&quot;label-clear&quot; Text=&quot;{Binding Handle}&quot; Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; VerticalOptions=&quot;Center&quot; /&gt;&#10;&#10;                        &lt;StackLayout Orientation=&quot;Horizontal&quot;  VerticalOptions=&quot;Center&quot; Grid.Column=&quot;2&quot; Grid.Row=&quot;1&quot; Spacing=&quot;5&quot; &gt;&#10;                            &lt;Label class=&quot;label-clear&quot; Text=&quot;{Binding PublishDateFormated, StringFormat='{0:MMMM d, yyyy}'}&quot; /&gt;&#10;                        &lt;/StackLayout&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/Grid&gt; &lt;ViewCell.Effects&gt;&#10;                    &lt;effects:ViewShadowEffect Radius=&quot;5&quot; DistanceX=&quot;5&quot; DistanceY=&quot;5&quot; Color=&quot;Red&quot; /&gt;&#10;                &lt;/ViewCell.Effects&gt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="920:2106" ph="&lt;&lt;Grid.RowDefinitions&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RowDefinition Height=&quot;*&quot;/&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RowDefinition Height=&quot;Auto&quot;/&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Grid.RowDefinitions&gt; &lt;ffimageloading:CachedImage Aspect=&quot;AspectFill&quot; &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Grid.RowSpan=&quot;2&quot; &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;HorizontalOptions=&quot;FillAndExpand&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;VerticalOptions=&quot;FillAndExpand&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;IsOpaque=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;CacheDuration=&quot;365&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;FadeAnimationForCachedImages=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;FadeAnimationEnabled=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;DownsampleToViewSize=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Source=&quot;{Binding Image}&quot; /&gt; &lt;Label TextColor=&quot;White&quot; &#10;&#9;&#9;&#9;&#9;&#9;&#9;       Text=&quot;{Binding Name}&quot;   &#10;&#9;&#9;&#9;&#9;&#9;&#9;       LineBreakMode=&quot;WordWrap&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;       Grid.Row=&quot;1&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;       VerticalOptions=&quot;End&quot;/&gt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="966:1089" ph="&lt;&lt;RowDefinition Height=&quot;*&quot;/&gt; &lt;RowDefinition Height=&quot;Auto&quot;/&gt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="1103:1508" ph="&lt;.../&gt;" />
+                <marker date="1553729986646" expanded="true" signature="1841:2092" ph="&lt;.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/GradientView.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding>
+                <marker date="1553729868560" expanded="true" signature="6:66" ph="..." />
+                <marker date="1553729868560" expanded="true" signature="93:1476" ph="{...}" />
+                <marker date="1553729868560" expanded="true" signature="139:1474" ph="{...}" />
+                <marker date="1553729868560" expanded="true" signature="349:526" ph="{...}" />
+                <marker date="1553729868560" expanded="true" signature="610:1468" ph="{...}" />
+                <marker date="1553729868560" expanded="true" signature="1287:1377" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/AppDelegate.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+              <folding>
+                <marker date="1553727728693" expanded="false" signature="6:98" ph="..." />
+                <marker date="1553727728693" expanded="true" signature="129:1411" ph="{...}" />
+                <marker date="1553727728693" expanded="true" signature="136:361" ph="/* The UIApplicationDelegate for the application. This class is responsible for launching the ... */" />
+                <marker date="1553727728693" expanded="true" signature="490:1409" ph="{...}" />
+                <marker date="1553727728693" expanded="true" signature="505:842" ph="/* This method is invoked when the application has loaded and is ready to run. In this ... */" />
+                <marker date="1553727728693" expanded="true" signature="930:1403" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="25" />
+              <folding>
+                <marker date="1553727341013" expanded="false" signature="6:94" ph="..." />
+                <marker date="1553727341013" expanded="true" signature="121:1695" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="182:1693" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="272:1343" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="370:1285" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="415:578" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="623:838" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="883:1077" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="1122:1271" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="1408:1545" ph="{...}" />
+                <marker date="1553727341013" expanded="true" signature="1576:1687" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/GradientView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/AppDelegate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/AppShell.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/AppShell.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml.cs" />
+        <option value="$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/AppDelegate.cs" />
+        <option value="$PROJECT_DIR$/VisualChallenge/VisualChallenge/GradientView.cs" />
+        <option value="$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml" />
+      </list>
+    </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="VisualChallenge.Android/invalid/Android Facet - VisualChallenge.Android" />
+    </ignored-facets>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1528" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="VisualChallenge" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="VisualChallenge" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="VisualChallenge" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="VisualChallenge" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="VisualChallenge" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="App.xaml" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="VisualChallenge" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="VisualChallenge" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="VisualChallengePage.xaml" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Xamarin.iOS.iOS Default">
+    <configuration name="Android Default" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="iOS Default" type="XamarinIOSProject" factoryName="Xamarin.iOS">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/VisualChallenge.iOS.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="DEFAULT_IPHONE_DEVICE" value="" />
+      <option name="DEFAULT_IPHONE_SIMULATOR" value="iPhone SE iOS 11.3" />
+      <option name="DEPLOY_TARGET_BEHAVIOUR_NAME" value="Simulator" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29a9c1a4-a384-4ea9-82fb-07312451023e" name="Default Changelist" comment="" />
+      <created>1553726090387</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553726090387</updated>
+      <workItem from="1553726092479" duration="3847000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3847000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1528" height="1057" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" />
+      <window_info id="Azure Explorer" weight="0.32960597" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31561238" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Build" weight="0.33367875" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="NuGet" weight="0.32953367" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Azure Activity Log" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/AppShell.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <marker date="1553726022276" expanded="false" signature="6:69" ph="..." />
+            <marker date="1553726022276" expanded="true" signature="96:249" ph="{...}" />
+            <marker date="1553726022276" expanded="true" signature="154:247" ph="{...}" />
+            <marker date="1553726022276" expanded="true" signature="186:241" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/AppShell.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1553726022275" expanded="true" signature="39:1781" ph="&lt;&lt;Shell.Resources&gt;&#10;        &lt;ResourceDictionary&gt;&#10;            &lt;Color x:Key=&quot;NavigationPrimary&quot;&gt;##2196F3&lt;/Color&gt;&#10;            &lt;Style x:Key=&quot;BaseStyle&quot; TargetType=&quot;Element&quot;&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellForegroundColor&quot; Value=&quot;White&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTitleColor&quot; Value=&quot;White&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellDisabledColor&quot; Value=&quot;##B4FFFFFF&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellUnselectedColor&quot; Value=&quot;##95FFFFFF&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarForegroundColor&quot; Value=&quot;White&quot;/&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarUnselectedColor&quot; Value=&quot;##95FFFFFF&quot;/&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarTitleColor&quot; Value=&quot;White&quot;/&gt;&#10;            &lt;/Style&gt;&#10;            &lt;Style TargetType=&quot;ShellItem&quot; BasedOn=&quot;{StaticResource BaseStyle}&quot; /&gt;&#10;        &lt;/ResourceDictionary&gt;&#10;    &lt;/Shell.Resources&gt; &lt;ShellItem&gt;&#10;        &lt;ShellSection&gt;&#10;            &lt;ShellContent ContentTemplate=&quot;{DataTemplate local:VisualChallengePage}&quot;/&gt;&#10;        &lt;/ShellSection&gt;&#10;    &lt;/ShellItem&gt;.../&gt;" />
+            <marker date="1553726022275" expanded="true" signature="443:486" ph="&lt;!--...--&gt;" />
+            <marker date="1553726022275" expanded="true" signature="491:1603" ph="&lt;&lt;ResourceDictionary&gt;&#10;            &lt;Color x:Key=&quot;NavigationPrimary&quot;&gt;##2196F3&lt;/Color&gt;&#10;            &lt;Style x:Key=&quot;BaseStyle&quot; TargetType=&quot;Element&quot;&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellForegroundColor&quot; Value=&quot;White&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTitleColor&quot; Value=&quot;White&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellDisabledColor&quot; Value=&quot;##B4FFFFFF&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellUnselectedColor&quot; Value=&quot;##95FFFFFF&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarForegroundColor&quot; Value=&quot;White&quot;/&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarUnselectedColor&quot; Value=&quot;##95FFFFFF&quot;/&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarTitleColor&quot; Value=&quot;White&quot;/&gt;&#10;            &lt;/Style&gt;&#10;            &lt;Style TargetType=&quot;ShellItem&quot; BasedOn=&quot;{StaticResource BaseStyle}&quot; /&gt;&#10;        &lt;/ResourceDictionary&gt;.../&gt;" />
+            <marker date="1553726022275" expanded="true" signature="517:1580" ph="&lt;&lt;Color x:Key=&quot;NavigationPrimary&quot;&gt;##2196F3&lt;/Color&gt; &lt;Style x:Key=&quot;BaseStyle&quot; TargetType=&quot;Element&quot;&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellForegroundColor&quot; Value=&quot;White&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTitleColor&quot; Value=&quot;White&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellDisabledColor&quot; Value=&quot;##B4FFFFFF&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellUnselectedColor&quot; Value=&quot;##95FFFFFF&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarForegroundColor&quot; Value=&quot;White&quot;/&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarUnselectedColor&quot; Value=&quot;##95FFFFFF&quot;/&gt;&#10;                &lt;Setter Property=&quot;Shell.ShellTabBarTitleColor&quot; Value=&quot;White&quot;/&gt;&#10;            &lt;/Style&gt; &lt;Style TargetType=&quot;ShellItem&quot; BasedOn=&quot;{StaticResource BaseStyle}&quot; /&gt;.../&gt;" />
+            <marker date="1553726022275" expanded="true" signature="611:1468" ph="&lt;&lt;Setter Property=&quot;Shell.ShellBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt; &lt;Setter Property=&quot;Shell.ShellForegroundColor&quot; Value=&quot;White&quot; /&gt; &lt;Setter Property=&quot;Shell.ShellTitleColor&quot; Value=&quot;White&quot; /&gt; &lt;Setter Property=&quot;Shell.ShellDisabledColor&quot; Value=&quot;##B4FFFFFF&quot; /&gt; &lt;Setter Property=&quot;Shell.ShellUnselectedColor&quot; Value=&quot;##95FFFFFF&quot; /&gt; &lt;Setter Property=&quot;Shell.ShellTabBarBackgroundColor&quot; Value=&quot;{StaticResource NavigationPrimary}&quot; /&gt; &lt;Setter Property=&quot;Shell.ShellTabBarForegroundColor&quot; Value=&quot;White&quot;/&gt; &lt;Setter Property=&quot;Shell.ShellTabBarUnselectedColor&quot; Value=&quot;##95FFFFFF&quot;/&gt; &lt;Setter Property=&quot;Shell.ShellTabBarTitleColor&quot; Value=&quot;White&quot;/&gt;.../&gt;" />
+            <marker date="1553726022275" expanded="true" signature="1609:1771" ph="&lt;&lt;ShellSection&gt;&#10;            &lt;ShellContent ContentTemplate=&quot;{DataTemplate local:VisualChallengePage}&quot;/&gt;&#10;        &lt;/ShellSection&gt;.../&gt;" />
+            <marker date="1553726022275" expanded="true" signature="1629:1754" ph="&lt;&lt;ShellContent ContentTemplate=&quot;{DataTemplate local:VisualChallengePage}&quot;/&gt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge.iOS/AppDelegate.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <marker date="1553727728693" expanded="false" signature="6:98" ph="..." />
+            <marker date="1553727728693" expanded="true" signature="129:1411" ph="{...}" />
+            <marker date="1553727728693" expanded="true" signature="136:361" ph="/* The UIApplicationDelegate for the application. This class is responsible for launching the ... */" />
+            <marker date="1553727728693" expanded="true" signature="490:1409" ph="{...}" />
+            <marker date="1553727728693" expanded="true" signature="505:842" ph="/* This method is invoked when the application has loaded and is ready to run. In this ... */" />
+            <marker date="1553727728693" expanded="true" signature="930:1403" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <marker date="1553727341013" expanded="false" signature="6:94" ph="..." />
+            <marker date="1553727341013" expanded="true" signature="121:1695" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="182:1693" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="272:1343" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="370:1285" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="415:578" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="623:838" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="883:1077" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="1122:1271" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="1408:1545" ph="{...}" />
+            <marker date="1553727341013" expanded="true" signature="1576:1687" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/GradientView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <marker date="1553729868560" expanded="true" signature="6:66" ph="..." />
+            <marker date="1553729868560" expanded="true" signature="93:1476" ph="{...}" />
+            <marker date="1553729868560" expanded="true" signature="139:1474" ph="{...}" />
+            <marker date="1553729868560" expanded="true" signature="349:526" ph="{...}" />
+            <marker date="1553729868560" expanded="true" signature="610:1468" ph="{...}" />
+            <marker date="1553729868560" expanded="true" signature="1287:1377" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisualChallenge/VisualChallenge/VisualChallengePage.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding>
+            <marker date="1553729986646" expanded="true" signature="40:2196" ph="&lt;&lt;ScrollView&gt;&#10;&#9;&#9;&lt;FlexLayout Margin=&quot;20&quot; Direction=&quot;Column&quot; AlignContent=&quot;Center&quot; JustifyContent=&quot;SpaceAround&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;Label Text=&quot;Start Here&quot; FontSize=&quot;24&quot; HorizontalTextAlignment=&quot;Center&quot;/&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Text=&quot;Read More About Visual&quot; Clicked=&quot;Button_Clicked&quot; /&gt;&#10;&#10;&#9;&#9;&lt;/FlexLayout&gt;&#10;&#9;&lt;/ScrollView&gt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="575:756" ph="&lt;!--...--&gt;" />
+            <marker date="1553729986646" expanded="true" signature="760:2181" ph="&lt;&lt;ListView.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;TextCell Text=&quot;{Binding DisplayName}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&lt;/ListView.ItemTemplate&gt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="858:2168" ph="&lt;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;TextCell Text=&quot;{Binding DisplayName}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/DataTemplate&gt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="885:2141" ph="&lt;&lt;TextCell Text=&quot;{Binding DisplayName}&quot; /&gt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="904:2122" ph="&lt;&lt;Grid RowSpacing=&quot;5&quot; ColumnSpacing=&quot;0&quot;&gt;&#10;                    &lt;Grid.RowDefinitions&gt;&#10;                        &lt;RowDefinition Height=&quot;*&quot;/&gt;&#10;                        &lt;RowDefinition Height=&quot;Auto&quot;/&gt;&#10;                    &lt;/Grid.RowDefinitions&gt;&#10;                        &#10;                    &lt;ffimageloading:CachedImage Aspect=&quot;AspectFill&quot; &#10;                                                Grid.RowSpan=&quot;2&quot; &#10;                                                HorizontalOptions=&quot;FillAndExpand&quot;&#10;                                                VerticalOptions=&quot;FillAndExpand&quot;&#10;                                                RetryCount=&quot;1&quot;&#10;                                                RetryDelay=&quot;2000&quot;&#10;                                                IsOpaque=&quot;true&quot;&#10;                                                CacheDuration=&quot;365&quot;&#10;                                                FadeAnimationForCachedImages=&quot;true&quot;&#10;                                                FadeAnimationEnabled=&quot;true&quot;&#10;                                                ErrorPlaceholder = &quot;hokone.jpg&quot;&#10;                                                Source=&quot;{Binding BackGroundImage}&quot; /&gt;&#10;                        &#10;                    &lt;controls:GradientView StartColor=&quot;White&quot; &#10;                                           EndColor=&quot;##3e6366&quot; &#10;                                           Grid.Row=&quot;0&quot;&#10;                                           Grid.RowSpan=&quot;2&quot;/&gt;&#10;                    &#10;                    &lt;Grid Margin=&quot;10&quot; RowSpacing=&quot;10&quot; ColumnSpacing=&quot;10&quot; Grid.Row=&quot;1&quot;&gt;&#10;                        &lt;Grid.RowDefinitions&gt;&#10;                            &lt;RowDefinition Height=&quot;Auto&quot;/&gt;&#10;                            &lt;RowDefinition Height=&quot;25&quot;/&gt;&#10;                        &lt;/Grid.RowDefinitions&gt;&#10;                        &lt;Grid.ColumnDefinitions&gt;&#10;                            &lt;ColumnDefinition Width=&quot;25&quot;/&gt;&#10;                            &lt;ColumnDefinition Width=&quot;*&quot;/&gt;&#10;                            &lt;ColumnDefinition Width=&quot;Auto&quot;/&gt;&#10;                        &lt;/Grid.ColumnDefinitions&gt;&#10;                            &#10;                        &lt;Label class=&quot;h2-clear&quot; Text=&quot;{Binding Title}&quot;  Grid.Row=&quot;0&quot; Grid.ColumnSpan=&quot;3&quot; LineBreakMode=&quot;WordWrap&quot;/&gt;&#10;                            &#10;                        &lt;circleview:CircleImage Source=&quot;{Binding ImageLink}&quot; Aspect=&quot;AspectFill&quot; Grid.Row=&quot;1&quot; Grid.Column=&quot;0&quot; WidthRequest=&quot;25&quot; HeightRequest=&quot;25&quot; /&gt;&#10;                        &lt;Label class=&quot;label-clear&quot; Text=&quot;{Binding Handle}&quot; Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; VerticalOptions=&quot;Center&quot; /&gt;&#10;&#10;                        &lt;StackLayout Orientation=&quot;Horizontal&quot;  VerticalOptions=&quot;Center&quot; Grid.Column=&quot;2&quot; Grid.Row=&quot;1&quot; Spacing=&quot;5&quot; &gt;&#10;                            &lt;Label class=&quot;label-clear&quot; Text=&quot;{Binding PublishDateFormated, StringFormat='{0:MMMM d, yyyy}'}&quot; /&gt;&#10;                        &lt;/StackLayout&gt;&#10;                    &lt;/Grid&gt;&#10;                &lt;/Grid&gt; &lt;ViewCell.Effects&gt;&#10;                    &lt;effects:ViewShadowEffect Radius=&quot;5&quot; DistanceX=&quot;5&quot; DistanceY=&quot;5&quot; Color=&quot;Red&quot; /&gt;&#10;                &lt;/ViewCell.Effects&gt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="920:2106" ph="&lt;&lt;Grid.RowDefinitions&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RowDefinition Height=&quot;*&quot;/&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RowDefinition Height=&quot;Auto&quot;/&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Grid.RowDefinitions&gt; &lt;ffimageloading:CachedImage Aspect=&quot;AspectFill&quot; &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Grid.RowSpan=&quot;2&quot; &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;HorizontalOptions=&quot;FillAndExpand&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;VerticalOptions=&quot;FillAndExpand&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;IsOpaque=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;CacheDuration=&quot;365&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;FadeAnimationForCachedImages=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;FadeAnimationEnabled=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;DownsampleToViewSize=&quot;true&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Source=&quot;{Binding Image}&quot; /&gt; &lt;Label TextColor=&quot;White&quot; &#10;&#9;&#9;&#9;&#9;&#9;&#9;       Text=&quot;{Binding Name}&quot;   &#10;&#9;&#9;&#9;&#9;&#9;&#9;       LineBreakMode=&quot;WordWrap&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;       Grid.Row=&quot;1&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;       VerticalOptions=&quot;End&quot;/&gt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="966:1089" ph="&lt;&lt;RowDefinition Height=&quot;*&quot;/&gt; &lt;RowDefinition Height=&quot;Auto&quot;/&gt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="1103:1508" ph="&lt;.../&gt;" />
+            <marker date="1553729986646" expanded="true" signature="1841:2092" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

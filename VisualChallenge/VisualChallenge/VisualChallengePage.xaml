@@ -5,19 +5,53 @@
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             xmlns:controls="clr-namespace:VisualChallenge"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="Visual Challenge">
 
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+	
+	<ListView x:Name="MonkeyList"
+	          RowHeight="200"
+	          SeparatorVisibility="None">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<Grid RowSpacing="5" ColumnSpacing="0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						
+						<ffimageloading:CachedImage Aspect="AspectFill" 
+													Grid.RowSpan="2" 
+													HorizontalOptions="FillAndExpand"
+													VerticalOptions="FillAndExpand"
+													IsOpaque="true"
+													CacheDuration="365"
+													FadeAnimationForCachedImages="true"
+													FadeAnimationEnabled="true"
+													DownsampleToViewSize="true"
+													Source="{Binding Image}" />
+                        
+                     <controls:GradientView StartColor="White"  
+                                            EndColor="#3e6366"  
+                                            Grid.Row="0" 
+                                            Grid.RowSpan="2"/> 
+                    
+						<Label TextColor="White" 
+						       Margin="10"
+						       Text="{Binding Name}"
+						       FontAttributes="Bold"
+						       FontSize="Large"
+						       LineBreakMode="WordWrap"
+						       Grid.Row="1"
+						       VerticalOptions="End"/> 
+					</Grid>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
 </ContentPage>
