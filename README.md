@@ -20,3 +20,6 @@ Listview has no _Visual_ padding for example.
 ## what you would like to see us doing differently in support of this goal: same design on iOS and Android
 
 Master/detail page?
+
+
+Bye bye
