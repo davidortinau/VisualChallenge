@@ -11,10 +11,19 @@ namespace VisualChallenge
         {
             InitializeComponent();
         }
-
-        private void Button_Clicked(object sender, EventArgs e)
+      
+        private async void OnPhoto_Clicked(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/visual"));
+            string[] options = new string[] { "Open Camera", "Gallery" };
+            var result = await DisplayActionSheet("Imagen", "Cancel", null, options);
+            if (result == "Open Camera")
+            {
+               await DisplayAlert("Options" ,"Camera Selected", "Cancel");
+            }
+            if (result == "Gallery")
+            {
+                await DisplayAlert("Options", "Gallery","Cancel");
+            }
         }
     }
 }

@@ -1,19 +1,104 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Class="VisualChallenge.VisualChallengePage" Shell.NavBarIsVisible="True" BackgroundColor="White" Title="Visual Challenge">
     <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-        <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-        <Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Frame Grid.Row="0" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5" HorizontalOptions="FillAndExpand" Margin="16,16,16,0" Padding="3">
+                <Image Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="https://xamariners.com/wp-content/uploads/2016/12/monkeys-585x418.png" />
+            </Frame>
+            <Button BackgroundColor="#d8d8d8" BorderColor="White" BorderWidth="4" TranslationY="15" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" BorderRadius="0" HeightRequest="40" Clicked="OnPhoto_Clicked" WidthRequest="150"
+                CornerRadius="20" Text="Take Photo" Opacity="0.7" TextColor="White" FontAttributes="Bold" />
+            <ScrollView Grid.Row="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="16,10,16,16" Orientation="Vertical">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="45" />
+                        </StackLayout.HeightRequest>
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Entry #1" Keyboard="Text" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0, 5">
+                        <StackLayout.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="45" />
+                        </StackLayout.HeightRequest>
+                        <Picker HorizontalOptions="FillAndExpand" Title="Picker 1" TitleColor="#424242">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Baboon</x:String>
+                                    <x:String>Capuchin Monkey</x:String>
+                                    <x:String>Blue Monkey</x:String>
+                                    <x:String>Squirrel Monkey</x:String>
+                                    <x:String>Golden Lion Tamarin</x:String>
+                                    <x:String>Howler Monkey</x:String>
+                                    <x:String>Japanese Macaque</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="45" />
+                        </StackLayout.HeightRequest>
+                        <Picker HorizontalOptions="FillAndExpand" Title="Picker 2">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Baboon</x:String>
+                                    <x:String>Capuchin Monkey</x:String>
+                                    <x:String>Blue Monkey</x:String>
+                                    <x:String>Squirrel Monkey</x:String>
+                                    <x:String>Golden Lion Tamarin</x:String>
+                                    <x:String>Howler Monkey</x:String>
+                                    <x:String>Japanese Macaque</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0, 5">
+                        <StackLayout.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="45" />
+                        </StackLayout.HeightRequest>
+                        <Picker Title="Picker 3" HorizontalOptions="FillAndExpand">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Baboon</x:String>
+                                    <x:String>Capuchin Monkey</x:String>
+                                    <x:String>Blue Monkey</x:String>
+                                    <x:String>Squirrel Monkey</x:String>
+                                    <x:String>Golden Lion Tamarin</x:String>
+                                    <x:String>Howler Monkey</x:String>
+                                    <x:String>Japanese Macaque</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="45" />
+                        </StackLayout.HeightRequest>
+                        <Picker Title="Picker 4" HorizontalOptions="FillAndExpand">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Baboon</x:String>
+                                    <x:String>Capuchin Monkey</x:String>
+                                    <x:String>Blue Monkey</x:String>
+                                    <x:String>Squirrel Monkey</x:String>
+                                    <x:String>Golden Lion Tamarin</x:String>
+                                    <x:String>Howler Monkey</x:String>
+                                    <x:String>Japanese Macaque</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+        <StackLayout VerticalOptions="EndAndExpand" Margin="15,0,15,15">
+            <Button TextColor="White" BorderRadius="20" HeightRequest="40" BackgroundColor="#373f83" Text="Button" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
     </FlexLayout>
-    
 </ContentPage>

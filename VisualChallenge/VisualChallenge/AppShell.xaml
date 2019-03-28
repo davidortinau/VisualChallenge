@@ -8,8 +8,7 @@
        FlyoutBehavior="Disabled"
        Title="VisualChallenge"
        x:Class="VisualChallenge.AppShell"
-       Visual="Material"
-       >
+       Visual="Material">
 
     <!-- 
         Styles and Resources 
