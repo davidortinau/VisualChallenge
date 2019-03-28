@@ -8,9 +8,8 @@
              Title="Visual Challenge"
              >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add"></ToolbarItem>
+        <ToolbarItem Order="Primary" Text="Add"></ToolbarItem>
         <ToolbarItem Order="Secondary" Priority="0" Text="Update"></ToolbarItem>
-        <!--<ToolbarItem Order="Secondary" Text="Delete"></ToolbarItem>-->
     </ContentPage.ToolbarItems>
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
