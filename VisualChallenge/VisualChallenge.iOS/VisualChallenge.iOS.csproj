@@ -144,4 +144,19 @@
       <Name>VisualChallenge</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkey1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkey2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkey3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkey4.jpg" />
+  </ItemGroup>
 </Project>

@@ -7,7 +7,11 @@
              BackgroundColor="White"
              Title="Visual Challenge"
              >
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"></ToolbarItem>
+        <ToolbarItem Order="Secondary" Priority="0" Text="Update"></ToolbarItem>
+        <!--<ToolbarItem Order="Secondary" Text="Delete"></ToolbarItem>-->
+    </ContentPage.ToolbarItems>
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
@@ -23,12 +27,12 @@
             <Frame BorderColor="LightGray">
                 <Grid Visual="Material">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="160"/>
-                        <ColumnDefinition Width="160"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="150"/>
-                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
                     </Grid.RowDefinitions>
                     <Frame Grid.Row="0" Visual="Material" Grid.Column="0" BorderColor="LightGray">
                         <StackLayout >
