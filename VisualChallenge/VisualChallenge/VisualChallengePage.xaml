@@ -1,23 +1,290 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    x:Class="VisualChallenge.VisualChallengePage"
+    xmlns:devsdna="clr-namespace:DevsDNA;assembly=DevsDNA.GradientBoxView"
+    xmlns:cb="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+    Shell.NavBarIsVisible="true"
+    BackgroundColor="{StaticResource PinkBackground}"
+    Title="Interludes"
+    Visual="Material">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color
+                x:Key="PinkText"
+                x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#f9d5f4</x:String>
+                </x:Arguments>
+            </Color>
+            <Color
+                x:Key="PinkBackground"
+                x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#dd78cb</x:String>
+                </x:Arguments>
+            </Color>
+            <Color
+                x:Key="PinkForeground"
+                x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#fc96e1</x:String>
+                </x:Arguments>
+            </Color>
+            <Color
+                x:Key="PurpleForeground"
+                x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#7418f8</x:String>
+                </x:Arguments>
+            </Color>
+            <Color
+                x:Key="TurquoiseForeground"
+                x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#15a3c2</x:String>
+                </x:Arguments>
+            </Color>
+            <Color
+                x:Key="GrayForeground"
+                x:FactoryMethod="FromHex">
+                <x:Arguments>
+                    <x:String>#bcc1c0</x:String>
+                </x:Arguments>
+            </Color>
+            <Style
+                TargetType="Label">
+                <Setter
+                    Property="FontSize"
+                    Value="10" />
+                <Setter
+                    Property="TextColor"
+                    Value="White" />
+                <Setter
+                    Property="HorizontalTextAlignment"
+                    Value="Center" />
+            </Style>
+            <Style
+                x:Key="SectionHeaderLabel"
+                TargetType="Label">
+                <Setter
+                    Property="TextColor"
+                    Value="{StaticResource PinkText}" />
+                <Setter
+                    Property="HorizontalOptions"
+                    Value="Start" />
+                <Setter
+                    Property="FontSize"
+                    Value="12" />
+                <Setter
+                    Property="FontAttributes"
+                    Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <!-- If you decide to change out the flexlayout leave the scroll view here
+         Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+    -->
+    <Grid
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="80" />
+            <RowDefinition
+                Height="4" />
+            <RowDefinition
+                Height="104" />
+        </Grid.RowDefinitions>
+        <ListView
+            Grid.RowSpan="3"
+            Margin="{OnPlatform iOS='20,88,20,0', Android='20,0'}"
+            VerticalOptions="FillAndExpand"
+            BackgroundColor="Transparent"
+            ItemsSource="{Binding AudioSections}"
+            IsGroupingEnabled="true"
+            SeparatorVisibility="None"
+            HasUnevenRows="true"
+            SelectionMode="None"
+            VerticalScrollBarVisibility="Never"
+            HorizontalScrollBarVisibility="Never">
+            <ListView.Header>
+                <Entry
+                    Visual="Material"
+                    Margin="8"
+                    Placeholder="Search"
+                    BackgroundColor="#dadada"
+                    TextColor="#848484"
+                    FontSize="14"
+                    HorizontalOptions="FillAndExpand" />
+            </ListView.Header>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label
+                            BackgroundColor="{StaticResource PinkBackground}"
+                            HeightRequest="14"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Style="{StaticResource SectionHeaderLabel}"
+                            Text="{Binding Name}"
+                            Margin="0" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame
+                            Padding="16"
+                            Margin="0,0,0,8">
+                            <Grid
+                                HeightRequest="50"
+                                RowSpacing="0"
+                                ColumnSpacing="0"
+                                Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="*" />
+                                    <RowDefinition
+                                        Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="60" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                    <ColumnDefinition
+                                        Width="30" />
+                                    <ColumnDefinition
+                                        Width="24" />
+                                </Grid.ColumnDefinitions>
+                                <cb:CircleButton
+                                    Grid.RowSpan="2"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    HeightRequest="46"
+                                    WidthRequest="46"
+                                    FontIcon="Material"
+                                    Icon="md-play-arrow"
+                                    TextColor="White"
+                                    FontSize="40"
+                                    BackgroundColor="{StaticResource PinkForeground}" />
+                                <Label
+                                    Grid.Column="1"
+                                    Margin="16,0,0,0"
+                                    Text="{Binding Name}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"
+                                    FontSize="14"
+                                    TextColor="Black" />
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    Margin="16,0,0,0"
+                                    Text="{Binding Time}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Start"
+                                    FontSize="12"
+                                    TextColor="Gray" />
+                                <cb:CircleButton
+                                    Grid.RowSpan="2"
+                                    Grid.Column="2"
+                                    WidthRequest="30"
+                                    HeightRequest="30"
+                                    BorderRadius="15"
+                                    Padding="0"
+                                    Margin="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    BackgroundColor="{StaticResource GrayForeground}"
+                                    FontIcon="FontAwesome"
+                                    Icon="fa-plus"
+                                    TextColor="White"
+                                    FontSize="14" />
+                                <cb:CircleButton
+                                    Grid.RowSpan="2"
+                                    Grid.Column="3"
+                                    HeightRequest="12"
+                                    FontIcon="Material"
+                                    Icon="md-more-vert"
+                                    FontSize="24"
+                                    TextColor="Gray"
+                                    BackgroundColor="White"
+                                    WidthRequest="12"
+                                    Margin="0,0,-10,0" />
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <devsdna:GradientBoxView
+            Grid.Row="1"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            TopColor="Transparent"
+            BottomColor="{StaticResource PinkBackground}" />
+        <BoxView
+            Grid.Row="2"
+            BackgroundColor="{StaticResource PinkBackground}" />
+        <BoxView
+            Grid.Row="3"
+            BackgroundColor="Black"
+            Opacity="0.55" />
+        <FlexLayout
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            AlignContent="Center"
+            VerticalOptions="Center"
+            JustifyContent="SpaceAround"
+            Padding="0,88,0,0">
+            <StackLayout
+                Orientation="Vertical"
+                Margin="0,2,0,0">
+                <cb:CircleButton
+                    HeightRequest="54"
+                    WidthRequest="54"
+                    TextColor="White"
+                    FontSize="24"
+                    FontIcon="FontAwesome"
+                    Icon="fa-folder"
+                    BackgroundColor="{StaticResource PurpleForeground}" />
+                <Label
+                    Text="Library" />
+            </StackLayout>
+            <StackLayout
+                Orientation="Vertical"
+                Margin="0,-16,0,0">
+                <cb:CircleButton
+                    HeightRequest="74"
+                    WidthRequest="74"
+                    FontSize="70"
+                    TextColor="White"
+                    FontIcon="Material"
+                    Icon="md-play-arrow"
+                    BackgroundColor="{StaticResource PinkForeground}" />
+                <Label
+                    Text="Interludes"
+                    FontAttributes="Bold" />
+            </StackLayout>
+            <StackLayout
+                Orientation="Vertical"
+                Margin="0,2,0,0">
+                <cb:CircleButton
+                    HeightRequest="54"
+                    WidthRequest="54"
+                    FontSize="24"
+                    TextColor="White"
+                    FontIcon="FontAwesome"
+                    Icon="fa-music"
+                    BackgroundColor="{StaticResource TurquoiseForeground}" />
+                <Label
+                    Text="Sounds" />
+            </StackLayout>
+        </FlexLayout>
+    </Grid>
 </ContentPage>
