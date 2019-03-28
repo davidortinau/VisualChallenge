@@ -19,6 +19,7 @@
         <e p="AppShell.xaml.cs" t="Include" />
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="core.css" t="Include" />
         <e p="GradientView.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

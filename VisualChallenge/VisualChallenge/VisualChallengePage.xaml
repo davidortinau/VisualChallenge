@@ -3,16 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
+             Shell.NavBarIsVisible="false"
              BackgroundColor="White"
+             class="h1"
              xmlns:controls="clr-namespace:VisualChallenge"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             Title="Visual Challenge">
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	
+	<ContentPage.Resources>
+		<StyleSheet Source="core.css" />
+	</ContentPage.Resources>
 	<ListView x:Name="MonkeyList"
 	          RowHeight="200"
 	          SeparatorVisibility="None">
@@ -41,11 +40,10 @@
                                             Grid.Row="0" 
                                             Grid.RowSpan="2"/> 
                     
-						<Label TextColor="White" 
+						<Label class="h1"
 						       Margin="10"
 						       Text="{Binding Name}"
-						       FontAttributes="Bold"
-						       FontSize="Large"
+						       
 						       LineBreakMode="WordWrap"
 						       Grid.Row="1"
 						       VerticalOptions="End"/> 
