@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using SegmentedControl.FormsPlugin.Android;
 
 namespace VisualChallenge.Droid
 {
@@ -24,7 +25,8 @@ namespace VisualChallenge.Droid
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 			global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
-			LoadApplication(new App());
+            SegmentedControlRenderer.Init();
+            LoadApplication(new App());
         }
     }
 }
