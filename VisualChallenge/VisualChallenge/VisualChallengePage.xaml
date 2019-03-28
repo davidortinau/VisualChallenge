@@ -22,7 +22,7 @@
                 <Entry Visual="Material" Placeholder="Enter Name"></Entry>
             </Frame>
             <Frame Visual="Material" HeightRequest="150" WidthRequest="150" CornerRadius="5" BorderColor="Red">
-                <Image Source="monkey.png"></Image>
+                <Image Source="monkey.jpg"></Image>
             </Frame>
             <Frame BorderColor="LightGray">
                 <Grid Visual="Material">
@@ -37,27 +37,27 @@
                     <Frame Grid.Row="0" Visual="Material" Grid.Column="0" BorderColor="LightGray">
                         <StackLayout >
                             <Label Text="Monkey"></Label>
-                            <Image Aspect="AspectFit" Source="monkey1.png"></Image>
+                            <Image Aspect="AspectFit" Source="monkey1.jpg"></Image>
                         </StackLayout>
                     </Frame>
 
                     <Frame Grid.Row="0" Grid.Column="1" BorderColor="LightGray">
                         <StackLayout >
                             <Label Text="Monkey"></Label>
-                            <Image Aspect="AspectFit" Source="monkey2.png"></Image>
+                            <Image Aspect="AspectFit" Source="monkey2.jpg"></Image>
                         </StackLayout>
                     </Frame>
                     <Frame Grid.Row="1" Grid.Column="0" BorderColor="LightGray">
                         <StackLayout >
                             <Label Text="Monkey"></Label>
-                            <Image Aspect="AspectFit" Source="monkey3.png"></Image>
+                            <Image Aspect="AspectFit" Source="monkey3.jpg"></Image>
                         </StackLayout>
                     </Frame>
 
                     <Frame Grid.Row="1" Grid.Column="1" BorderColor="LightGray">
                         <StackLayout >
                             <Label Text="Monkey"></Label>
-                            <Image Aspect="AspectFit" Source="monkey4.png"></Image>
+                            <Image Aspect="AspectFit" Source="monkey4.jpg"></Image>
                         </StackLayout>
                     </Frame>
                 </Grid>
