@@ -17,9 +17,9 @@
 	<ScrollView>
 		<StackLayout Margin="20" >
 
-            <Frame Padding="0" Visual="Material" CornerRadius="10" BorderColor="Green">
-                <Entry Visual="Material" Placeholder="Enter Name"></Entry>
-            </Frame>
+            <Stepper BackgroundColor="#42f4ce" Visual="Default"/>
+            <Stepper BackgroundColor="#42f4ce" Visual="Material"></Stepper>
+            
             <Frame Visual="Material" HeightRequest="150" WidthRequest="150" CornerRadius="5" BorderColor="Red">
                 <Image Source="monkey.jpg"></Image>
             </Frame>
