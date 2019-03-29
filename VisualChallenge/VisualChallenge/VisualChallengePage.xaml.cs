@@ -10,6 +10,7 @@ namespace VisualChallenge
         public VisualChallengePage()
         {
             InitializeComponent();
+            BindingContext = new VisualChallengePageViewModel();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
