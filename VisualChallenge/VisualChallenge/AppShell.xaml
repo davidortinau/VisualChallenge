@@ -16,25 +16,44 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#0072C6</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
                 <Setter Property="Shell.ShellTitleColor" Value="White" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
                 <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#8E8E93"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="{StaticResource NavigationPrimary}"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
     <ShellItem>
-        <ShellSection>
+        <!--<ShellSection>
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>-->
+
+
+        <ShellSection Title="Search" Icon="search.png">
+            <ShellContent>
+                <local:SearchPage></local:SearchPage>
+            </ShellContent>
+        </ShellSection>
+
+        <ShellSection Title="Inbox" Icon="inbox.png">
+            <ShellContent>
+                <local:InboxPage></local:InboxPage>
+            </ShellContent>
+        </ShellSection>
+
+        <ShellSection Title="Calendar" Icon="calendar.png">
+            <ShellContent>
+                <local:CalendarPage></local:CalendarPage>
+            </ShellContent>
         </ShellSection>
     </ShellItem>
 

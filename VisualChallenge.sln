@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualChallenge.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualChallenge.iOS", "VisualChallenge\VisualChallenge.iOS\VisualChallenge.iOS.csproj", "{728A2889-2E6F-4B3D-B2AC-57151FF2BC0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualChallenge", "VisualChallenge\VisualChallenge\VisualChallenge.csproj", "{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualChallenge", "VisualChallenge\VisualChallenge\VisualChallenge.csproj", "{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{164F8568-3F55-464E-BF3F-43E085FB0BEF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{164F8568-3F55-464E-BF3F-43E085FB0BEF}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{728A2889-2E6F-4B3D-B2AC-57151FF2BC0F}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{728A2889-2E6F-4B3D-B2AC-57151FF2BC0F}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{728A2889-2E6F-4B3D-B2AC-57151FF2BC0F}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{728A2889-2E6F-4B3D-B2AC-57151FF2BC0F}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{728A2889-2E6F-4B3D-B2AC-57151FF2BC0F}.Debug|iPhone.Build.0 = Debug|iPhone

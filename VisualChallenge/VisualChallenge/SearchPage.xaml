@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualChallenge.SearchPage" BackgroundColor="#E3E3E3" Shell.NavBarIsVisible="False">
+    <ScrollView Margin="0,0,0,1.3" BackgroundColor="White">
+        <FlexLayout Direction="Column">
+            <Frame Padding="0" BorderColor="#E3E3E3" HasShadow="True">
+                <SearchBar Placeholder="Search" PlaceholderColor="#8E8E93" VerticalOptions="Start" BackgroundColor="#F1F1F1" Margin="10,7"></SearchBar>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Margin="13,10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <Label Text="Contacts" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                    <Label Text=">" TextColor="#0072C6" FontSize="30" VerticalTextAlignment="Center"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Label Text="Create" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                    <Label Text="+" TextColor="#0072C6" FontSize="30" VerticalTextAlignment="Center"></Label>
+                </StackLayout>
+            </StackLayout>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
