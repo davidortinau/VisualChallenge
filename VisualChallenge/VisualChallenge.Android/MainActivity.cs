@@ -24,7 +24,9 @@ namespace VisualChallenge.Droid
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 			global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
-			LoadApplication(new App());
+            global::FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
+            global::FFImageLoading.ImageService.Instance.Initialize();
+            LoadApplication(new App());
         }
     }
 }

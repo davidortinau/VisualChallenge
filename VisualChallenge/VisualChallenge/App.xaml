@@ -1,8 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualChallenge.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Helvetica Neue"/>
+            </Style>
+            
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Helvetica Neue"/>
+            </Style>
+            
+            <Style TargetType="Span">
+                <Setter Property="FontFamily" Value="Helvetica Neue"/>
+            </Style>
+            
+            <Style x:Key="MessageLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            
+            <Style x:Key="DateLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Micro"/>
+            </Style>
+            
+            <Style x:Key="DescriptionSpanStyle" TargetType="Span">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            
+            <Style x:Key="DefaultButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            
+        </ResourceDictionary>
         
     </Application.Resources>
 </Application>
