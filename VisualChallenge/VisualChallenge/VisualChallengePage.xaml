@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
@@ -12,12 +12,39 @@
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
 	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+		
+         <Grid>
+        <Grid.RowDefinitions>
+             <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+        <StackLayout Orientation="Vertical" Grid.Row="1" >
+            <Label Text="Create a New Account" FontSize="Large" TextColor="Black" HorizontalOptions="Center" Margin="0,10,0,0" />
+            <Entry Text="{Binding Email}" Placeholder="Email" TextColor="Black" PlaceholderColor="Black" Margin="0,5,0,0" />
+            <Entry Text="{Binding UserName}" Placeholder="Username" TextColor="Black" PlaceholderColor="Black" Margin="0,5,0,0" />
+            <Entry Text="{Binding Password}" Placeholder="Password" TextColor="Black" PlaceholderColor="Black" IsPassword="True" Margin="0,5,0,0" />
+            <Entry Text="{Binding ConfirmPassword}" Placeholder="Confirm Password" TextColor="Black" PlaceholderColor="Black" IsPassword="True" Margin="0,5,0,0" />
+            <Button Command="{Binding RegisterCommand}" Text="Register"  TextColor="Black" Margin="0,5,0,0" />
+            <Label Text="{Binding Message,Mode=TwoWay}" TextColor="Black" FontSize="Default" Margin="0,5,0,0" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"  Color="Black" />
+        </StackLayout>
 
-		</FlexLayout>
+        <StackLayout VerticalOptions="End" Orientation="Vertical" Grid.Row="2">
+            <BoxView  HeightRequest="1"  BackgroundColor="Gray" />
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToLoginPage}" />
+                </StackLayout.GestureRecognizers>
+                <Label Text="Already have an account?"  FontSize="Small" TextColor="Black"  />
+                <Label Text="Log in" FontSize="Small" FontAttributes="Bold" TextColor="Black" />
+            </StackLayout>
+        </StackLayout>
+
+</Grid>
+        
+        
 	</ScrollView>
 </ContentPage>
