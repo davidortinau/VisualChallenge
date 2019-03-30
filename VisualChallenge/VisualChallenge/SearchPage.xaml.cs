@@ -29,6 +29,13 @@ namespace VisualChallenge
                 new Person(){Avatar = "https://randomuser.me/api/portraits/men/6.jpg", FirstName = "Lionel", LastName="Murphy" }
             };
             clVwPeople.ItemsSource = lstPeople;
+
+            var lstEvents = new List<Event>()
+            {
+                new Event(){ Destination = "New York", Airplane="Delta Air Lines", AirplaneCode = "", DepartureAirport = "SFO", ArrivalAirport = "JFK", DepartureTime = new DateTime(2019,1,15,5,35,0), ArrivalTime = new DateTime(2019,1,16,4,40,0) },
+                new Event(){ Destination = "Paris", Airplane="Contoso Airlines", AirplaneCode = "AA 1234", DepartureAirport = "JFK", ArrivalAirport = "CDG", DepartureTime = new DateTime(2019,1,18,7,0,0), ArrivalTime = new DateTime(2019,1,19,6,0,0) }
+            };
+            clVwUpcoming.ItemsSource = lstEvents;
         }
     }
 }

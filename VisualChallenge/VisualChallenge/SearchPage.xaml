@@ -19,7 +19,7 @@
                     <Label Text="+" TextColor="#0072C6" FontSize="30" VerticalTextAlignment="Center"></Label>
                 </StackLayout>
             </StackLayout>
-            <CollectionView x:Name="clVwPeople" HeightRequest="100">
+            <CollectionView x:Name="clVwPeople" HeightRequest="120" ItemSizingStrategy="MeasureFirstItem">
                 <CollectionView.ItemsLayout>
                     <ListItemsLayout>
                         <x:Arguments>
@@ -29,12 +29,8 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Margin="10,0" Spacing="5">
+                        <StackLayout Padding="10,0" Spacing="5">
                             <controls:CircleImage WidthRequest="75" HeightRequest="75" Aspect="AspectFill" Source="{Binding Avatar}"></controls:CircleImage>
-
-                            <!--<Label Text="{Binding FirstName}" TextColor="Black" HorizontalTextAlignment="Center"></Label>
-
-                            <Label Text="{Binding LastName}" TextColor="#949498" HorizontalTextAlignment="Center"></Label>-->
 
                             <Label HorizontalTextAlignment="Center">
                                 <Label.FormattedText>
@@ -45,6 +41,73 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
+                            
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="13,10">
+                <Label Text="Upcoming" TextColor="Black" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <CollectionView x:Name="clVwUpcoming" HeightRequest="150" ItemSizingStrategy="MeasureFirstItem">
+                <CollectionView.ItemsLayout>
+                    <ListItemsLayout>
+                        <x:Arguments>
+                            <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
+                        </x:Arguments>
+                    </ListItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10,0" WidthRequest="270">
+
+                            <StackLayout Padding="10,5" BackgroundColor="#0072C6" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="12">
+                                
+                                <Grid Padding="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <BoxView Color="White" HeightRequest="50" WidthRequest="50" CornerRadius="25"></BoxView>
+                                    <Image Source="airplane.png" Scale="0.5"></Image>
+                                </Grid>
+                                
+                                <Label VerticalTextAlignment="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Destination, StringFormat='{}Flight To {0}'}" TextColor="White"></Span>
+                                            <Span Text="&#10;"></Span>
+                                            <Span Text="{Binding Airplane}" TextColor="#949498"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+
+                            <Grid Padding="10,0" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding AirplaneCode,StringFormat='{}Flight {0} '}"></Span>
+                                            <Span Text="{Binding DepartureAirport}"></Span>
+                                            <Span Text="{Binding ArrivalAirport,StringFormat='{} -> {0}'}"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="1" Text="In 3h" HorizontalTextAlignment="End"></Label>
+                                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DepartureTime,StringFormat='{}From: {0:ddd, MMM dd h:m tt}'}"></Label>
+                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding ArrivalTime,StringFormat='{}To: {0:ddd, MMM dd h:m tt}'}"></Label>
+                            </Grid>
+                            
                             
                         </StackLayout>
                     </DataTemplate>
