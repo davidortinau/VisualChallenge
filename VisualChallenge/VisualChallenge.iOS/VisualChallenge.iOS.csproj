@@ -124,6 +124,10 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\arrow.png" />
+    <BundleResource Include="Resources\ellipsis.png" />
+    <BundleResource Include="Resources\notification.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,6 +139,12 @@
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.293082-pre8" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.0.0.293082-pre8</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.4.859</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

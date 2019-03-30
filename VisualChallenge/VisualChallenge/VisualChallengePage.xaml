@@ -1,23 +1,245 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             BackgroundColor="#F2F7FB">
+    
+    <Shell.TitleView>
+        <FlexLayout VerticalOptions="Center"
+                    JustifyContent="SpaceBetween"
+                    AlignItems="Center">
+            <ImageButton Source="notification.png"
+                         BackgroundColor="Transparent"
+                         WidthRequest="25"
+                         HeightRequest="25"/>
+            
+            <ffimageloading:CachedImage Grid.Column="0"
+                                        Grid.Row="0"
+                                        WidthRequest="35"
+                                        HeightRequest="35"
+                                        Source="https://cdn.pixabay.com/photo/2017/06/26/02/47/people-2442565__340.jpg"
+                                        DownsampleToViewSize="true">
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:CircleTransformation/>
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+            
+            <ImageButton Source="settings.png"
+                         BackgroundColor="Transparent"
+                         WidthRequest="25"
+                         HeightRequest="25"/>
+        </FlexLayout>
+    </Shell.TitleView>
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+    <!-- If you decide to change out the flexlayout leave the scroll view here
+         Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+    -->
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <StackLayout>
+            <Frame BackgroundColor="#013088"
+                   Margin="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <ffimageloading:CachedImage Grid.Column="0"
+                                                Grid.Row="0"
+                                                HorizontalOptions="Start"
+                                                WidthRequest="75"
+                                                HeightRequest="75"
+                                                Source="https://cdn.pixabay.com/photo/2014/01/03/01/13/girl-237871_960_720.jpg"
+                                                DownsampleToViewSize="true">
+                        <ffimageloading:CachedImage.Transformations>
+                            <fftransformations:CircleTransformation/>
+                        </ffimageloading:CachedImage.Transformations>
+                    </ffimageloading:CachedImage>
+                    
+                    <Label Grid.Column="1"
+                           Grid.Row="0"
+                           Style="{StaticResource DateLabelStyle}"
+                           HorizontalTextAlignment="End"
+                           Text="TODAY"/>
+                    
+                    <Label Grid.Column="0"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Nina Debois sent you "
+                                      Style="{StaticResource DescriptionSpanStyle}"/>
+                                <Span Text="$20.00"
+                                      Style="{StaticResource DescriptionSpanStyle}"
+                                      FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    
+                    <Label Grid.Column="0"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           Style="{StaticResource MessageLabelStyle}"
+                           Text="&quot;For Dinner &#x0001F32E; &#x0001F355;&quot;"/>
+                    
+                    <Button Grid.Column="0"
+                            Grid.Row="3"
+                            Style="{StaticResource DefaultButtonStyle}"
+                            Margin="0,30,0,0"
+                            Padding="10,0"
+                            HorizontalOptions="StartAndExpand"
+                            Text="See Details"/>
+                </Grid>
+            </Frame>
+            
+            <FlexLayout Margin="20,0" JustifyContent="SpaceBetween">
+                <Label Text="Quick Send"
+                       FontAttributes="Bold"/>
+                
+                <Image Source="arrow.png"
+                       WidthRequest="25"
+                       HeightRequest="25"/>
+            </FlexLayout>
+            
+            <ScrollView Orientation="Horizontal"
+                        HorizontalScrollBarVisibility="Never">
+                <StackLayout BindableLayout.ItemsSource="{Binding Users}"
+                             Orientation="Horizontal"
+                             Spacing="0">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <FlexLayout Direction="Column"
+                                        AlignItems="Center"
+                                        Margin="15,0,5,0">
+                                <ffimageloading:CachedImage Grid.Column="0"
+                                                            Grid.Row="0"
+                                                            WidthRequest="75"
+                                                            HeightRequest="75"
+                                                            Source="{Binding PhotoUrl}"
+                                                            DownsampleToViewSize="true">
+                                    <ffimageloading:CachedImage.Transformations>
+                                        <fftransformations:CircleTransformation/>
+                                    </ffimageloading:CachedImage.Transformations>
+                                </ffimageloading:CachedImage>
+                                
+                                <Label Text="{Binding Name}"
+                                       FontSize="Small"
+                                       Margin="0,5,0,0"/>
+                            </FlexLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            
+            <Frame BackgroundColor="#FDFFFF"
+                   Margin="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Grid.Column="0"
+                           Grid.Row="0"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Text="PayPal Balance"/>
+                    
+                    <Image Grid.Column="1"
+                           Grid.Row="0"
+                           WidthRequest="20"
+                           HeightRequest="20"
+                           Source="ellipsis.png"/>
+                    
+                    <Label Grid.Column="0"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           Text="$25.00"
+                           FontSize="50"/>
+                    
+                    <Label Grid.Column="0"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           Text="Available"
+                           FontSize="18"
+                           TextColor="Gray"/>
+                </Grid>
+            </Frame>
+            
+            <FlexLayout Margin="20,0" JustifyContent="SpaceBetween">
+                <Label Grid.Column="0"
+                       Grid.Row="0"
+                       FontAttributes="Bold"
+                       Text="Your Activity"/>
+                
+                <Image Source="arrow.png"
+                       WidthRequest="25"
+                       HeightRequest="25"/>
+            </FlexLayout>
+            
+            <StackLayout BindableLayout.ItemsSource="{Binding Activities}"
+                         Margin="0,0,0,20">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="15,10,15,0" RowSpacing="3" ColumnSpacing="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <ffimageloading:CachedImage Grid.Column="0"
+                                                        Grid.Row="0"
+                                                        Grid.RowSpan="2"
+                                                        WidthRequest="50"
+                                                        HeightRequest="50"
+                                                        Source="{Binding User.PhotoUrl}"
+                                                        DownsampleToViewSize="true">
+                                <ffimageloading:CachedImage.Transformations>
+                                    <fftransformations:CircleTransformation/>
+                                </ffimageloading:CachedImage.Transformations>
+                            </ffimageloading:CachedImage>
+                            
+                            <Label Grid.Column="1"
+                                   Grid.Row="0"
+                                   Text="{Binding User.Name}"/>
+                            
+                            <Label Grid.Column="1"
+                                   Grid.Row="1"
+                                   TextColor="Gray"
+                                   FontSize="Small"
+                                   Text="Money received"/>
+                            
+                            <Label Grid.Column="2"
+                                   Grid.Row="0"
+                                   Text="{Binding Amount, StringFormat='+ {0:C2}'}"/>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+            
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
