@@ -3,6 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualChallenge.App">
     <Application.Resources>
+
+        <OnPlatform
+                x:Key="LightFont"
+                x:TypeArguments="x:String"
+                iOS="HelveticaNeue-Light"
+                Android="sans-serif-light" />
         
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource LightFont}" />
+        </Style>
     </Application.Resources>
 </Application>

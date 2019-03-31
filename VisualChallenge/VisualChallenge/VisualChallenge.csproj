@@ -11,13 +11,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.1.206893" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.1.206893" />  
+    <PackageReference Include="LiveXAML" Version="2.1.70" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.293082-pre8" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Update="VisualChallengePage.xaml.cs">
       <DependentUpon>VisualChallengePage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="AppShell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="VisualChallengePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>
