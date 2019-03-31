@@ -22,74 +22,74 @@
 
             <StackLayout Spacing="0" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" >
 
-                <AbsoluteLayout  BackgroundColor="Black" HeightRequest="150" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <AbsoluteLayout  BackgroundColor="Black" HeightRequest="168" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
 
-                <FlexLayout AbsoluteLayout.LayoutBounds="1, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="10, 0, 10, 60" HeightRequest="40" JustifyContent="End" AlignItems="Center">
-                    <!--<Image BackgroundColor="Red" WidthRequest="30" Margin="20, 0, 0, 0" HeightRequest="30"></Image>-->
-                </FlexLayout>
+                <!--<FlexLayout AbsoluteLayout.LayoutBounds="1, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="10, 0, 10, 65" HeightRequest="55" JustifyContent="End" AlignItems="Center">
+                    <Image BackgroundColor="Red" WidthRequest="30" Margin="20, 0, 0, 0" HeightRequest="30"></Image>
+                </FlexLayout>-->
 
-                <FlexLayout AbsoluteLayout.LayoutBounds="1, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="10, 0, 10, 10" HeightRequest="40" BackgroundColor="White" JustifyContent="End" AlignItems="Center">
-                    <Image Source="xamagon_preview" WidthRequest="30" HeightRequest="30"></Image>
-                    <Image Source="xamagon_preview" WidthRequest="30" Margin="20, 0, 0, 0" HeightRequest="30"></Image>
-                    <Image Source="xamagon_preview" WidthRequest="30" Margin="20, 0, 0, 0" HeightRequest="30"></Image>
+                <FlexLayout AbsoluteLayout.LayoutBounds="1, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="10, 0, 20, 13" HeightRequest="40" BackgroundColor="White" JustifyContent="End" AlignItems="Center">
+                    <Image Source="xamagon_preview" WidthRequest="22" HeightRequest="22"></Image>
+                    <Image Source="xamagon_preview" WidthRequest="22" Margin="26, 0, 0, 0" HeightRequest="22"></Image>
+                    <Image Source="xamagon_preview" WidthRequest="30" Margin="26, 0, 0, 0" HeightRequest="30"></Image>
                 </FlexLayout>
-                <Frame Visual="Default" CornerRadius="10" Margin="10, 0, 0, 10" Padding="0" WidthRequest="120" HeightRequest="120"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Frame Visual="Default" CornerRadius="10" Margin="20, 0, 0, 13" Padding="0" WidthRequest="140" HeightRequest="140"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
                     <Image Source="invisibila"></Image>
                 </Frame>
             </AbsoluteLayout>
 
-            <Frame HasShadow="False" Padding="0" Margin="10, 10, 10, 0" CornerRadius="10">
-                <SearchBar Placeholder="Search episodes" BackgroundColor="LightGray"></SearchBar>
+            <Frame HasShadow="False" Padding="0" Margin="20, 0, 20, 0" CornerRadius="10">
+                <SearchBar Placeholder="Search episodes" BackgroundColor="LightGray" HeightRequest="40"></SearchBar>
             </Frame>
 
-            <StackLayout Orientation="Horizontal" Margin="10, 13, 10, 13">
-                <Label VerticalOptions="Center"  Text="49 episodes &#8226; 2 archived"></Label>
-                <Image HorizontalOptions="EndAndExpand" Source="xamagon_preview" WidthRequest="30" Margin="20, 0, 0, 0" HeightRequest="30"></Image>
+            <StackLayout Orientation="Horizontal" Margin="20, 11, 20, 11">
+                <Label VerticalOptions="Center"  Text="49 episodes &#8226; 2 archived" FontSize="13"></Label>
+                <Image HorizontalOptions="EndAndExpand" Source="xamagon_preview" WidthRequest="16" HeightRequest="16"></Image>
             </StackLayout>
 
             <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
-            <StackLayout Margin="15, 10" Orientation="Horizontal">
+            <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
                 <StackLayout Orientation="Vertical" Spacing="2">
                     <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
                     <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                    <Label Text="47 min"></Label>
+                    <Label Text="47 min" FontSize="12"></Label>
                 </StackLayout>
-                <Image WidthRequest="20" HeightRequest="20" Margin="15, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
-                <Image WidthRequest="30" HeightRequest="30" Margin="15, 0, 0, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
+                <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
+                <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
             </StackLayout>
 
-            <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
-            <StackLayout Margin="15, 10" Orientation="Horizontal">
-                <StackLayout Orientation="Vertical" Spacing="2">
-                    <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
-                    <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                    <Label Text="47 min"></Label>
+                <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
+                    <StackLayout Orientation="Vertical" Spacing="2">
+                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12"></Label>
+                    </StackLayout>
+                    <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
+                    <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
                 </StackLayout>
-                <Image WidthRequest="20" HeightRequest="20" Margin="15, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
-                <Image WidthRequest="30" HeightRequest="30" Margin="15, 0, 0, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
-            </StackLayout>
 
-            <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
-            <StackLayout Margin="15, 10" Orientation="Horizontal">
-                <StackLayout Orientation="Vertical" Spacing="2">
-                    <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
-                    <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                    <Label Text="47 min"></Label>
+                <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
+                    <StackLayout Orientation="Vertical" Spacing="2">
+                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12"></Label>
+                    </StackLayout>
+                    <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
+                    <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
                 </StackLayout>
-                <Image WidthRequest="20" HeightRequest="20" Margin="15, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
-                <Image WidthRequest="30" HeightRequest="30" Margin="15, 0, 0, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
-            </StackLayout>
 
-            <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
-            <StackLayout Margin="15, 10" Orientation="Horizontal">
-                <StackLayout Orientation="Vertical" Spacing="2">
-                    <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
-                    <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                    <Label Text="47 min"></Label>
+                <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
+                    <StackLayout Orientation="Vertical" Spacing="2">
+                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12"></Label>
+                    </StackLayout>
+                    <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
+                    <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
                 </StackLayout>
-                <Image WidthRequest="20" HeightRequest="20" Margin="15, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
-                <Image WidthRequest="30" HeightRequest="30" Margin="15, 0, 0, 0" BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
-            </StackLayout>
 
                 <!--Spacer so that content will move past the fixed view-->
                 <BoxView AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HeightRequest="60"></BoxView>
@@ -102,20 +102,32 @@
     </ScrollView>
 
         <StackLayout Spacing="0" AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
-            <Frame Margin="0, 0, 0, 0" CornerRadius="0" Visual="Default" BackgroundColor="White" Padding="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center">
-                    <Image Margin="10, 0, 0, 0" Source="makingsense" WidthRequest="40" HeightRequest="40"></Image>
-                    <Image Margin="20, 0, 0, 0" Source="xamagon_preview" WidthRequest="30" HeightRequest="30"></Image>
-                    <Image Source="xamagon_preview" WidthRequest="40" HeightRequest="40"></Image>
-                    <Image Margin="0, 0, 20, 0" Source="xamagon_preview" WidthRequest="30" HeightRequest="30"></Image>
-                    <Image Margin="0, 0, 10, 0" Source="xamagon_preview" WidthRequest="30" HeightRequest="30" HorizontalOptions="EndAndExpand"></Image>
+            <Frame Margin="0" CornerRadius="0" Visual="Default" BackgroundColor="White" HeightRequest="65" Padding="0">
+                <FlexLayout Margin="10, 0" JustifyContent="SpaceBetween" AlignItems="Center">
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Frame Padding="0" HasShadow="False" CornerRadius="4">
+                            <Image Source="makingsense" WidthRequest="48" HeightRequest="48"></Image>
+                        </Frame>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0, 0, 10, 0" Source="xamagon_preview" WidthRequest="17" HeightRequest="17"></Image>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" Source="xamagon_preview" WidthRequest="48" HeightRequest="48"></Image>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="10, 0, 0, 0" Source="xamagon_preview" WidthRequest="17" HeightRequest="17"></Image>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" Source="xamagon_preview" WidthRequest="20" HeightRequest="20" HorizontalOptions="EndAndExpand"></Image>
+                    </ContentView>
                 </FlexLayout>
             </Frame>
 
             <AbsoluteLayout AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
-                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" BackgroundColor="LightGray"></BoxView>
-                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="0, 0, 80, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" BackgroundColor="DarkRed"></BoxView>
-                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="0, 0, 120, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" BackgroundColor="Red"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="3" BackgroundColor="LightGray"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="0, 0, 32, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="3" BackgroundColor="DarkRed"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="0, 0, 80, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="3" BackgroundColor="Red"></BoxView>
             </AbsoluteLayout>
         </StackLayout>
 
