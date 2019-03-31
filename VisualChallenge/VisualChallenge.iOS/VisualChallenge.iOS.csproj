@@ -148,4 +148,28 @@
       <Name>VisualChallenge</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\airplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\inbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+  </ItemGroup>
 </Project>
