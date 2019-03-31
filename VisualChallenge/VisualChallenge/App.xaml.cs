@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using DLToolkit.Forms.Controls;
+using Xamarin.Forms;
 
 namespace VisualChallenge
 {
@@ -10,6 +11,7 @@ namespace VisualChallenge
             InitializeComponent();
             
             MainPage = new AppShell();
+            FlowListView.Init();
         }
 
         protected override void OnStart()
