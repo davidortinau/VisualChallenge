@@ -4,7 +4,7 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
-             Shell.ShellBackgroundColor="Black"
+             Shell.ShellBackgroundColor="#24272B"
              >
 
     <ContentPage.ToolbarItems>
@@ -22,7 +22,7 @@
 
             <StackLayout Spacing="0" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" >
 
-                <AbsoluteLayout  BackgroundColor="Black" HeightRequest="168" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <AbsoluteLayout  BackgroundColor="#24272B" HeightRequest="168" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
 
                 <!--<FlexLayout AbsoluteLayout.LayoutBounds="1, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="10, 0, 10, 65" HeightRequest="55" JustifyContent="End" AlignItems="Center">
                     <Image BackgroundColor="Red" WidthRequest="30" Margin="20, 0, 0, 0" HeightRequest="30"></Image>
@@ -39,7 +39,7 @@
             </AbsoluteLayout>
 
             <Frame HasShadow="False" Padding="0" Margin="20, 0, 20, 0" CornerRadius="10">
-                <SearchBar Placeholder="Search episodes" BackgroundColor="LightGray" HeightRequest="40"></SearchBar>
+                <SearchBar Placeholder="Search episodes" BackgroundColor="#F2F4F5" HeightRequest="40" PlaceholderColor="#969798" FontSize="16"></SearchBar>
             </Frame>
 
             <StackLayout Orientation="Horizontal" Margin="20, 11, 20, 11">
@@ -47,45 +47,45 @@
                 <Image HorizontalOptions="EndAndExpand" Source="xamagon_preview" WidthRequest="16" HeightRequest="16"></Image>
             </StackLayout>
 
-            <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+            <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
             <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
                 <StackLayout Orientation="Vertical" Spacing="2">
-                    <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
-                    <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                    <Label Text="47 min" FontSize="12"></Label>
+                    <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" TextColor="#8F97A4" ></Label>
+                    <Label Text="The Remote Control Brain" TextColor="#212121" FontSize="16"></Label>
+                    <Label Text="47 min" FontSize="12" TextColor="#8F97A4"></Label>
                 </StackLayout>
                 <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
                 <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
             </StackLayout>
 
-                <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
                 <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
                     <StackLayout Orientation="Vertical" Spacing="2">
-                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
-                        <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                        <Label Text="47 min" FontSize="12"></Label>
+                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" TextColor="#8F97A4" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="#212121" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12" TextColor="#8F97A4"></Label>
                     </StackLayout>
                     <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
                     <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
                 </StackLayout>
 
-                <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
                 <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
                     <StackLayout Orientation="Vertical" Spacing="2">
-                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
-                        <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                        <Label Text="47 min" FontSize="12"></Label>
+                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" TextColor="#8F97A4" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="#212121" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12" TextColor="#8F97A4"></Label>
                     </StackLayout>
                     <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
                     <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
                 </StackLayout>
 
-                <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
                 <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
                     <StackLayout Orientation="Vertical" Spacing="2">
-                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" ></Label>
-                        <Label Text="The Remote Control Brain" TextColor="Black" FontSize="16"></Label>
-                        <Label Text="47 min" FontSize="12"></Label>
+                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" TextColor="#8F97A4" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="#212121" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12" TextColor="#8F97A4"></Label>
                     </StackLayout>
                     <Image WidthRequest="20" HeightRequest="20" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Image>
                     <Image WidthRequest="33" HeightRequest="33" Source="xamagon_preview" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0"></Image>
@@ -125,9 +125,9 @@
             </Frame>
 
             <AbsoluteLayout AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
-                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="3" BackgroundColor="LightGray"></BoxView>
-                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="0, 0, 32, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="3" BackgroundColor="DarkRed"></BoxView>
-                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="0, 0, 80, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="3" BackgroundColor="Red"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" BackgroundColor="#F9F9F9"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="-3, 0, 32, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" CornerRadius="2" BackgroundColor="#F4E3DF"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="-3, 0, 80, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" CornerRadius="2" BackgroundColor="#D02E05"></BoxView>
             </AbsoluteLayout>
         </StackLayout>
 
