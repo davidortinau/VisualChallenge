@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
+             BackgroundColor="#2196F3"
              Title="Visual Challenge"
              >
 
@@ -14,9 +14,28 @@
 	<ScrollView>
 		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+			<Frame>
+                <StackLayout Spacing="7">
+                    <Label Text="Log In" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                    <Entry Text="Username" BackgroundColor="White" PlaceholderColor="White"/>
+                    <Entry Text="Password" BackgroundColor="White" PlaceholderColor="White"/>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Switch />
+                        <Label Text="Remember me"/>
+                    </StackLayout>
+                        <Label Text="Forgot Password?" TextColor="Blue" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Button Text="Log In" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="Navy"/>
+                    <Label Text="or Log in with" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Button Text="Facebook" BackgroundColor="#3b5998"/>
+                        <Button Text="Twitter" BackgroundColor="#1DA1F2"/>
+                    </StackLayout>
+                    <Label Text="Don't have an account?" HorizontalOptions="CenterAndExpand" Margin="5"/>
+                    <Label Text="Sign Up" TextColor="Blue" HorizontalOptions="CenterAndExpand" Margin="5"/>
+                </StackLayout>
+            </Frame>
 
 		</FlexLayout>
 	</ScrollView>
