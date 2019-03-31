@@ -97,7 +97,7 @@
                                             <ColumnDefinition Width="200"></ColumnDefinition>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                        <Label Grid.Row="0" Grid.Column="0" TextColor="Black">
+                                        <Label Grid.Row="0" Grid.Column="0" TextColor="Black" LineBreakMode="TailTruncation" FontSize="{OnPlatform iOS='14'}">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <Span Text="{Binding AirplaneCode,StringFormat='{}Flight {0} '}"></Span>
@@ -106,12 +106,10 @@
                                                 </FormattedString>
                                             </Label.FormattedText>
                                         </Label>
-                                        <Label Grid.Row="0" Grid.Column="1" Text="In 3h" HorizontalTextAlignment="End"></Label>
-                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding DepartureTime,StringFormat='{}From: {0:ddd, MMM dd h:m tt}'}"></Label>
-                                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding ArrivalTime,StringFormat='{}To: {0:ddd, MMM dd h:m tt}'}"></Label>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="In 3h" HorizontalTextAlignment="End" TextColor="#949498" FontSize="{OnPlatform iOS='14'}"></Label>
+                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding DepartureTime,StringFormat='{}From: {0:ddd, MMM dd h:m tt}'}" TextColor="#949498" FontSize="{OnPlatform iOS='14'}" ></Label>
+                                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding ArrivalTime,StringFormat='{}To: {0:ddd, MMM dd h:m tt}'}" TextColor="#949498" FontSize="{OnPlatform iOS='14'}"></Label>
                                     </Grid>
-
-
                                 </StackLayout>
                             </Frame>
                         </ContentView>
@@ -143,7 +141,7 @@
                                             <FormattedString>
                                                 <Span Text="{Binding FileName}" TextColor="Black"></Span>
                                                 <Span Text="&#10;"></Span>
-                                                <Span Text="{Binding FileExt}"></Span>
+                                                <Span Text="{Binding FileExt}" TextColor="#949498"></Span>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
