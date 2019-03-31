@@ -28,6 +28,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchExtraArgs>--enable-repl</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -124,6 +125,53 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\ic_baggage%403x.png" />
+    <BundleResource Include="Resources\ic_baggage%402x.png" />
+    <BundleResource Include="Resources\ic_baggage.png" />
+    <BundleResource Include="Resources\ic_check_in%403x.png" />
+    <BundleResource Include="Resources\ic_check_in%402x.png" />
+    <BundleResource Include="Resources\ic_check_in.png" />
+    <BundleResource Include="Resources\ic_chevron_right_black_24dp%403x.png" />
+    <BundleResource Include="Resources\ic_chevron_right_black_24dp%402x.png" />
+    <BundleResource Include="Resources\ic_chevron_right_black_24dp.png" />
+    <BundleResource Include="Resources\ic_home%403x.png" />
+    <BundleResource Include="Resources\ic_home%402x.png" />
+    <BundleResource Include="Resources\ic_home.png" />
+    <BundleResource Include="Resources\ic_launcher_round%403x.png" />
+    <BundleResource Include="Resources\ic_launcher_round%402x.png" />
+    <BundleResource Include="Resources\ic_launcher_round.png" />
+    <BundleResource Include="Resources\ic_more_info_16dp%403x.png" />
+    <BundleResource Include="Resources\ic_more_info_16dp%402x.png" />
+    <BundleResource Include="Resources\ic_more_info_16dp.png" />
+    <BundleResource Include="Resources\ic_offer%403x.png" />
+    <BundleResource Include="Resources\ic_offer%402x.png" />
+    <BundleResource Include="Resources\ic_offer.png" />
+    <BundleResource Include="Resources\ic_person_black_24dp%403x.png" />
+    <BundleResource Include="Resources\ic_person_black_24dp%402x.png" />
+    <BundleResource Include="Resources\ic_person_black_24dp.png" />
+    <BundleResource Include="Resources\ic_plane%403x.png" />
+    <BundleResource Include="Resources\ic_plane%402x.png" />
+    <BundleResource Include="Resources\ic_plane.png" />
+    <BundleResource Include="Resources\ic_qstreaming_homepage%403x.png" />
+    <BundleResource Include="Resources\ic_qstreaming_homepage%402x.png" />
+    <BundleResource Include="Resources\ic_qstreaming_homepage.png" />
+    <BundleResource Include="Resources\ic_seat%403x.png" />
+    <BundleResource Include="Resources\ic_seat%402x.png" />
+    <BundleResource Include="Resources\ic_seat.png" />
+    <BundleResource Include="Resources\ic_trip%403x.png" />
+    <BundleResource Include="Resources\ic_trip%402x.png" />
+    <BundleResource Include="Resources\ic_trip.png" />
+    <BundleResource Include="Resources\shapes_set4%403x.png" />
+    <BundleResource Include="Resources\shapes_set4%402x.png" />
+    <BundleResource Include="Resources\shapes_set4.png" />
+    <BundleResource Include="Resources\shapes_silver%403x.png" />
+    <BundleResource Include="Resources\shapes_silver%402x.png" />
+    <BundleResource Include="Resources\shapes_silver.png" />
+    <BundleResource Include="Resources\brauer_neue_std.ttf" />
+    <BundleResource Include="Resources\ciutadella_regular.ttf" />
+    <BundleResource Include="Resources\ciutadella_medium.ttf" />
+    <BundleResource Include="Resources\ciutadella_semibold.ttf" />
+    <BundleResource Include="Resources\shapes_default.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -143,5 +191,8 @@
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 </Project>
