@@ -19,7 +19,7 @@
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         <ScrollView Grid.ColumnSpan="2" Grid.RowSpan="2" >
-        <StackLayout Padding="10" Spacing="10">
+        <StackLayout Padding="5,10" Spacing="10">
 
                 <Frame Margin="2,0" Padding="8,0" HasShadow="True" BorderColor="LightGray" CornerRadius="10">
                     <StackLayout Orientation="Horizontal">
