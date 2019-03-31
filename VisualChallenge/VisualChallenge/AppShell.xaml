@@ -6,6 +6,7 @@
        RouteScheme="app"
        Route="VisualChallenge"
        FlyoutBehavior="Disabled"
+       Shell.NavBarIsVisible="False"
        Title="VisualChallenge"
        x:Class="VisualChallenge.AppShell"
        Visual="Material"
@@ -16,26 +17,45 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#FEFEFE</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.ShellForegroundColor" Value="Green" />
+                <Setter Property="Shell.ShellTitleColor" Value="Black" />
+                <Setter Property="Shell.ShellDisabledColor" Value="Blue" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="Orange" />
                 <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="Purple"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="Gray"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="#E80000"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
+    
+<ShellItem Title="Bottom Tab Sample"
+           Style="{StaticResource BaseStyle}">
+           
+    <ShellSection Title="HOME" Icon="ic_home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+    </ShellSection>
+    
+    <ShellSection Title="TRIPS" Icon="ic_trip.png">
+        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+    </ShellSection>
+    
+    <ShellSection Title="BOOK" Icon="ic_plane.png">
+        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+    </ShellSection>
+    
+    <ShellSection Title="DEALS" Icon="ic_offer.png">
+        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+    </ShellSection>
+    
+    <ShellSection Title="MY QFF" Icon="ic_person_black_24dp.png">
+        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+    </ShellSection>
 
-    <FlyoutItem>
-        <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
-        </Tab>
-    </FlyoutItem>
-
+</ShellItem>
+    
 </Shell>
