@@ -11,6 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Faker.Portable" Version="0.8.2" />
+    <PackageReference Include="LiveXAML" Version="2.1.70" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.1.206893" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.1.206893" />  
   </ItemGroup>
@@ -19,5 +21,11 @@
     <Compile Update="VisualChallengePage.xaml.cs">
       <DependentUpon>VisualChallengePage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="MasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

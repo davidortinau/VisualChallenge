@@ -5,19 +5,91 @@
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             Visual="Material"> 
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" /> 
+            <RowDefinition Height="0.5" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1" />
+        </Grid.RowDefinitions>
+        <Grid Margin="0" Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="profile.png" Margin="10"  VerticalOptions="Center"></Image>
+            <Label Grid.Column="1" TextColor="Black" FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" Text="Start"/>
+            <Image Grid.Column="2" Margin="10" VerticalOptions="Center" Source="stars.png"/>
+        </Grid>
+        <BoxView Color="Black" Grid.Row="1" ></BoxView>
+        <Frame Grid.Row="2" CornerRadius="30" HeightRequest="20" WidthRequest="20" VerticalOptions="End" HorizontalOptions="End" Margin="10" BackgroundColor="#1da1f2">
+            <Frame.GestureRecognizers> 
+                <TapGestureRecognizer Tapped="ClickGestureRecognizer_Clicked"/>
+            </Frame.GestureRecognizers>
+            <Image Source="feather.png"/>
+        </Frame> 
+        <ListView ItemsSource="{Binding Tweets}" Grid.Row="2" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid MinimumHeightRequest="0" Margin="5, 5, 10, 5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="retweet.png"  IsVisible="{Binding IsRetweet}" HeightRequest="17" Margin="0, 5, 0, 3" HorizontalOptions="End"/>
+                            <Label Grid.Column="1" VerticalOptions="Center" IsVisible="{Binding IsRetweet}" Text="{Binding RetweetedBy, StringFormat=' {0}  retweeted'}" />
+                            <Image Source="profile.png" Margin="5" Grid.Row="1" Grid.RowSpan="3" VerticalOptions="Start"/>
+                            <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                                <Label Text="{Binding FullUserName}" FontAttributes="Bold" HorizontalOptions="Start" MaxLines="1"/>
+                                <Label Text="{Binding User, StringFormat='@{0}'}" HorizontalOptions="Start" MaxLines="1"/>
+                                <Label Text="· 1 h" HorizontalOptions="Start"/>
+                                <Image Source="more.png" HorizontalOptions="EndAndExpand" HeightRequest="10"/>
+                            </StackLayout> 
+                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Content}" MinimumHeightRequest="0" VerticalOptions="Start" VerticalTextAlignment="Start"/> 
+                            <Frame IsVisible="{Binding HasImage}" Padding="0" Grid.Row="3" Grid.Column="1" HasShadow="False" CornerRadius="5" Margin="0" BackgroundColor="Gray">
+                                <Image Source="image.png"/>
+                            </Frame>
+                            <Grid Grid.Column="1" Grid.Row="4">
+                                <Grid.Resources>
+                                    <Style TargetType="Image">
+                                        <Setter Property="Margin" Value="5"/> 
+                                        <Setter Property="Aspect" Value="AspectFit"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="comment.png"/>
+                                <Label Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Text="{Binding ReplyCount}"/>
+                                <Image Grid.Column="2" Source="retweet.png"/>
+                                <Label Grid.Column="3" HorizontalOptions="Start" VerticalOptions="Center" Text="{Binding ReplyCount}"/>
+                                <Image Grid.Column="4" Source="heart.png"/>
+                                <Label Grid.Column="5" HorizontalOptions="Start" VerticalOptions="Center" Text="{Binding ReplyCount}"/>
+                                <Image Grid.Column="6" Source="share.png"/>
+                            </Grid>
+                        </Grid>
+                    </ViewCell> 
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <BoxView Grid.Row="3" Color="{StaticResource PrimaryColor}" ></BoxView>
+    </Grid>
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
 </ContentPage>

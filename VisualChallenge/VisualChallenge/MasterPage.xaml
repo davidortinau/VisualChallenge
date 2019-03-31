@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualChallenge.MasterPage"
+             Title="Master">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="profile.png" Margin="20, 10, 0, 0" HorizontalOptions="Start" WidthRequest="60" HeightRequest="60"/>
+            <Grid Margin="20, 0" >
+                <Label Text="Konrad Müller" FontAttributes="Bold" FontSize="20"/>
+                <Image Source="more_blue.png" HorizontalOptions="End" HeightRequest="12"/>
+            </Grid> 
+            <Label Text="@konmue" Margin="20, 0"/>
+            <StackLayout Orientation="Horizontal" Margin="20, 0">
+                <Label Text="85" FontAttributes="Bold" />
+                <Label Text="I follow" Margin="0, 0, 10, 0"/>
+                <Label Text="19"  FontAttributes="Bold"/>
+                <Label Text="Follower"/>
+            </StackLayout>
+            <BoxView Color="Gray" HeightRequest="0.5"/>
+            <Grid Margin="20, 5" RowSpacing="20">
+                <Grid.Resources>
+                    <Style TargetType="Image">
+                        <Setter Property="HorizontalOptions" Value="Start"/>
+                    </Style>
+                    <Style TargetType="Label">
+                        <Setter Property="VerticalOptions" Value="Center"/>
+                        <Setter Property="FontSize" Value="20"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/> 
+                </Grid.ColumnDefinitions>
+                <Image Source="profile_menu.png" Grid.Row="0"/>
+                <Image Source="lists_menu.png" Grid.Row="1"/>
+                <Image Source="bookmarks_menu.png" Grid.Row="2"/>
+                <Image Source="moments_menu.png" Grid.Row="3"/>
+                <Label Text="Profile" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Lists" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Bookmarks" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Moments" Grid.Row="3" Grid.Column="1"/> 
+            </Grid>
+            <BoxView Color="Gray" HeightRequest="0.5"/>
+            <Label Margin="20, 5" FontSize="20" Text="Settings and data protection" />
+            <Label Margin="20, 5" FontSize="20" Text="Help center" />
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.Resources>
+                    <Style TargetType="Image">
+                        <Setter Property="Aspect" Value="AspectFill"/>
+                        <Setter Property="Margin" Value="20, 10"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.5"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions> 
+                </Grid.ColumnDefinitions>
+                <BoxView Color="Gray" Grid.Row="1" VerticalOptions="End"/>
+                <Image Grid.Row="2" HorizontalOptions="Start" Source="dark_mode.png"/>
+                <Image Grid.Row="2" HorizontalOptions="End"  Source="dunno_what_this_is.png"/>
+            </Grid> 
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
