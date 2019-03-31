@@ -36,6 +36,14 @@ namespace VisualChallenge
                 new Event(){ Destination = "Paris", Airplane="Contoso Airlines", AirplaneCode = "AA 1234", DepartureAirport = "JFK", ArrivalAirport = "CDG", DepartureTime = new DateTime(2019,1,18,7,0,0), ArrivalTime = new DateTime(2019,1,19,6,0,0) }
             };
             clVwUpcoming.ItemsSource = lstEvents;
+
+            var lstFiles = new List<File>()
+            {
+                new File(){ FileName="Resume",FileExt="PDF",FileIcon="pdf.png"},
+                new File(){ FileName="Work_report",FileExt="XSLX",FileIcon="excel.png"},
+                new File(){ FileName="Receipt",FileExt="DOCX",FileIcon="word.png"}
+            };
+            clVwFiles.ItemsSource = lstFiles;
         }
     }
 }
