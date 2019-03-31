@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:VisualChallenge"
              x:Class="VisualChallenge.SearchPage" BackgroundColor="#E3E3E3" Shell.NavBarIsVisible="False">
     <ScrollView Margin="0,0,0,1.3" BackgroundColor="White">
         <FlexLayout Direction="Column" Padding="0,0,0,10">
             <Frame Padding="0" BorderColor="#E3E3E3" HasShadow="True">
-                <SearchBar Placeholder="Search" PlaceholderColor="#8E8E93" VerticalOptions="Start" BackgroundColor="#F1F1F1" Margin="10,7"></SearchBar>
+                <SearchBar Placeholder="Search" PlaceholderColor="#8E8E93" VerticalOptions="Start" BackgroundColor="#F1F1F1" Margin="10,7" local:BorderlessEffect.HasBorder="False">
+                </SearchBar>
             </Frame>
             <StackLayout Orientation="Horizontal" Margin="13,10">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start">

@@ -41,7 +41,9 @@ namespace VisualChallenge
             {
                 new File(){ FileName="Resume",FileExt="PDF",FileIcon="pdf.png"},
                 new File(){ FileName="Work_report",FileExt="XSLX",FileIcon="excel.png"},
-                new File(){ FileName="Receipt",FileExt="DOCX",FileIcon="word.png"}
+                new File(){ FileName="Receipt",FileExt="DOCX",FileIcon="word.png"},
+                new File(){ FileName="Portfolio",FileExt="PDF",FileIcon="pdf.png"},
+                new File(){ FileName="ContoseAir_Ticket",FileExt="PDF",FileIcon="pdf.png"}
             };
             clVwFiles.ItemsSource = lstFiles;
         }
