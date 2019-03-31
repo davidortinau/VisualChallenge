@@ -38,19 +38,19 @@
         </ShellSection>-->
 
 
-        <ShellSection Title="Search" Icon="search.png">
+        <ShellSection Icon="search.png">
             <ShellContent>
                 <local:SearchPage></local:SearchPage>
             </ShellContent>
         </ShellSection>
 
-        <ShellSection Title="Inbox" Icon="inbox.png">
+        <ShellSection Icon="inbox.png">
             <ShellContent>
                 <local:InboxPage></local:InboxPage>
             </ShellContent>
         </ShellSection>
 
-        <ShellSection Title="Calendar" Icon="calendar.png">
+        <ShellSection Icon="calendar.png">
             <ShellContent>
                 <local:CalendarPage></local:CalendarPage>
             </ShellContent>
