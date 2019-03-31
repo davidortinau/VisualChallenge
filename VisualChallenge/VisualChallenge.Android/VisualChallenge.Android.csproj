@@ -81,9 +81,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LiveXAML">
-      <Version>2.1.70</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>4.0.0.293082-pre8</Version>
     </PackageReference>

@@ -7,7 +7,6 @@
         <OnPlatform
                 x:Key="LightFont"
                 x:TypeArguments="x:String"
-                iOS="HelveticaNeue-Light"
                 Android="sans-serif-light" />
         
         <Style TargetType="Label">
