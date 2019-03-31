@@ -92,7 +92,7 @@
                                 <Label Margin="0,-10" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="End" VerticalOptions="End" FontAttributes="Bold"  FontSize="13" Text="{Binding Date}" HorizontalOptions="Center" TextColor="Black"/>
                                 <Image Margin="0,-15,0,0" Grid.Row="2" Scale="{OnPlatform Android=1.4, iOS=1}" Grid.Column="2" Source="ic_star_border" HorizontalOptions="End"/>
 
-                                <Frame VerticalOptions="Start" Grid.Column="1" Grid.Row="3" Margin="{OnPlatform Android= '0,-5,0,0', iOS='5,5,5,5'}" Padding="{OnPlatform Android= '2,2.5,2,2.5', iOS='0,0,0,0'}" HorizontalOptions="Start" MinimumWidthRequest="100" CornerRadius="15" IsVisible="{Binding HasAttachment}">
+                                <Frame Scale="{OnPlatform Android=1, iOS=.9}" VerticalOptions="Start" Grid.Column="1" Grid.Row="3" Margin="{OnPlatform Android= '0,-5,0,0', iOS='5,5,5,5'}" Padding="{OnPlatform Android= '2,2.5,2,2.5', iOS='0,0,0,0'}" HorizontalOptions="Start" MinimumWidthRequest="100" CornerRadius="15" IsVisible="{Binding HasAttachment}">
                                     <StackLayout VerticalOptions="Start" Orientation="Horizontal" Grid.Row="2" Margin="0" Padding="0" Grid.Column="1" Grid.ColumnSpan="2" MinimumWidthRequest="50" Spacing="2">
                                         <Image Source="ic_description" Scale="{OnPlatform Android=1.25, iOS=1}" HorizontalOptions="Start" MinimumHeightRequest="30" MinimumWidthRequest="30" Aspect="AspectFit"/>
                                         <Label LineBreakMode="TailTruncation" VerticalTextAlignment="Center" VerticalOptions="Center" Margin="0" FontSize="14" Text="{Binding Attachment}" HorizontalOptions="Start" TextColor="{Binding AttachmentTextColor}"/>
