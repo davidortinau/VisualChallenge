@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VisualChallenge.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:visualChallenge="clr-namespace:VisualChallenge;assembly=VisualChallenge"
+    Title="Registration"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout Margin="16,0,16,16" BackgroundColor="White">
+            <Grid>
+                <Image
+                    Margin="0,16,0,0"
+                    HeightRequest="48"
+                    HorizontalOptions="Start"
+                    Source="invision_logo.png" />
+
+                <Button
+                    Margin="0,16,8,0"
+                    Padding="16,0"
+                    BackgroundColor="White"
+                    BorderColor="LightGray"
+                    BorderWidth="2"
+                    CornerRadius="20"
+                    FontSize="12"
+                    HeightRequest="40"
+                    HorizontalOptions="End"
+                    Text="Sign in"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </Grid>
+
+            <Label
+                Margin="0,8,0,0"
+                FontSize="28"
+                Text="Get started absolutely free."
+                TextColor="#5D5D5D" />
+
+            <Label
+                FontSize="16"
+                Text="Free forever. No credit card needed."
+                TextColor="#848484" />
+
+            <Label
+                Margin="0,32,0,0"
+                FontAttributes="Bold"
+                FontSize="12"
+                Text="WORK EMAIL ADDRESS"
+                TextColor="#5D5D5D" />
+
+            <Frame
+                Padding="0"
+                BorderColor="LightGray"
+                HasShadow="False">
+                <Entry BackgroundColor="white" />
+            </Frame>
+
+            <Label
+                Margin="0,8,0,0"
+                FontAttributes="Bold"
+                FontSize="12"
+                Text="NAME"
+                TextColor="#5D5D5D" />
+
+            <Frame
+                Padding="0"
+                BorderColor="LightGray"
+                HasShadow="False">
+                <Entry BackgroundColor="white" />
+            </Frame>
+
+            <Label
+                Margin="0,8,0,0"
+                FontAttributes="Bold"
+                FontSize="12"
+                Text="PASSWORD"
+                TextColor="#5D5D5D" />
+
+            <Frame
+                Padding="0"
+                BorderColor="LightGray"
+                HasShadow="False">
+                <Entry BackgroundColor="white" />
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" Spacing="0">
+
+                <visualChallenge:MaterialCheckBox
+                    Margin="8"
+                    HeightRequest="36"
+                    HorizontalOptions="Start"
+                    TextColor="#FF3366"
+                    Visual="Default"
+                    WidthRequest="36" />
+
+                <Label
+                    FontSize="12"
+                    TextColor="#848484"
+                    VerticalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="I'm not interested in updates about InVision products and services. " />
+                            <Span Text="Privacy Policy" TextDecorations="Underline" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <Label
+                FontSize="12"
+                HorizontalTextAlignment="Center"
+                TextColor="#848484">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By clicking &quot;Continue&quot; I agree to InVision's " />
+                        <Span Text="Terms of Service" TextDecorations="Underline" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Button
+                Margin="0,16"
+                Padding="48,0"
+                BackgroundColor="#FF3366"
+                CornerRadius="28"
+                HeightRequest="56"
+                HorizontalOptions="Center"
+                Text="Continue" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
