@@ -8,8 +8,9 @@ namespace VisualChallenge
         public App()
         {
             InitializeComponent();
-            
+
             MainPage = new AppShell();
+            //MainPage = new VisualChallengePage();
         }
 
         protected override void OnStart()

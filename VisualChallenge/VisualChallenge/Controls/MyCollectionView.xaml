@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VisualChallenge.Controls.MyCollectionView">
+    <ContentView.Content>
+        <Frame
+            HeightRequest="380"
+            BackgroundColor="White"
+            BorderColor="Silver"
+            CornerRadius="20"
+            Padding="0">
+            <StackLayout>
+                <Grid
+                    Padding="10,20"
+                    Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="25" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="4*" />
+                        <ColumnDefinition
+                            Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        x:Name="Title"
+                        Grid.Column="0"
+                        Margin="20,0"
+                        Text="Following"
+                        TextColor="Black"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start" />
+                    <Image
+                        Grid.Column="1"
+                        Margin="0,0,20,0"
+                        HeightRequest="20"
+                        WidthRequest="20"
+                        Source="tab_feed"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End" />
+                </Grid>
+                <BoxView
+                    BackgroundColor="#FCF7F7"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0" />
+                <CollectionView
+                    BackgroundColor="White"
+                    ItemsSource="{Binding Coins}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid
+                                Padding="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="20" />
+                                    <RowDefinition
+                                        Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="1*" />
+                                    <ColumnDefinition
+                                        Width="2*" />
+                                    <ColumnDefinition
+                                        Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Source="{Binding Image}"
+                                    Aspect="AspectFit"
+                                    HeightRequest="40"
+                                    WidthRequest="40"
+                                    HorizontalOptions="Center" />
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    Text="{Binding Name}"
+                                    FontAttributes="Bold" />
+                                <Label
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    TextColor="Silver"
+                                    Text="{Binding ShortName}" />
+                                <Frame
+                                    CornerRadius="15"
+                                    Padding="0"
+                                    Grid.RowSpan="2"
+                                    VerticalOptions="Center"
+                                    BackgroundColor="#FCF7F7"
+                                    HasShadow="False"
+                                    Grid.Row="0"
+                                    Grid.Column="2">
+                                    <Label
+                                        Margin="5"
+                                        HorizontalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="#CC5055"
+                                        FontSize="Small"
+                                        Text="{Binding Value}" />
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <BoxView
+                    BackgroundColor="#FCF7F7"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand" />
+                <Grid
+                    Padding="10,20"
+                    Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="25" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Margin="20,0"
+                        Text="View all assets"
+                        TextColor="Silver"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start" />
+                    <Label
+                        Grid.Column="1"
+                        Margin="0,0,20,0"
+                        Text="&gt;"
+                        TextColor="Silver"
+                        HeightRequest="20"
+                        WidthRequest="20"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End" />
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>
