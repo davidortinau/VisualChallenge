@@ -20,4 +20,33 @@
       <DependentUpon>VisualChallengePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\cover_photo.jpg" />
+    <None Remove="Resources\ic_help.png" />
+    <None Remove="Resources\ic_bell.png" />
+    <None Remove="Resources\ic_link.png" />
+    <None Remove="Resources\profile_photo.png" />
+    <None Remove="Resources\umbrella.jpg" />
+    <None Remove="Resources\vikings.jpg" />
+    <None Remove="Resources\peaky.jpg" />
+    <None Remove="Resources\mirror.jpg" />
+    <None Remove="Resources\leftovers.jpg" />
+    <None Remove="Resources\dark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cover_photo.jpg" />
+    <EmbeddedResource Include="Resources\ic_help.png" />
+    <EmbeddedResource Include="Resources\ic_bell.png" />
+    <EmbeddedResource Include="Resources\ic_link.png" />
+    <EmbeddedResource Include="Resources\profile_photo.png" />
+    <EmbeddedResource Include="Resources\umbrella.jpg" />
+    <EmbeddedResource Include="Resources\vikings.jpg" />
+    <EmbeddedResource Include="Resources\peaky.jpg" />
+    <EmbeddedResource Include="Resources\mirror.jpg" />
+    <EmbeddedResource Include="Resources\leftovers.jpg" />
+    <EmbeddedResource Include="Resources\dark.jpg" />
+  </ItemGroup>
 </Project>
