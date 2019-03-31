@@ -23,19 +23,33 @@
                 <Setter Property="Shell.ShellTitleColor" Value="White" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
                 <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="Gray"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="#2196F3"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
-    <FlyoutItem>
-        <Tab>
+    <ShellItem>
+
+        <ShellSection Title="Podcasts" Icon="xamagon_preview">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
-        </Tab>
-    </FlyoutItem>
+        </ShellSection>
+
+        <ShellSection Title="Filters" Icon="xamagon_preview">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+
+        <ShellSection Title="Discover" Icon="xamagon_preview">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+
+        <ShellSection Title="Profile" Icon="xamagon_preview">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+
+    </ShellItem>
 
 </Shell>

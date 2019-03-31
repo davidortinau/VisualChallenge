@@ -144,4 +144,13 @@
       <Name>VisualChallenge</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\invisibila.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\makingsense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\xamagon_preview.png" />
+  </ItemGroup>
 </Project>
