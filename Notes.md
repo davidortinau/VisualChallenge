@@ -8,4 +8,4 @@
 - CollectionView is powerful!!!
 - Button's shadow was great still I'd like to be able to edit the elevation without a custom renderer or effect.
 
-![TV Time Screenshot 1](https://xerx.github.com/VisualChallenge/TV Time Screenshot 1.jpg)
+![TV Time Screenshot 1](https://raw.githubusercontent.com/xerx/VisualChallenge/master/Clone%20Android%20Screenshot%201.png)
