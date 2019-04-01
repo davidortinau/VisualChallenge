@@ -1,3 +1,0 @@
-The app reproducted is TV Time.
-
-- In Material the Frame had no shadow by default
