@@ -1,7 +1,11 @@
-## TV Time clone
+# TV Time clone
 
 - https://itunes.apple.com/us/app/tv-time-track-what-you-watch/id431065232?mt=8
 - https://play.google.com/store/apps/details?id=com.tozelabs.tvshowtime&hl=en
 
-# Notes
-- In Material the Frame had no shadow by default so I had to build a custom visual renderer to reproduce the shadow effect
+## Notes
+- In Material the Frame had no shadow by default so I had to build a custom visual renderer to reproduce the shadow effect.
+- CollectionView is powerful!!!
+- Button's shadow was great still I'd like to be able to edit the elevation without a custom renderer or effect.
+
+![TV Time Screenshot 1](https://xerx.github.com/VisualChallenge/TV Time Screenshot 1.jpg)
