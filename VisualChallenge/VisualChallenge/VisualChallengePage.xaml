@@ -28,8 +28,8 @@
                     <Image Source="xamagon_preview" WidthRequest="22" Margin="26, 0, 0, 0" HeightRequest="22"></Image>
                     <Image Source="xamagon_preview" WidthRequest="30" Margin="26, 0, 0, 0" HeightRequest="30"></Image>
                 </FlexLayout>
-                <Frame CornerRadius="10" Margin="20, 0, 0, 13" Padding="0" WidthRequest="140" HeightRequest="140"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
-                    <Image Source="invisibila.jpg"></Image>
+                <Frame CornerRadius="10" Margin="20, 0, 0, 13" Padding="0"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Image WidthRequest="140" HeightRequest="140" Source="invisibila.jpg"></Image>
                 </Frame>
             </AbsoluteLayout>
 
