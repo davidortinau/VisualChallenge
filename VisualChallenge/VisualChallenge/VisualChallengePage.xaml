@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
@@ -15,7 +15,6 @@
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
         <ScrollView AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
@@ -29,8 +28,8 @@
                     <Image Source="xamagon_preview" WidthRequest="22" Margin="26, 0, 0, 0" HeightRequest="22"></Image>
                     <Image Source="xamagon_preview" WidthRequest="30" Margin="26, 0, 0, 0" HeightRequest="30"></Image>
                 </FlexLayout>
-                <Frame Visual="Default" CornerRadius="10" Margin="20, 0, 0, 13" Padding="0" WidthRequest="140" HeightRequest="140"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
-                    <Image Source="invisibila"></Image>
+                <Frame CornerRadius="10" Margin="20, 0, 0, 13" Padding="0" WidthRequest="140" HeightRequest="140"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Image Source="invisibila.jpg"></Image>
                 </Frame>
             </AbsoluteLayout>
 
@@ -39,7 +38,7 @@
             </Frame>
 
             <StackLayout Orientation="Horizontal" Margin="20, 11, 20, 11">
-                <Label VerticalOptions="Center"  Text="49 episodes &#8226; 2 archived" FontSize="13"></Label>
+                <Label VerticalOptions="Center" TextColor="#8F97A4" Text="49 episodes &#8226; 2 archived" FontSize="13"></Label>
                 <Image HorizontalOptions="EndAndExpand" Source="xamagon_preview" WidthRequest="16" HeightRequest="16"></Image>
             </StackLayout>
 
@@ -97,10 +96,17 @@
     </ScrollView>
 
         <StackLayout Spacing="0" AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+            <!--I probably should have listened to that comment about the scrollview...-->
+            <StackLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP">0</On>
+            <On Platform="iOS">0,00,0,50</On>
+        </OnPlatform>
+            </StackLayout.Margin>
             <Frame Margin="0" CornerRadius="0" Visual="Default" BackgroundColor="White" HeightRequest="65" Padding="0">
                 <FlexLayout Margin="10, 0" JustifyContent="SpaceBetween" AlignItems="Center">
                     <ContentView WidthRequest="50" HeightRequest="50">
-                        <Frame Padding="0" HasShadow="False" CornerRadius="4">
+                        <Frame Padding="0" HasShadow="False" CornerRadius="4" IsClippedToBounds="true">
                             <Image Source="makingsense" WidthRequest="48" HeightRequest="48"></Image>
                         </Frame>
                     </ContentView>
@@ -127,6 +133,5 @@
         </StackLayout>
 
     </AbsoluteLayout>
-
     
 </ContentPage>
