@@ -9,7 +9,7 @@ namespace VisualChallenge
         {
             InitializeComponent();
             
-            MainPage = new AppShell();
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()
