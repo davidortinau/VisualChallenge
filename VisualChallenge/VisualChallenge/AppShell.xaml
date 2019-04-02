@@ -31,7 +31,6 @@
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
-
     <ShellItem>
         <ShellSection Title="News" Icon="news.png">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
@@ -46,5 +45,4 @@
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
         </ShellSection>
     </ShellItem>
-
 </Shell>
