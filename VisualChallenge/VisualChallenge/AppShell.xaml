@@ -31,10 +31,10 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <ShellItem>
-        <ShellSection>
+    <FlyoutItem>
+        <Tab>
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
-        </ShellSection>
-    </ShellItem>
+        </Tab>
+    </FlyoutItem>
 
 </Shell>
