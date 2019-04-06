@@ -6,12 +6,8 @@
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
              Title="Visual Challenge"
-             Visual="Material"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
+             Visual="Material">
+             
 	<Grid Padding="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -27,7 +23,7 @@
                     <Entry Placeholder="Username"/>
                     <Entry Placeholder="Password" IsPassword="true"/>
                     
-                    <Picker Title="Account Type">
+                    <Picker Title="Account Picker">
                         <Picker.Items>
                             <sys:String>Personal</sys:String>
                             <sys:String>Business</sys:String>
@@ -45,8 +41,10 @@
                     <Label Text="Slider"/>
                     <Slider ValueChanged="Handle_ValueChanged" VerticalOptions="End"/>
                     
-                    <Label Text="Enabled"/>
-                    <Switch Toggled="Handle_Toggled"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Button Enabled" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                        <Switch Toggled="Handle_Toggled" IsToggled="true"/>
+                    </StackLayout>
                 </StackLayout>
             </Frame>
         </ScrollView>
