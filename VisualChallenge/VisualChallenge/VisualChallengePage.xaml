@@ -1,23 +1,164 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+<ContentPage
+    x:Class="VisualChallenge.VisualChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title="Visual Challenge"
+    BackgroundColor="White"
+    BackgroundImage="image_background.png"
+    Shell.NavBarIsVisible="False">
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <ContentPage.Resources>
+        <ResourceDictionary>
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <Color x:Key="AccentColor">#fd613b</Color>
+            <Color x:Key="PrimaryColor">#37465d</Color>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+            <Style x:Key="LoginEntryStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryColor}" />
+            </Style>
 
-		</FlexLayout>
-	</ScrollView>
+            <Style x:Key="ValidationEntryErrorStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="DarkRed" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+
+            <Style x:Key="PrimaryActionButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HeightRequest" Value="44" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="BorderRadius" Value="22" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <Frame
+                Margin="16"
+                Padding="16"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+
+                <Grid>
+
+                    <BoxView
+                        Margin="-16"
+                        BackgroundColor="White"
+                        CornerRadius="10"
+                        HorizontalOptions="FillAndExpand"
+                        Opacity="0.5"
+                        VerticalOptions="FillAndExpand" />
+
+
+                    <ActivityIndicator
+                        x:Name="Loaderspinner"
+                        Margin="0,36,8,0"
+                        HorizontalOptions="End"
+                        IsRunning="true"
+                        IsVisible="True"
+                        VerticalOptions="Start"
+                        Color="{StaticResource AccentColor}" />
+
+
+                    <StackLayout Visual="Material">
+
+
+                        <!--  text  -->
+                        <Label
+                            Margin="0,0,0,24"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            LineBreakMode="WordWrap"
+                            Text="Register a new account"
+                            TextColor="{StaticResource PrimaryColor}" />
+
+                        <StackLayout VerticalOptions="Start">
+                            <!--  -EMAIL FIELD  -->
+                            <Entry
+                                x:Name="EmailEntry"
+                                Placeholder="E-mail"
+                                Style="{StaticResource LoginEntryStyle}" />
+
+                            <Label Style="{StaticResource ValidationEntryErrorStyle}" Text="Enter a valid e-mail" />
+                        </StackLayout>
+
+                        <!--  -USERNAME FIELD  -->
+                        <Entry
+                            x:Name="usernameEntry"
+                            Grid.Row="1"
+                            Placeholder="Username"
+                            Style="{StaticResource LoginEntryStyle}"
+                            VerticalOptions="StartAndExpand" />
+
+
+                        <!--  -PASSWORD FIELD  -->
+                        <Entry
+                            x:Name="passwordEntry"
+                            Grid.Row="2"
+                            IsPassword="true"
+                            Placeholder="Password"
+                            Style="{StaticResource LoginEntryStyle}"
+                            VerticalOptions="StartAndExpand" />
+
+                        <StackLayout
+                            Grid.Row="3"
+                            Margin="0,0,0,32"
+                            VerticalOptions="StartAndExpand">
+
+                            <!--  -PASSWORD REPEAT FIELD  -->
+                            <Entry
+                                x:Name="passwordConfirmEntry"
+                                IsPassword="true"
+                                Placeholder="Repeat password"
+                                Style="{StaticResource LoginEntryStyle}" />
+
+                            <Label Style="{StaticResource ValidationEntryErrorStyle}" Text="Your password doesn't match" />
+
+                        </StackLayout>
+
+
+                        <!--  BUTTONS  -->
+                        <Button
+                            x:Name="RegisterButton"
+                            Style="{StaticResource PrimaryActionButtonStyle}"
+                            Text="Sign In"
+                            VerticalOptions="EndAndExpand" />
+
+                        <Label
+                            x:Name="LoginButton"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="{StaticResource PrimaryColor}"
+                            TranslationY="4">
+
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Already an user? " />
+                                    <Span
+                                        FontAttributes="Bold"
+                                        Text="Login now"
+                                        TextDecorations="Underline" />
+                                </FormattedString>
+                            </Label.FormattedText>
+
+                        </Label>
+
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
