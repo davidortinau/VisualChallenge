@@ -1,23 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+<ContentPage
+    x:Class="VisualChallenge.VisualChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title=" Blog - Visual Change"
+    BackgroundColor="#EFEFF4"
+    Shell.NavBarIsVisible="True">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Name="Search"
+            Icon="searchIcon.png"
+            Order="Primary"
+            Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <CollectionView x:Name="BlogList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="#EFEFF4">
+                            <Frame
+                                Margin="8,12"
+                                Padding="0"
+                                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                AbsoluteLayout.LayoutFlags="All"
+                                BackgroundColor="White"
+                                CornerRadius="0"
+                                IsClippedToBounds="True"
+                                Visual="Material">
+                                <Grid Padding="0" RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="124" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                        Grid.Row="0"
+                                        Aspect="AspectFill"
+                                        Source="{Binding ImageUrl}" />
+                                    <StackLayout
+                                        Grid.Row="1"
+                                        Padding="5,48,5,15"
+                                        BackgroundColor="White"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="EndAndExpand">
+                                        <Label
+                                            FontSize="Medium"
+                                            HorizontalOptions="CenterAndExpand"
+                                            HorizontalTextAlignment="Center"
+                                            Text="{Binding AuthorName}"
+                                            TextColor="#8A8B8C" />
+                                        <Label
+                                            Margin="5,0,5,10"
+                                            FontSize="Large"
+                                            HorizontalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="3"
+                                            Text="{Binding Title}" />
+                                        <StackLayout
+                                            HorizontalOptions="CenterAndExpand"
+                                            Orientation="Horizontal"
+                                            VerticalOptions="FillAndExpand">
+                                            <Image Source="miniCalendar.png" VerticalOptions="CenterAndExpand" />
+                                            <Label
+                                                FontSize="Micro"
+                                                Text="{Binding Date}"
+                                                TextColor="#8A8B8C"
+                                                VerticalOptions="CenterAndExpand" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <AbsoluteLayout
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        HorizontalOptions="FillAndExpand">
+                                        <BoxView
+                                            AbsoluteLayout.LayoutBounds="0,124,1,2"
+                                            AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                                            BackgroundColor="#29b69b" />
+                                        <controls:CircleImage
+                                            AbsoluteLayout.LayoutBounds="0.5,84,80,80"
+                                            AbsoluteLayout.LayoutFlags="XProportional"
+                                            Aspect="AspectFill"
+                                            BorderColor="#29b69b"
+                                            BorderThickness="2"
+                                            Source="{Binding AuthorImageUrl}" />
+                                    </AbsoluteLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -16,26 +16,33 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#2cb695</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
                 <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellDisabledColor" Value="#8A8B8C" />
+                <Setter Property="Shell.ShellUnselectedColor" Value="#8A8B8C" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.ShellTabBarForegroundColor" Value="{StaticResource NavigationPrimary}"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#8A8B8C"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="{StaticResource NavigationPrimary}"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
-
-    <FlyoutItem>
-        <Tab>
+    <ShellItem>
+        <ShellSection Title="News" Icon="news.png">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
-        </Tab>
-    </FlyoutItem>
-
+        </ShellSection>
+        <ShellSection Title="Events" Icon="calendar.png">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+        <ShellSection Title="Blog" Icon="cpIcon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+        <ShellSection Title="More" Icon="more.png">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+    </ShellItem>
 </Shell>

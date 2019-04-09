@@ -11,8 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.293082-pre8" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.293082-pre8" />  
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.1.206893" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.1.206893" />  
   </ItemGroup>
 
   <ItemGroup>
