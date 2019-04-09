@@ -1,22 +1,108 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#1D232E"
              Title="Visual Challenge"
              >
-
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
 	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+		<FlexLayout Padding="0,20" Direction="Column" AlignContent="Center" JustifyContent="Start">
+			<Grid RowSpacing="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*" />
+                    <RowDefinition Height="0.4*" />
+                    <RowDefinition Height="0.4*" />
+                </Grid.RowDefinitions>
+				<StackLayout Grid.Row="0">
+					<Label Style="{StaticResource LabelTitleStyle}" Text="Featured" />
+					<ScrollView Orientation="Horizontal">
+						<StackLayout Padding="20,0" Spacing="15" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding Featured}">
+							<BindableLayout.ItemTemplate>
+								<DataTemplate>
+									<StackLayout WidthRequest="150">
+										<Frame HeightRequest="150" Padding="0" BackgroundColor="Black" >
+											<StackLayout>
+												<Image Opacity="0.7"
+												       HorizontalOptions="FillAndExpand"
+												       VerticalOptions="FillAndExpand"
+												       Source="{Binding Photo}"
+												       AbsoluteLayout.LayoutFlags="All"
+												       Aspect="AspectFill" />
+											</StackLayout>
+										</Frame>
+										<Label Text="{Binding Title}"
+										       Style="{StaticResource LabelSubtitleStyle}" />
+										<Label Text="{Binding Time}"
+										       Style="{StaticResource LabelRegularStyle}" />
+									</StackLayout>
+								</DataTemplate>
+							</BindableLayout.ItemTemplate>
+						</StackLayout>
+					</ScrollView>
+				</StackLayout>
+				<StackLayout Grid.Row="1">
+					<Label Style="{StaticResource LabelTitleStyle}" Text="Night Meditations" />
+					<ScrollView Orientation="Horizontal">
+						<StackLayout Padding="20,0" Spacing="15" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding NightMeditations}">
+							<BindableLayout.ItemTemplate>
+								<DataTemplate>
+									<StackLayout WidthRequest="150">
+										<Frame HeightRequest="150" Padding="0" BackgroundColor="Black">
+											<StackLayout>
+												<Image Opacity="0.7"
+												       HorizontalOptions="FillAndExpand"
+												       VerticalOptions="FillAndExpand"
+												       Source="{Binding Photo}" 
+												       AbsoluteLayout.LayoutFlags="All"
+												       Aspect="AspectFill"/>
+											</StackLayout>
+										</Frame>
+										<Label Text="{Binding Title}"
+										       Style="{StaticResource LabelSubtitleStyle}" />
+										<Label Text="{Binding Time}"
+										       Style="{StaticResource LabelRegularStyle}" />
+									</StackLayout>
+								</DataTemplate>
+							</BindableLayout.ItemTemplate>
+						</StackLayout>
+					</ScrollView>
+				</StackLayout>
+				<StackLayout Grid.Row="2">
+					<Label Style="{StaticResource LabelTitleStyle}" Text="Night Meditations" />
+					<ScrollView Orientation="Horizontal">
+						<StackLayout Padding="20,0" Spacing="15" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding Anxiety}">
+							<BindableLayout.ItemTemplate>
+								<DataTemplate>
+									<StackLayout WidthRequest="150">
+										<Frame HeightRequest="150" Padding="0" BackgroundColor="Black">
+											<StackLayout>
+												<Image Opacity="0.7" 
+												       HorizontalOptions="FillAndExpand"
+												       VerticalOptions="FillAndExpand"
+												       Source="{Binding Photo}" 
+												       AbsoluteLayout.LayoutFlags="All"
+												       Aspect="AspectFill"/>
+											</StackLayout>
+										</Frame>
+										<Label Text="{Binding Title}"
+										       Style="{StaticResource LabelSubtitleStyle}" />
+										<Label Text="{Binding Time}"
+										       Style="{StaticResource LabelRegularStyle}" />
+									</StackLayout>
+								</DataTemplate>
+							</BindableLayout.ItemTemplate>
+						</StackLayout>
+					</ScrollView>
+				</StackLayout>
+            </Grid>
 
 		</FlexLayout>
 	</ScrollView>
