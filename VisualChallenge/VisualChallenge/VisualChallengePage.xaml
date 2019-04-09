@@ -1,23 +1,159 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true" 
              BackgroundColor="White"
-             Title="Visual Challenge"
              >
+    <Shell.TitleView>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Discover"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="White" FontSize="Medium" />
+        </StackLayout>
+    </Shell.TitleView>
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <StackLayout>
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.45*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.45*"/>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+            </Grid.RowDefinitions>
 
-		</FlexLayout>
-	</ScrollView>
+
+
+            <StackLayout Margin="20,10,20,20" Orientation="Horizontal" Grid.Row="0">
+
+                <Label HorizontalOptions="StartAndExpand" Text="Stories" HorizontalTextAlignment="Start"></Label>
+                <Label HorizontalOptions="EndAndExpand" TextColor="#1e90ff" Text="Show all" HorizontalTextAlignment="End"></Label>
+
+
+            </StackLayout>
+            <StackLayout  Grid.Row="1">
+
+                <CollectionView ItemsSource="{Binding MyListCollector}"
+                       
+                   Margin="20,0,20,0"
+                    
+                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout  Margin="20,0,20,0">
+
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="140" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Frame Padding="0" Margin="0"  Visual="Material" CornerRadius="2"
+                                            HasShadow="True">
+                                        <Image Source="{Binding foodurl}" Aspect="AspectFill"/>
+                                    </Frame>
+                                    <Frame Grid.Row="1" Margin="0,-5,0,0"
+                                            CornerRadius="2"
+                                            Visual="Material"
+                                            HasShadow="True">
+                                        <StackLayout Orientation="Vertical">
+                                            <Label 
+                                    TextColor="Black"
+                       Text="{Binding FoodName}"
+                       FontAttributes="Bold"
+                       
+                       LineBreakMode="TailTruncation" />
+                                            <Label 
+                                    TextColor="Black"
+                      
+                       Text="{Binding FoodDetail}"
+                       LineBreakMode="TailTruncation"
+                       FontAttributes="Italic"
+                       />
+                                        </StackLayout>
+
+
+                                    </Frame>
+
+                                </Grid>
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+
+            <StackLayout Margin="20,-20,20,0" Orientation="Horizontal" Grid.Row="2">
+
+                <Label HorizontalOptions="StartAndExpand" Text="Stories" HorizontalTextAlignment="Start"></Label>
+                <Label HorizontalOptions="EndAndExpand" TextColor="#1e90ff" Text="Show all" HorizontalTextAlignment="End"></Label>
+
+
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <CollectionView ItemsSource="{Binding MyListCollector}"
+                                                 
+                   Margin="20,-30,0,0">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                        Span="2"  />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout  Margin="20,60,0,0">
+
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="140" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Frame Padding="0"  Visual="Material"
+                                            CornerRadius="2"
+                                            HasShadow="True"   Margin="0" Grid.Row="0">
+                                        <Image Source="{Binding foodurl}" Aspect="AspectFill"/>
+                                    </Frame>
+
+                                    <Frame VerticalOptions="StartAndExpand" Grid.Row="1"  Visual="Material"
+                                            CornerRadius="2"
+                                            HasShadow="True" Margin="0,-5,0,0">
+                                        <StackLayout Orientation="Vertical">
+
+                                            <Label  VerticalTextAlignment="Start"
+                                    TextColor="Black"
+                       Text="{Binding FoodName}"
+                       FontAttributes="Bold"
+                       
+                       LineBreakMode="TailTruncation" />
+                                        </StackLayout>
+                                    </Frame>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+
+        </Grid>
+
+    </StackLayout>
+
 </ContentPage>
