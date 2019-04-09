@@ -1,23 +1,239 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:VisualChallenge"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <local:VisualChallengePageViewModel/>
+    </ContentPage.BindingContext>
 	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
+		<Grid RowSpacing="0">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="#333333"/>
+                        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                    </Style>
+                    <Style TargetType="ImageButton" x:Key="roundImageButtonStyle">
+                        <Setter Property="VerticalOptions" Value="Start"/>
+                        <Setter Property="WidthRequest" Value="20"/>
+                        <Setter Property="HeightRequest" Value="20"/>
+                        <Setter Property="BackgroundColor" Value="Transparent"/>
+                    </Style>
+                    <Style TargetType="Frame">
+                        <Setter Property="Padding" Value="10,10,10,0"/>
+                        <Setter Property="Visual" Value="Custom"/>
+                        <Setter Property="WidthRequest" Value="200"/>
+                    </Style>
+                </ResourceDictionary>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding CoverPhoto}"
+                   Grid.ColumnSpan="2"
+                   Aspect="AspectFill"/>
+            <ImageButton Source="{Binding HelpIcon}"
+                         Style="{StaticResource roundImageButtonStyle}"
+                         Margin="20,20,0,0"
+                         HorizontalOptions="Start"/>
+            <ImageButton Source="{Binding BellIcon}"
+                         Style="{StaticResource roundImageButtonStyle}"
+                         Margin="0,20,20,0"
+                         Grid.Column="1"
+                         HorizontalOptions="End"/>
+            <Image Source="{Binding ProfilePhoto}"
+                   Aspect="AspectFill"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.RowSpan="2"
+                   Grid.ColumnSpan="2"
+                   HorizontalOptions="Center"
+                   VerticalOptions="End"/>
+            <Label HorizontalOptions="Center"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="2"
+                   Margin="0,5"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   Text="Xam Tam"/>
+            <Button BackgroundColor="#EEEEEE"
+                    Margin="0,5"
+                    TextColor="#333333"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Text="EDIT"/>
+            <ScrollView Grid.Row="4"
+                        Grid.ColumnSpan="2"
+                        Orientation="Horizontal"
+                        Margin="0,5">
+                <StackLayout Orientation="Horizontal"
+                             Padding="18"
+                             Spacing="18">
+                    <Frame>
+                        <StackLayout Spacing="0">
+                            <Label Text="WATCHED EPISODES"
+                                   FontSize="14"/>
+                            <Label Text="678"
+                                   FontSize="28"
+                                   FontAttributes="Bold"/>
+                            <Label Text="16 in the last month"
+                                   FontSize="12"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame>
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="TIME SPENT"
+                                   Grid.ColumnSpan="3"
+                                   FontSize="14"/>
+                            <Label Text="01"
+                                   Grid.Row="1"
+                                   FontAttributes="Bold"
+                                   FontSize="28"/>
+                            <Label Text="12"
+                                   Grid.Row="1"
+                                   Grid.Column="1"
+                                   FontAttributes="Bold"
+                                   FontSize="28"/>
+                            <Label Text="21"
+                                   Grid.Row="1"
+                                   Grid.Column="2"
+                                   FontAttributes="Bold"
+                                   FontSize="28"/>  
+                            <Label Text="Months"
+                                   Grid.Row="2"
+                                   FontSize="12"/>
+                            <Label Text="Days"
+                                   Grid.Row="2"
+                                   Grid.Column="1"
+                                   FontSize="12"/>
+                            <Label Text="Hours"
+                                   Grid.Row="2"
+                                   Grid.Column="2"
+                                   FontSize="12"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <Label Text="Shows"
+                   Grid.Row="5"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="18,4"/>
+            <Button BackgroundColor="Transparent"
+                    Visual="Default"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="18,4"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    TextColor="#0066CC"
+                    Text="SEE ALL"/>
+            <CollectionView ItemsLayout="{Static ListItemsLayout.HorizontalList}"
+                            ItemsSource="{Binding ShowsList}"
+                            Grid.Row="6"
+                            Grid.ColumnSpan="2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="18,0,0,0"
+                              WidthRequest="130">
+                        <ImageButton Source="{Binding .}" 
+                                     Aspect="AspectFill"/> 
+                        </Grid>
+                   </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Text="Favourite TV Shows"
+                   Grid.Row="7"
+                   Grid.ColumnSpan="2"
+                   FontSize="18"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="18"/>
+            <CollectionView ItemsLayout="{Static ListItemsLayout.HorizontalList}"
+                            ItemsSource="{Binding FavouriteShowsList}"
+                            Grid.Row="8"
+                            Grid.ColumnSpan="2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="18,0,0,0"
+                              WidthRequest="130">
+                        <ImageButton Source="{Binding .}" 
+                                     Aspect="AspectFill"/> 
+                        </Grid>
+                   </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <CollectionView ItemsSource="{Binding MiscObjectsList}"
+                            Grid.Row="9"
+                            HeightRequest="350"
+                            Grid.ColumnSpan="2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HeightRequest="70">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Title}"
+                                   Margin="18,0,0,0"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Center"/>
+                            <Label Text="{Binding Count}"
+                                   Grid.Column="1"
+                                   Margin="0,0,18,0"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center"/>
+                            <BoxView BackgroundColor="Gray"
+                                     Grid.ColumnSpan="2"
+                                     HeightRequest="1"
+                                     VerticalOptions="End"/>
+                        </Grid>
+                   </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button BackgroundColor="#EEEEEE"
+                    Margin="0,15"
+                    TextColor="#333333"
+                    Grid.Row="10"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Text="SETTINGS"/>
+        </Grid>
 	</ScrollView>
 </ContentPage>
