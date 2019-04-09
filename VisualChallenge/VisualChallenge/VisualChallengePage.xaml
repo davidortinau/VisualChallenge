@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
@@ -6,18 +6,48 @@
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
              Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+             Visual="Material">
+             
+	<Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView>
+            <Frame VerticalOptions="Center" Margin="8">
+                <StackLayout Spacing="12">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="First Name" HorizontalOptions="FillAndExpand"/>
+                        <Entry Placeholder="Last Name" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <Entry Placeholder="Username"/>
+                    <Entry Placeholder="Password" IsPassword="true"/>
+                    
+                    <Picker Title="Account Picker">
+                        <Picker.Items>
+                            <sys:String>Personal</sys:String>
+                            <sys:String>Business</sys:String>
+                        </Picker.Items>
+                    </Picker>
+                    
+                    <StackLayout Orientation="Horizontal">            
+                        <DatePicker HorizontalOptions="FillAndExpand" />
+                        <TimePicker HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    
+                    <Label Text="Progress bar"/>
+                    <ProgressBar x:Name="progressBar"/>
+                    
+                    <Label Text="Slider"/>
+                    <Slider ValueChanged="Handle_ValueChanged" VerticalOptions="End"/>
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Button Enabled" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                        <Switch Toggled="Handle_Toggled" IsToggled="true"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+        <Button x:Name="LonelyButton" Grid.Row="1" Text="Visual" Clicked="Button_Clicked" VerticalOptions="End" />
+    </Grid>
 </ContentPage>
