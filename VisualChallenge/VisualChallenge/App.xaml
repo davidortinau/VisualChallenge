@@ -1,8 +1,44 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualChallenge.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+              
+            <Style TargetType="Label" x:Key="TitleStyle" >
+                 <Setter Property="VerticalOptions" Value="Start"  />
+                 <Setter Property="FontSize" Value="Large" />
+                 <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,30,0,0" />
+            </Style>
+            
+             <Style TargetType="Label" x:Key="DescriptionStyle" >
+                 <Setter Property="VerticalOptions" Value="Start"  />
+                 <Setter Property="FontSize" Value="14" />
+                 <Setter Property="FontAttributes" Value="Bold" />
+                 <Setter Property="Margin" Value="10,0" />
+                 <Setter Property="LineBreakMode" Value="TailTruncation" />
+            </Style>
+            
+             <Style TargetType="Label" x:Key="TagStyle"  BasedOn="{StaticResource DescriptionStyle}">
+                 <Setter Property="TextColor" Value="RoyalBlue"  />
+            </Style>
+            
+            <Style TargetType="Button" x:Key="FilterButtonStyle" >
+                 <Setter Property="TextColor" Value="Gray"  />
+                 <Setter Property="HorizontalOptions" Value="Start" />
+                 <Setter Property="BackgroundColor" Value="White" />
+                 <Setter Property="BorderColor" Value="LightGray" />
+                 <Setter Property="BorderWidth" Value="1" />
+                 <Setter Property="CornerRadius" Value="5" />
+                 <Setter Property="Padding" Value="10,0" />
+                 <Setter Property="Visual" Value="Default" />
+            </Style>
+            
+            <Style TargetType="Button" x:Key="FilterSelectedButtonStyle"  BasedOn="{StaticResource FilterButtonStyle}">
+                 <Setter Property="TextColor" Value="White"  />
+                 <Setter Property="BackgroundColor" Value="#3A888D" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
