@@ -16,8 +16,5 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="VisualChallengePage.xaml.cs">
-      <DependentUpon>VisualChallengePage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 </Project>
