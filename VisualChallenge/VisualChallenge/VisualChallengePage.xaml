@@ -7,17 +7,61 @@
              BackgroundColor="White"
              Title="Visual Challenge"
              >
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Add"></ToolbarItem>
+        <ToolbarItem Order="Secondary" Priority="0" Text="Update"></ToolbarItem>
+    </ContentPage.ToolbarItems>
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
 	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+		<StackLayout Margin="20" >
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <Stepper BackgroundColor="#42f4ce" Visual="Default"/>
+            <Stepper BackgroundColor="#42f4ce" Visual="Material"></Stepper>
+            
+            <Frame Visual="Material" HeightRequest="150" WidthRequest="150" CornerRadius="5" BorderColor="Red">
+                <Image Source="monkey.jpg"></Image>
+            </Frame>
+            <Frame BorderColor="LightGray">
+                <Grid Visual="Material">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" Visual="Material" Grid.Column="0" BorderColor="LightGray">
+                        <StackLayout >
+                            <Label Text="Monkey"></Label>
+                            <Image Aspect="AspectFit" Source="monkey1.jpg"></Image>
+                        </StackLayout>
+                    </Frame>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+                    <Frame Grid.Row="0" Grid.Column="1" BorderColor="LightGray">
+                        <StackLayout >
+                            <Label Text="Monkey"></Label>
+                            <Image Aspect="AspectFit" Source="monkey2.jpg"></Image>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="1" Grid.Column="0" BorderColor="LightGray">
+                        <StackLayout >
+                            <Label Text="Monkey"></Label>
+                            <Image Aspect="AspectFit" Source="monkey3.jpg"></Image>
+                        </StackLayout>
+                    </Frame>
 
-		</FlexLayout>
+                    <Frame Grid.Row="1" Grid.Column="1" BorderColor="LightGray">
+                        <StackLayout >
+                            <Label Text="Monkey"></Label>
+                            <Image Aspect="AspectFit" Source="monkey4.jpg"></Image>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </Frame>
+            
+		</StackLayout>
 	</ScrollView>
 </ContentPage>
