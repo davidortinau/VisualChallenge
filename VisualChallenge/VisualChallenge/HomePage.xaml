@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualChallenge.HomePage"
+             BackgroundColor="#White"
+             Title="Visual Challenge">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" Padding="20,100,20,0" >
+            <Image Source="xamarinlogo.png" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Start"/>
+            <Label Text="Log In" FontSize="25" TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Placeholder="E-Mail" BackgroundColor="#476CBF" Keyboard="Email" TextColor="White"  Visual="Material"/>
+            <Entry Placeholder="Password" BackgroundColor="#476CBF" IsPassword="true" TextColor="White"  Visual="Material" />
+            <Button Text="Login" 
+                    TextColor="White"
+                    BackgroundColor="#2F237F"
+                    BorderRadius="15"
+                    BorderColor="White"
+                    BorderWidth="6"
+                    WidthRequest="200"                 
+                    Visual="Material" />
+            <ActivityIndicator IsRunning="true" 
+                               IsVisible="true"  
+                               Visual="Material"/>
+            <Button Text="Sing up" 
+                    TextColor="White"
+                    BackgroundColor="#FFA733" 
+                    BorderRadius="15"
+                    BorderColor="White"
+                    BorderWidth="6"
+                    WidthRequest="200"
+                    Visual="Material"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
