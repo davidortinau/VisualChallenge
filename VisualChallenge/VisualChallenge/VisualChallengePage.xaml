@@ -2,22 +2,57 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
-             Title="Visual Challenge"
+             Title="Crop List"
              >
 
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+	<ScrollView BackgroundColor="#f0f0f0">
+		<FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <StackLayout Margin="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="Default" HasUnevenRows="False"
+                            FlowItemsSource="{Binding Crops}" HorizontalOptions="Fill" VerticalOptions="Fill"
+                            RowHeight="120"
+                            FlowColumnMinWidth="120"
+                              >
+                        <flv:FlowListView.FlowColumnTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="#f0f0f0" Padding="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Frame HasShadow="True" BackgroundColor="White" Padding="0"
+                           HeightRequest="120" WidthRequest="120">
+                                        <Grid Padding="2">
+                                            <Grid BackgroundColor="White">
+                                                <Image Source="{Binding ImageSource}" HeightRequest="20" />
+                                                <Label Text="{Binding Name}" Margin="2" />
+                                                <Label Text="✓" TextColor="#4CAF50" IsVisible="{Binding IsSelected}"
+                             FontSize="40"
+                             HorizontalOptions="End" />
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView>
+                </Grid>
+            </StackLayout>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
+        </FlexLayout>
 	</ScrollView>
 </ContentPage>
