@@ -1,23 +1,270 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="VisualChallenge.VisualChallengePage"
+			 Shell.NavBarIsVisible="True"
+			 Shell.ShellBackgroundColor="#004661"
+			 BackgroundColor="#00AECC"
+			 Title="Visual Challenge"            
+			 Shell.ShellTitleColor="White"
+             Shell.ShellTabBarBackgroundColor="White"
+			 >
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Search" Order="Primary" Icon="magnifying_glass_search.png" Text="Search"/>
+    </ContentPage.ToolbarItems>
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+    <ScrollView Orientation="Horizontal" Margin="0" Padding="0">
+        <StackLayout Orientation="Horizontal" Margin="10" Padding="0" Spacing="0">
+            <Frame BackgroundColor="#C9CDCF" WidthRequest="280" Padding="0" Margin="10,0,10,10" HorizontalOptions="Start" VerticalOptions="Start">
+                <Grid Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame BackgroundColor ="#DFE1E2" Grid.Row="0" Grid.Column="0" Margin="0" Padding="10,0,10,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label FontSize="Medium" Grid.Row="0" Grid.Column="0" Text="Xamarin" FontAttributes="Bold" Margin="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Image Source="menu.png" Grid.Row="0" Grid.Column="1" Margin="0" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="13" WidthRequest="13"/>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor ="#DFE1E2" Grid.Row="2" Grid.Column="0" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="Add Card" TextColor="#61BD4F" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Frame>
+                    <ScrollView Orientation="Vertical" Grid.Row="1" Grid.Column="0" Margin="0" Padding="0">
+                        <StackLayout Orientation="Vertical" Margin="0" Padding="10" Spacing="10">
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped ="OnTapGestureRecognizerTapped"  NumberOfTapsRequired="2" />
+                                </Frame.GestureRecognizers>
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="FlexLayout" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Display Images in Android" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Grouping data with Tabbed page" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Detecting page orientation" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Master Detail Page Drawer Over Content Page" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Checkbox" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="How to set/get the App version" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Android 8 adaptive (vector) icons" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Cafeteria Theme" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Activity/Loading Indicator Page" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Overlay loading" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </ScrollView>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="#C9CDCF" WidthRequest="280" Padding="0" Margin="10,0,10,10" HorizontalOptions="Start" VerticalOptions="Start">
+                <Grid Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame BackgroundColor ="#DFE1E2" Grid.Row="0" Grid.Column="0" Margin="0" Padding="10,0,10,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label FontSize="Medium" Grid.Row="0" Grid.Column="0" Text="Unity" FontAttributes="Bold" Margin="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Image Source="menu.png" Grid.Row="0" Grid.Column="1" Margin="0" HorizontalOptions="End" VerticalOptions="Center" HeightRequest="13" WidthRequest="13"/>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor ="#DFE1E2" Grid.Row="2" Grid.Column="0" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="Add Card" TextColor="#61BD4F" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Frame>
+                    <ScrollView Orientation="Vertical" Grid.Row="1" Grid.Column="0" Margin="0" Padding="0">
+                        <StackLayout Orientation="Vertical" Margin="0" Padding="10" Spacing="10">
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Fake Vertex Shadows" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Unsafe Keyword C#" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor ="#FFFFFF" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                <Grid Margin="0" Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Reflection Based on Local Cubemaps in Unity" Grid.Row="0" Grid.Column="0" Margin="0" LineBreakMode="WordWrap"/>
+                                    <Image Source="align_to_left.png" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="Start" VerticalOptions="Center" HeightRequest="13"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </ScrollView>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

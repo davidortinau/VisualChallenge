@@ -22,10 +22,15 @@ namespace VisualChallenge.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            UINavigationBar.Appearance.TintColor = UIColor.White;
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes() { TextColor = UIColor.White });
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGBA(0, 70, 97, 255);
+
             global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "Visual_Experimental", "CollectionView_Experimental", "FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App());
+            app.StatusBarStyle = UIStatusBarStyle.LightContent;
 
             return base.FinishedLaunching(app, options);
         }
