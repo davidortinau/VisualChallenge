@@ -124,6 +124,9 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\bitcoin.png" />
+    <BundleResource Include="Resources\ethereum.png" />
+    <BundleResource Include="Resources\litecoin.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

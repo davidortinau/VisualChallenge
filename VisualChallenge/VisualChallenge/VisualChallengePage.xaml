@@ -1,23 +1,62 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
-
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    x:Class="VisualChallenge.VisualChallengePage"
+    xmlns:controls="clr-namespace:VisualChallenge.Controls"
+    BackgroundColor="#2455e7"
+    Shell.NavBarIsVisible="false">
+    <!-- If you decide to change out the flexlayout leave the scroll view here
+         Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+    -->
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="1*" />
+                <RowDefinition
+                    Height="3*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <FlexLayout
+                Direction="Column"
+                AlignContent="Start"
+                JustifyContent="Start"
+                HeightRequest="250"
+                BackgroundColor="#2455e7"
+                Grid.Row="0">
+                <StackLayout
+                    Margin="0, 60">
+                    <Label
+                        Text="$650.45"
+                        TextColor="White"
+                        FontSize="46"
+                        HorizontalTextAlignment="Center" />
+                    <Label
+                        Text="Your Accounts &gt;"
+                        TextColor="White"
+                        FontSize="18"
+                        HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout
+                Direction="Column"
+                AlignContent="Start"
+                JustifyContent="Start"
+                BackgroundColor="#FCFCFC"
+                Grid.Row="1"
+                Padding="20">
+                <controls:MyCollectionView 
+                    Margin="0, -92"
+                    Text="Following"/>
+                <controls:MyCollectionView 
+                    Margin="0, 110"
+                    Text="Newly Tradable Assets"/>
+            </FlexLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>

@@ -85,6 +85,10 @@
     <AndroidResource Include="Resources\drawable-xhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
+    <AndroidResource Include="Resources\drawable\litecoin.png" />
+    <AndroidResource Include="Resources\drawable\ethereum.png" />
+    <AndroidResource Include="Resources\drawable\bitcoin.png" />
+    <AndroidResource Include="Resources\drawable\tab_feed.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

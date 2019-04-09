@@ -20,4 +20,8 @@
       <DependentUpon>VisualChallengePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
 </Project>
