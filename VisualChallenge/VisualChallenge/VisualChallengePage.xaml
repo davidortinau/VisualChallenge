@@ -59,15 +59,16 @@
                         Opacity="0.5"
                         VerticalOptions="FillAndExpand" />
 
+                    <StackLayout HorizontalOptions="End" VerticalOptions="Start">
+                        <ActivityIndicator
+                            x:Name="Loaderspinner"
+                            Margin="0,36,8,0"
+                            IsRunning="true"
+                            IsVisible="True"
+                            VerticalOptions="Start"
+                            Color="{StaticResource AccentColor}" />
+                    </StackLayout>
 
-                    <ActivityIndicator
-                        x:Name="Loaderspinner"
-                        Margin="0,36,8,0"
-                        HorizontalOptions="End"
-                        IsRunning="true"
-                        IsVisible="True"
-                        VerticalOptions="Start"
-                        Color="{StaticResource AccentColor}" />
 
 
                     <StackLayout Visual="Material">
