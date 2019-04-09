@@ -144,4 +144,7 @@
       <Name>VisualChallenge</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\image_background.png" />
+  </ItemGroup>
 </Project>
