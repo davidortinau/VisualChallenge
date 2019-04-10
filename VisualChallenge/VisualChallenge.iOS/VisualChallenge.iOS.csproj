@@ -124,6 +124,12 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\headphones%403x.png" />
+    <BundleResource Include="Resources\headphones%402x.png" />
+    <BundleResource Include="Resources\headphones.png" />
+    <BundleResource Include="Resources\search%403x.png" />
+    <BundleResource Include="Resources\search%402x.png" />
+    <BundleResource Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
