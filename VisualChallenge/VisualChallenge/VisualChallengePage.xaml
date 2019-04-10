@@ -1,23 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+<ContentPage
+    x:Class="VisualChallenge.VisualChallengePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title="Visual Challenge"
+    BackgroundColor="White"
+    Shell.NavBarIsVisible="True">
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <!--
+        If you decide to change out the flexlayout leave the scroll view here
+        Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+    -->
+    <ScrollView>
+        <FlexLayout
+            Margin="20"
+            AlignContent="Center"
+            Direction="Column"
+            JustifyContent="SpaceAround">
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <Label
+                FontAttributes="Bold"
+                FontSize="22"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="Create account"
+                TextColor="Black" />
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+            <Image
+                HeightRequest="128"
+                HorizontalOptions="FillAndExpand"
+                Source="user.png"
+                VerticalOptions="FillAndExpand" />
 
-		</FlexLayout>
-	</ScrollView>
+            <StackLayout Orientation="Horizontal">
+                <Entry
+                    BackgroundColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="First Name"
+                    Text="Vlad" />
+                <Entry
+                    BackgroundColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Last Name"
+                    Text="Tyzun" />
+            </StackLayout>
+
+            <Entry
+                BackgroundColor="White"
+                Placeholder="User name"
+                Text="vlad_tyzun" />
+            <Entry
+                BackgroundColor="White"
+                Placeholder="Date of birth"
+                Text="11/08/1994" />
+            <Entry
+                BackgroundColor="White"
+                Placeholder="Email"
+                Text="vladtyzun@gmail.com" />
+
+            <Button
+                BackgroundColor="#3F8EE4"
+                CornerRadius="6"
+                FontAttributes="Bold"
+                FontSize="16"
+                HeightRequest="60"
+                Text="Next Step"
+                TextColor="White" />
+
+        </FlexLayout>
+    </ScrollView>
 </ContentPage>
