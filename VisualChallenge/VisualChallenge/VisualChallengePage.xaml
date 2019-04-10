@@ -6,18 +6,315 @@
              Shell.NavBarIsVisible="True"
              BackgroundColor="White"
              Title="Visual Challenge"
+             Visual="Material"
              >
 
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <ScrollView>
+        <FlexLayout Visual="Material" Margin="8" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+            <Frame
+                    Visual="Material"
+                    BackgroundColor="WhiteSmoke"
+                    CornerRadius="12"
+                    BorderColor="LightGray"
+                    HasShadow="True">
+                <StackLayout                        
+                        Orientation="Vertical">
+                    <StackLayout
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                        <Label
+                                Visual="Material"
+                                Margin="0,-12,0,0"
+                                TextColor="#616161"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                HorizontalOptions="StartAndExpand"
+                                Text="Select transport type"/>
+                        <Image
+                                Margin="0,-12,-8,0"
+                                HeightRequest="27"
+                                WidthRequest="27"
+                                Source="ic_question.png"/>
+                    </StackLayout>
+                    <StackLayout
+                            Margin="0,0,0,-12"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                        <Frame 
+                                Visual="Material"
+                                HorizontalOptions="FillAndExpand"
+                                BorderColor="LightGray"
+                                Padding="0" 
+                                IsClippedToBounds="True">
+                            <Image
+                                    BackgroundColor="WhiteSmoke"
+                                    ClassId="imageTruck"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="ic_truck.png"
+                                    WidthRequest="60"
+                                    HeightRequest="50"
+                                    Aspect="AspectFit"/>
+                        </Frame>
+                        <Frame 
+                                Visual="Material"
+                                HorizontalOptions="FillAndExpand"
+                                BorderColor="LightGray"
+                                Padding="0" 
+                                IsClippedToBounds="True">
+                            <Image
+                                    BackgroundColor="WhiteSmoke"
+                                    ClassId="imageTrain"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="ic_train.png"
+                                    WidthRequest="60"
+                                    HeightRequest="50"
+                                    Aspect="AspectFit"/>
+                        </Frame>
+                        <Frame 
+                                Visual="Material"
+                                HorizontalOptions="FillAndExpand"
+                                BorderColor="LightGray"
+                                Padding="0" 
+                                IsClippedToBounds="True">
+                            <Image
+                                    BackgroundColor="WhiteSmoke"
+                                    ClassId="imageShip"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="ic_ship.png"
+                                    WidthRequest="60"
+                                    HeightRequest="50"
+                                    Aspect="AspectFit"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame
+                    Margin="0,2,0,0"
+                    BackgroundColor="WhiteSmoke"
+                    CornerRadius="12"
+                    BorderColor="LightGray"
+                    HasShadow="True"
+                    Visual="Material">
+                <StackLayout
+                        Margin="0,0,0,-16">
+                    <StackLayout
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                        <Image 
+                                Margin="0,-12,0,0"
+                                WidthRequest="50"
+                                Source="weight"/>
+                        <StackLayout
+                                Margin="0,0,-8,0"   
+                                Orientation="Horizontal"
+                                HorizontalOptions="FillAndExpand">
+                            <StackLayout
+                                    HorizontalOptions="FillAndExpand">
+                                <Label
+                                        Visual="Material"
+                                        Margin="0,-12,0,0"     
+                                        TextColor="#616161"
+                                        FontSize="18"
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="Center"
+                                        Text="Weight (Kg)"/>
+                                <Entry
+                                        Visual="Material"
+                                        Margin="0,0,8,4"
+                                        Keyboard="Numeric"
+                                        HorizontalOptions="FillAndExpand"
+                                        Placeholder="Insert weight"/>
+                            </StackLayout>
+                            <Image
+                                    VerticalOptions="Start"
+                                    Margin="0,-12,0,0"
+                                    HeightRequest="27"
+                                    WidthRequest="27"
+                                    Source="ic_question.png"/>
+                        </StackLayout>
+                    </StackLayout>
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+                </StackLayout>
+            </Frame>
+            <Frame
+                    Margin="0,2,0,0"
+                    BackgroundColor="WhiteSmoke"
+                    CornerRadius="12"
+                    Visual="Material"
+                    BorderColor="LightGray"
+                    HasShadow="True">
+                <StackLayout
+                        Margin="0,0,0,-16">
+                    <Label
+                            Visual="Material"
+                            FontSize="18"
+                            TextColor="#616161"
+                            VerticalOptions="Center"
+                            Margin="0,-12,0,0"
+                            FontAttributes="Bold"
+                            Text="µ Coefficient"/>
+                    <StackLayout
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                        <Label 
+                                Visual="Material"
+                                TextColor="#616161"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Text="Preset"/>
+                        <Image
+                                Margin="0,-6,-8,0"
+                                HeightRequest="27"
+                                WidthRequest="27"
+                                HorizontalOptions="EndAndExpand"
+                                Source="ic_question.png"/>
+                    </StackLayout>
+                    <Grid
+                            Margin="0,4,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Frame
+                                Visual="Material"
+                                ClassId="frictionOne"
+                                BackgroundColor="LightGray"
+                                HorizontalOptions="FillAndExpand"
+                                BorderColor="Gray"
+                                HasShadow="True"
+                                Grid.Column="0"
+                                Grid.Row="0">
+                            <Label
+                                    Margin="0,-9,0,-9"
+                                    Text="0.1 µ"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    FontAttributes="Bold"
+                                    TextColor="#616161"/>
+                        </Frame>
+                        <Frame
+                                Visual="Material"
+                                ClassId="frictionTwo"
+                                BackgroundColor="LightGray"
+                                HorizontalOptions="FillAndExpand"
+                                BorderColor="Gray"
+                                HasShadow="True"
+                                Grid.Column="1"
+                                Grid.Row="0">
+                            <Label
+                                    Margin="0,-9,0,-9"
+                                    Text="0.2 µ"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    FontAttributes="Bold"
+                                    TextColor="#616161"/>
+                        </Frame>
+                        <Frame
+                                Visual="Material"
+                                ClassId="frictionThree"
+                                BackgroundColor="LightGray"
+                                HorizontalOptions="FillAndExpand"
+                                BorderColor="Gray"
+                                HasShadow="True"
+                                Grid.Column="2"
+                                Grid.Row="0">
+                            <Label
+                                    Margin="0,-9,0,-9"
+                                    Text="0.3 µ"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    FontAttributes="Bold"
+                                    TextColor="#616161"/>
+                        </Frame>
+                        <Frame
+                                Visual="Material"
+                                ClassId="frictionFour"
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="LightGray"
+                                BorderColor="Gray"
+                                HasShadow="True"
+                                Grid.Column="0"
+                                Grid.Row="1">
+                            <Label
+                                    Margin="0,-9,0,-9"
+                                    Text="0.4 µ"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    FontAttributes="Bold"
+                                    TextColor="#616161"/>
+                        </Frame>
+                        <Frame
+                                Visual="Material"
+                                ClassId="frictionFive"
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="LightGray"
+                                BorderColor="Gray"
+                                HasShadow="True"
+                                Grid.Column="1"
+                                Grid.Row="1">
+                            <Label
+                                    Margin="0,-9,0,-9"
+                                    Text="0.5 µ"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    FontAttributes="Bold"
+                                    TextColor="#616161"/>
+                        </Frame>
+                        <Frame
+                                Visual="Material"
+                                ClassId="frictionSix"
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="LightGray"
+                                BorderColor="Gray"
+                                HasShadow="True"
+                                Grid.Column="2"
+                                Grid.Row="1">
+                            <Label
+                                    Margin="0,-9,0,-9"
+                                    Text="0.6 µ"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    FontAttributes="Bold"
+                                    TextColor="#616161"/>
+                        </Frame>
+                    </Grid>
+                    <Label
+                            Visual="Material"
+                            Margin="0,-4,0,0"
+                            TextColor="#616161"
+                            VerticalOptions="Center"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Custom"/>
+                    <Entry
+                            Margin="0,0,8,4"
+                            Keyboard="Numeric"
+                            Placeholder="Insert value from 0 to 0,8"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand"
+                Orientation="Horizontal">
+                <Button 
+                    Visual="Material"
+                    BackgroundColor="#5f6d88"
+                    TextColor="WhiteSmoke"
+                    Margin="0,2,0,8"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    WidthRequest="140"
+                    Text="Next"/>
+            </StackLayout>
+        </FlexLayout>
+    </ScrollView>
 </ContentPage>
