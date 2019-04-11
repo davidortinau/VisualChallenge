@@ -3,21 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="White"
-             Title="Visual Challenge"
-             >
+             Title="Visual Challenge">
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <ScrollView>
+        <StackLayout BackgroundColor="#121212">
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="End"
+                         Margin="15">
+                <Image Source="star"
+                       HeightRequest="20"
+                       Margin="0,0,10,0" />
+                <Image Source="share"
+                       HeightRequest="20" />
+            </StackLayout>
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+            <Image Source="cover_medium" 
+                   Margin="20"
+                   HeightRequest="170"/>
+            <Label Text="142: Super Speed with AOT &amp; LLVM" 
+                   LineBreakMode="WordWrap"
+                   TextColor="White"
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+            <Label Text="Merge Conflict >"
+                   TextColor="#d05a74"
+                   Margin="0,0,0,50"
+                   HorizontalTextAlignment="Center"/>
+            <BoxView HeightRequest="1" 
+                     Margin="0,0,0,-55"
+                     BackgroundColor="Gray"/>
+            <Image Source="play" HeightRequest="100"
+                   BackgroundColor="Transparent"
+                   Margin="0,0,0,-35"/>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+            <FlexLayout Direction="Row" 
+                        AlignContent="Center" 
+                        Margin="0,40,0,30"
+                        JustifyContent="SpaceAround">
+                <StackLayout Orientation="Vertical">
+                    <Image Source="download" HeightRequest="30" />
+                    <Label Text="36,6 MB"
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="add" HeightRequest="30" />
+                    <Label Text="Up Next"
+                           TextColor="White" />
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="check" HeightRequest="30" />
+                    <Label Text="Mark Played"
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="archive" HeightRequest="30" />
+                    <Label Text="Archive"
+                           TextColor="White"/>
+                </StackLayout>
+            </FlexLayout>
 
-		</FlexLayout>
-	</ScrollView>
+            <BoxView HeightRequest="1" BackgroundColor="Gray"/>
+
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label Text="25 mars 2019" TextColor="White" HorizontalOptions="Start"/>
+                <Label Text="40 min" TextColor="White" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            <Label TextColor="White" Text="What about performance? How fast can C# possibly be on the iPhone? What if we told you it is a 1 to 1 and Frank can prove it as he wrote a way of compiling C/C++ code directly to .NET Standard and then measured performance of C to LLVM to IL to LLVM to Native! We discuss what this all means." Margin="10"/>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
