@@ -1,23 +1,85 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="VisualChallenge.VisualChallengePage"
+              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+              ios:Page.UseSafeArea="true"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
+              BackgroundColor="#e6f5ff"
              Title="Visual Challenge"
              >
 
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
-	</ScrollView>
+	<ContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="HasShadow" Value="false"/>
+            <Setter Property="BorderColor" Value="Transparent"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+        </Style>
+    </ContentPage.Resources>
+       
+         <Grid Margin="10" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" ></RowDefinition>
+                 <RowDefinition Height="Auto"></RowDefinition>
+                 <RowDefinition Height="Auto"></RowDefinition>
+                
+                 
+            </Grid.RowDefinitions>
+          
+            
+          <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+              <Frame >
+            <Entry Placeholder="Name"  />
+            </Frame>
+           <Frame Grid.Row="1" >
+                <Entry Placeholder="Phone Number"  />
+                </Frame>
+            <Frame  Grid.Row="2">
+                <StackLayout>
+                <Label Margin="10,0,0,0" Text="Birth Date:"/>
+                <DatePicker />
+                    </StackLayout>
+           </Frame>
+            <Frame Grid.Row="3">
+            <Editor Placeholder="Address"  />
+                
+               </Frame>
+       </Grid>
+           
+           <Grid   Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Duration:"/>
+            <Button Text="Daily" Grid.Row="1"></Button>
+            <Button Text="Weekly" Grid.Row="1" Grid.Column="1"></Button>
+            <Button Text="Monthly" Grid.Row="1" Grid.Column="2"></Button>
+            <Button Text="Yearly" Grid.Row="1" Grid.Column="3"></Button>
+        </Grid>
+          
+          
+            
+            <Button Text="Save"  Grid.Row="2"  />
+            
+        </Grid>
+    
 </ContentPage>
