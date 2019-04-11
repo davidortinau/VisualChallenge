@@ -1,23 +1,201 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="VisualChallenge.VisualChallengePage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="VisualChallenge.VisualChallengePage"
-             Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
              Title="Visual Challenge"
-             >
+             BackgroundColor="#F4F6FB"
+             Shell.NavBarIsVisible="True">
 
-	<!-- If you decide to change out the flexlayout leave the scroll view here
-		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
-	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+    <!--
+        If you decide to change out the flexlayout leave the scroll view here
+        Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
+    -->
+    <ScrollView>
+            <StackLayout Spacing="5">
+            
+            <Grid BackgroundColor="White" RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                
+                
+                <Grid ColumnSpacing="10" Margin="20,20,20,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- Round images is a must have by default-->
+                    <Image Source="https://blog.xamarin.com/wp-content/uploads/2017/04/monkey-MVP.png"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+                    
+                    <StackLayout Grid.Column="1">
+                        
+                        <Label Text="Xamarin Monkey" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        
+                        <Label Text="Senior Xamarin Developer" 
+                               FontSize="18"
+                               TextColor="Gray"/>
+                    </StackLayout>
+                    
+                </Grid>
+                
+                <Grid Grid.Row="1" 
+                      VerticalOptions="Center"
+                      HeightRequest="42"
+                      ColumnSpacing="20" Margin="20,0,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!-- TEXT ALL IN CAPS, SHOULDNT BE-->
+                    <Button Visual="Material" 
+                            TextColor="White"
+                            BackgroundColor="#385AF5"
+                            Text="View Profile"/>
+                    
+                    
+                    <Button Visual="Material" 
+                            BackgroundColor="#D6DDFC"
+                            TextColor="#3759F6"
+                            Grid.Column="1"
+                            Text="View Profile"/>
+                </Grid>
+                
+                
+        </Grid>
+            
+            
+            <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"   
+                            VerticalOptions="Center"
+                            Margin="5,15,5,0"
+                            HeightRequest="155"
+                            ItemSizingStrategy="MeasureFirstItem"
+                            ItemsSource="{Binding DashboardItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>                        
+                        <ContentView> <!-- Notice the additional ContentView here -->
+                            <Frame BackgroundColor="White"
+                                   HeightRequest="150"
+                                   WidthRequest="110"
+                                   Margin="10,0,10,0"
+                                   Visual="Material"
+                                   Padding="10"
+                                   IsClippedToBounds="True">
+                        
+                        
+                                <Grid RowSpacing="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    
+                                     <Image Source="{Binding ImageUrl}"
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="Start"/>
+                                    
+                                     <Label Grid.Row="1"   
+                                            Margin="0,10,0,0"
+                                            VerticalOptions="Center"
+                                            FontSize="25"
+                                            Text="{Binding Number}" />
+                                     <Label Grid.Row="2" 
+                                            VerticalOptions="Start"
+                                            FontSize="14"
+                                            TextColor="Gray"
+                                            Text="{Binding Description}" />
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+                                    
+                                </Grid>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+          
+          
+            <Grid Margin="25,20,10,0">
+                <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="35" />
+                     <ColumnDefinition Width="4*" />
+                     <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"
+                           VerticalOptions="Center"
+                           TextColor="Gray"
+                           FontSize="12"
+                           Text="ID" />
+                    <Label Grid.Column="1"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           TextColor="Gray"
+                           FontSize="12"
+                           Text="SUBJECT" />
 
-		</FlexLayout>
-	</ScrollView>
+                
+            </Grid>
+
+                   <!-- CollectionView header and footer?-->
+            <CollectionView ItemsLayout="{x:Static ListItemsLayout.VerticalList}" 
+                            Margin="0,0,0,0"
+                            ItemSizingStrategy="MeasureFirstItem"
+                            ItemsSource="{Binding Items}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <ContentView> <!-- Notice the additional ContentView here -->
+                            <Frame BackgroundColor="White"
+                                   HeightRequest="45"
+                                   Margin="10, 5"
+                                   Visual="Material"
+                                   Padding="10"
+                                   IsClippedToBounds="True">
+                                                
+                                    <Grid VerticalOptions="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="45" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="35" />
+                                            <ColumnDefinition Width="4*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Column="0"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               FontAttributes="Bold"
+                                               FontSize="14"
+                                               Text="{Binding Id}" />
+                                        <Label Grid.Column="1"
+                                               HorizontalOptions="Start"
+                                               FontSize="14"
+                                               VerticalOptions="Center"
+                                               Text="{Binding Subject}" />
+                                         <Label Grid.Column="2"
+                                                FontSize="14"
+                                                TextColor="#385AF5"
+                                                VerticalOptions="Center"
+                                                FontAttributes="Bold"
+                                                Text="{Binding Status}" />
+                                                  
+                                    </Grid>
+                                </Frame>
+                            </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            </StackLayout>
+            
+    </ScrollView>
 </ContentPage>
