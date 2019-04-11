@@ -70,6 +70,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -124,6 +125,26 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Hate.png" />
+    <BundleResource Include="Resources\Hate%402x.png" />
+    <BundleResource Include="Resources\Hate%403x.png" />
+    <BundleResource Include="Resources\Love%402x.png" />
+    <BundleResource Include="Resources\Love%403x.png" />
+    <BundleResource Include="Resources\Pause.png" />
+    <BundleResource Include="Resources\Skip.png" />
+    <BundleResource Include="Resources\Skip%402x.png" />
+    <BundleResource Include="Resources\Skip%403x.png" />
+    <BundleResource Include="Resources\Pause%402x.png" />
+    <BundleResource Include="Resources\Pause%403x.png" />
+    <BundleResource Include="Resources\Love.png" />
+    <BundleResource Include="Resources\artist.jpg" />
+    <BundleResource Include="Resources\Album.png" />
+    <BundleResource Include="Resources\Disabled.png" />
+    <BundleResource Include="Resources\Enabled%403x.png" />
+    <BundleResource Include="Resources\Disabled%402x.png" />
+    <BundleResource Include="Resources\Disabled%403x.png" />
+    <BundleResource Include="Resources\Enabled%402x.png" />
+    <BundleResource Include="Resources\Enabled.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -143,5 +164,8 @@
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 </Project>

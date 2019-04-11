@@ -57,6 +57,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -85,6 +86,18 @@
     <AndroidResource Include="Resources\drawable-xhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\xamagon_preview.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\xamagon_preview.png" />
+    <AndroidResource Include="Resources\drawable\Album.png" />
+    <AndroidResource Include="Resources\drawable\artist.jpg" />
+    <AndroidResource Include="Resources\drawable\Hate.png" />
+    <AndroidResource Include="Resources\drawable\Love.png" />
+    <AndroidResource Include="Resources\drawable\Pause.png" />
+    <AndroidResource Include="Resources\drawable\Skip.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Disabled.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Disabled.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Disabled.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Disabled.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Disabled.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Disabled.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -92,6 +105,14 @@
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-ldpi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
