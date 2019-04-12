@@ -2,40 +2,116 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
        xmlns:local="clr-namespace:VisualChallenge"
-       RouteHost="companyname.com"
+       xmlns:pages="clr-namespace:VisualChallenge.Pages;assembly=VisualChallenge"
+       
+       RouteHost="xamarin.com"
        RouteScheme="app"
        Route="VisualChallenge"
-       FlyoutBehavior="Disabled"
+       
+       FlyoutBehavior="Flyout"
        Title="VisualChallenge"
+       FlyoutHeaderBehavior="Default"
+       x:Name="self"
+       
+       FlyoutBackgroundColor="Black"
+       
        x:Class="VisualChallenge.AppShell"
+       
        Visual="Material"
+       
        >
-
-    <!-- 
-        Styles and Resources 
-    -->
-    <Shell.Resources>
-        <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
-            <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellForegroundColor" Value="White" />
-                <Setter Property="Shell.ShellTitleColor" Value="White" />
-                <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
-            </Style>
-            <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
-        </ResourceDictionary>
-    </Shell.Resources>
-
-    <FlyoutItem>
-        <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
-        </Tab>
-    </FlyoutItem>
-
+    
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            
+            <ContentView>
+                
+                <StackLayout BackgroundColor="#161A20"
+                             Orientation="Horizontal"
+                             Margin="0,3,0,3"
+                        >
+                
+                <Image Source="{Binding FlyoutIcon}"
+                       WidthRequest="28"
+                       HeightRequest="28"/>
+                
+                <Label Text="{Binding Title}"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="White"/>
+                
+                    </StackLayout>
+                    
+                </ContentView>
+            
+            </DataTemplate>
+        </Shell.ItemTemplate>
+    
+    
+    
+   <ShellItem  Title="Strona Główna"
+                
+                Shell.ShellBackgroundColor="#4982AB"
+                Shell.ShellTitleColor="White" 
+                Shell.ShellForegroundColor="White"
+                
+                FlyoutIcon="{local:ImageResource VisualChallenge.Images.glowna.png}">
+        
+        <ShellContent ContentTemplate="{DataTemplate pages:MainPage}"/>
+    </ShellItem>
+   
+   <ShellItem Title="Wykopalisko"
+             FlyoutIcon="{local:ImageResource VisualChallenge.Images.wykopalisko.png}"
+              Shell.ShellBackgroundColor="#4982AB"
+                Shell.ShellTitleColor="White" 
+                Shell.ShellForegroundColor="White">
+        
+        <ShellContent ContentTemplate="{DataTemplate pages:NotImplementedPage}" />
+    </ShellItem>
+    
+    <ShellItem Title="Hity"
+             FlyoutIcon="{local:ImageResource VisualChallenge.Images.hity.png}"
+              Shell.ShellBackgroundColor="#4982AB"
+                Shell.ShellTitleColor="White" 
+                Shell.ShellForegroundColor="White">
+        
+        <ShellContent ContentTemplate="{DataTemplate pages:NotImplementedPage}" />
+    </ShellItem>
+    
+    <ShellItem Title="Mikroblog"
+             FlyoutIcon="{local:ImageResource VisualChallenge.Images.mikroblog.png}"
+              Shell.ShellBackgroundColor="#4982AB"
+                Shell.ShellTitleColor="White" 
+                Shell.ShellForegroundColor="White">
+        
+        <ShellContent ContentTemplate="{DataTemplate pages:NotImplementedPage}" />
+    </ShellItem>
+    
+    <ShellItem Title="Szukaj"
+             FlyoutIcon="{local:ImageResource VisualChallenge.Images.szukaj.png}"
+              Shell.ShellBackgroundColor="#4982AB"
+                Shell.ShellTitleColor="White" 
+                Shell.ShellForegroundColor="White">
+        
+        <ShellContent ContentTemplate="{DataTemplate pages:NotImplementedPage}" />
+    </ShellItem>
+    
+    <ShellItem Title="Zaloguj się"
+             FlyoutIcon="{local:ImageResource VisualChallenge.Images.zaloguj.png}"
+              Shell.ShellBackgroundColor="#4982AB"
+                Shell.ShellTitleColor="White" 
+                Shell.ShellForegroundColor="White">
+        
+        <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" />
+    </ShellItem>
+    
+    <ShellItem Title="Styl nocny"
+             FlyoutIcon="{local:ImageResource VisualChallenge.Images.nocny.png}"
+              Shell.ShellBackgroundColor="#4982AB"
+                Shell.ShellTitleColor="White" 
+                Shell.ShellForegroundColor="White">
+        
+        <ShellContent ContentTemplate="{DataTemplate pages:NotImplementedPage}" />
+    </ShellItem>
+    
 </Shell>

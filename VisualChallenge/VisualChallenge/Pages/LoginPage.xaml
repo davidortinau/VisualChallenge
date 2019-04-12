@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualChallenge.Pages.LoginPage"
+             xmlns:visualChallenge="clr-namespace:VisualChallenge;assembly=VisualChallenge"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             Title="Zaloguj się">
+    <StackLayout>
+        
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Margin="0,20,0,20">
+        
+            <Image Grid.Column="1" 
+                           Source="{visualChallenge:ImageResource VisualChallenge.Images.FB.png}"/>
+            
+        <Label Text="ZALOGUJ SIE PRZEZ FACEBOOK"
+               VerticalOptions="Center"
+               FontSize="Small"
+               TextColor="#415894"/>
+        
+            </StackLayout>
+            
+        <BoxView Grid.Column="0"
+                             Color="#DCDBDC"
+                             HeightRequest="1"
+                             VerticalOptions="End"
+                             HorizontalOptions="FillAndExpand"
+                             Grid.ColumnSpan="4"/>
+        
+        <Entry Margin="10,10,10,0"
+               Placeholder="Login lub e-mail"
+               BackgroundColor="Transparent"/>
+        
+        <Entry Margin="10,10,10,0"
+               Placeholder="Hasło"
+               BackgroundColor="Transparent"/>
+        
+        <Button Text="ZALOGUJ SIĘ PRZEZ WYKOP"
+                Padding="10"
+                BackgroundColor="#3072A0"
+                Margin="10"/>
+        
+    </StackLayout>
+    
+   
+</ContentPage>

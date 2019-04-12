@@ -12,7 +12,7 @@
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
 	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+		<FlexLayout Margin="20" Direction="Column" AlignContent="Start" JustifyContent="SpaceEvenly">
 
 			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
 
