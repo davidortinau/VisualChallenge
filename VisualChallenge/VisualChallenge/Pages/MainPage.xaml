@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:visualChallenge="clr-namespace:VisualChallenge;assembly=VisualChallenge"
+             x:Class="VisualChallenge.Pages.MainPage"
+             Title="Strona główna">
+    
+    
+    <CollectionView x:Name="CollectionView">
+        
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                
+                <Grid HeightRequest="65"
+                      Padding="0"
+                      RowSpacing="0"
+                      ColumnSpacing="0">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    
+                    
+                    <Image Grid.Column="1" 
+                           Source="{visualChallenge:ImageResource VisualChallenge.Images.voteBox.png}"/>
+                    
+                    <Label Grid.Column="1" 
+                           Margin="1,0,0,0"
+                           FontAttributes="Bold"
+                           TextColor="#E12A00"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Text="{Binding VoteCount}"/>
+                    
+                    <Label Grid.Column="2" 
+                           TextColor="#3072A0"
+                           FontSize="Small"
+                           Margin="5,0,5,0"
+                           VerticalOptions="Center"
+                           Text="{Binding Title}"/>
+                    
+                    <Image Grid.Column="3" 
+                           Margin="0,0,5,0"
+                           Source="{Binding ImageUrl}"/>
+                    
+                    <BoxView Grid.Column="0"
+                             Color="#DCDBDC"
+                             HeightRequest="1"
+                             VerticalOptions="End"
+                             HorizontalOptions="FillAndExpand"
+                             Grid.ColumnSpan="4"/>
+                    
+                    </Grid>
+                
+                
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        
+        </CollectionView>
+    
+</ContentPage>

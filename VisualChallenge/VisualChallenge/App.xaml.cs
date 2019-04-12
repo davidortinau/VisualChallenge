@@ -10,6 +10,8 @@ namespace VisualChallenge
             InitializeComponent();
             
             MainPage = new AppShell();
+
+            MainPage.SetValue(NavigationPage.BarTextColorProperty, Color.White);
         }
 
         protected override void OnStart()
