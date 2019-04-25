@@ -17,7 +17,7 @@
 			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
 
 			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
-
-		</FlexLayout>
+            <Button Text="Navigate" Clicked="Navigated_Clicked"/>
+        </FlexLayout>
 	</ScrollView>
 </ContentPage>
