@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:VisualChallenge;assembly=VisualChallenge"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
              Shell.ShellBackgroundColor="#24272B"
@@ -24,10 +25,31 @@
                 <AbsoluteLayout  BackgroundColor="#24272B" HeightRequest="168" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
 
                     <FlexLayout AbsoluteLayout.LayoutBounds="1, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="10, 0, 20, 13" HeightRequest="40" BackgroundColor="White" JustifyContent="End" AlignItems="Center">
-                    <Image Source="xamagon_preview" WidthRequest="22" HeightRequest="22"></Image>
-                    <Image Source="xamagon_preview" WidthRequest="22" Margin="26, 0, 0, 0" HeightRequest="22"></Image>
-                    <Image Source="xamagon_preview" WidthRequest="30" Margin="26, 0, 0, 0" HeightRequest="30"></Image>
-                </FlexLayout>
+                    <Image WidthRequest="22" HeightRequest="22">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Color="#8F97A4"
+                                Glyph="{x:Static local:MaterialFontIcons.BellPlusOutline}"/>
+                            </Image.Source>
+                        </Image>
+                    <Image WidthRequest="22" Margin="26, 0, 0, 0" HeightRequest="22">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Color="#8F97A4"
+                                Glyph="{x:Static local:MaterialFontIcons.Settings}"/>
+                            </Image.Source>
+                        </Image>
+                    <Image WidthRequest="30" Margin="26, 0, 0, 0" HeightRequest="30">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.CheckCircle}"
+                                Color="#78D549"/>
+                        </Image.Source>
+                    </Image>
+                    </FlexLayout>
                 <Frame CornerRadius="10" Margin="20, 0, 0, 13" Padding="0"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
                     <Image WidthRequest="140" HeightRequest="140" Source="invisibila.jpg"></Image>
                 </Frame>
@@ -114,7 +136,14 @@
                         <Image VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0, 0, 10, 0" Source="xamagon_preview" WidthRequest="17" HeightRequest="17"></Image>
                     </ContentView>
                     <ContentView WidthRequest="50" HeightRequest="50">
-                        <Image VerticalOptions="Center" HorizontalOptions="Center" Source="xamagon_preview" WidthRequest="48" HeightRequest="48"></Image>
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="48" HeightRequest="48">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.PauseCircle}"
+                                Color="#D52F05"/>
+                            </Image.Source>
+                        </Image>
                     </ContentView>
                     <ContentView WidthRequest="50" HeightRequest="50">
                         <Image VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="10, 0, 0, 0" Source="xamagon_preview" WidthRequest="17" HeightRequest="17"></Image>
