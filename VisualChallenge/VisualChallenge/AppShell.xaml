@@ -41,19 +41,19 @@
     </ShellSection>
     
     <ShellSection Title="TRIPS" Icon="ic_trip.png">
-        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        <ShellContent ContentTemplate="{DataTemplate ContentPage}"/>
     </ShellSection>
     
     <ShellSection Title="BOOK" Icon="ic_plane.png">
-        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        <ShellContent ContentTemplate="{DataTemplate ContentPage}"/>
     </ShellSection>
     
     <ShellSection Title="DEALS" Icon="ic_offer.png">
-        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        <ShellContent ContentTemplate="{DataTemplate ContentPage}"/>
     </ShellSection>
     
     <ShellSection Title="MY QFF" Icon="ic_person_black_24dp.png">
-        <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        <ShellContent ContentTemplate="{DataTemplate ContentPage}"/>
     </ShellSection>
 
 </ShellItem>

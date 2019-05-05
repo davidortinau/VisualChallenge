@@ -18,31 +18,26 @@ namespace VisualChallenge
                 ? "Ciutadella-Md"
                 : "ciutadella_medium.ttf#Regular";
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
-        } 
-
         public VisualChallengePage()
         {
-            On<iOS>().SetUseSafeArea(false);
-
+            TranslationY = Offset;
             BackgroundColor = QantasLightGray;
             Visual = VisualMarker.Material;
-            TranslationY = -1;
-            
+
+            On<iOS>().SetUseSafeArea(false);
+            Shell.SetNavBarIsVisible(this, false);
+
             Content = GetContent();
         }
 
         private View GetContent() =>
             new Xamarin.Forms.ScrollView
             {
-                Margin = 0,
+                Margin = new Thickness(0, Inset, 0, Inset),
                 Content =
-                    new StackLayout
+                    new StackLayout 
                     {
+                        Margin = new Thickness(0, Inset, 0, 0),
                         Children =
                         {
                             HeaderView(),
@@ -346,5 +341,8 @@ namespace VisualChallenge
                     }
                 } 
             };
+
+        public int Inset => Device.RuntimePlatform == Device.iOS ? -24 : -12;
+        public int Offset => Device.RuntimePlatform == Device.iOS ? -20 : 0;
     }
 }
