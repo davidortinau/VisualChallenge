@@ -1,23 +1,251 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:VisualChallenge;assembly=VisualChallenge"
              x:Class="VisualChallenge.VisualChallengePage"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="White"
-             Title="Visual Challenge"
+             Shell.ShellBackgroundColor="#24272B"
              >
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="xamagon_preview"></ToolbarItem>
+        <ToolbarItem Icon="xamagon_preview"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
 	<!-- If you decide to change out the flexlayout leave the scroll view here
 		 Currently there's a bug in shell that will set margins wrong if the content is not in a scrollview
 	-->
-	<ScrollView>
-		<FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-			<Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
+        <ScrollView AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
 
-			<Button Text="Read More About Visual" Clicked="Button_Clicked" />
+            <StackLayout Spacing="0" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" >
 
-		</FlexLayout>
-	</ScrollView>
+                <AbsoluteLayout  BackgroundColor="#24272B" HeightRequest="168" AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
+
+                    <FlexLayout AbsoluteLayout.LayoutBounds="1, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="10, 0, 20, 13" HeightRequest="40" BackgroundColor="White" JustifyContent="End" AlignItems="Center">
+                    <Image WidthRequest="22" HeightRequest="22">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Color="#8F97A4"
+                                Glyph="{x:Static local:MaterialFontIcons.BellPlusOutline}"/>
+                            </Image.Source>
+                        </Image>
+                    <Image WidthRequest="22" Margin="26, 0, 0, 0" HeightRequest="22">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Color="#8F97A4"
+                                Glyph="{x:Static local:MaterialFontIcons.SettingsOutline}"/>
+                            </Image.Source>
+                        </Image>
+                    <Image WidthRequest="30" Margin="26, 0, 0, 0" HeightRequest="30">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.CheckCircle}"
+                                Color="#78D549"/>
+                        </Image.Source>
+                    </Image>
+                    </FlexLayout>
+                <Frame CornerRadius="10" Margin="20, 0, 0, 13" Padding="0"  AbsoluteLayout.LayoutBounds="0, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Image WidthRequest="140" HeightRequest="140" Source="invisibila.jpg"></Image>
+                </Frame>
+            </AbsoluteLayout>
+
+            <Frame HasShadow="False" Padding="0" Margin="20, 0, 20, 0" CornerRadius="10">
+                <SearchBar Placeholder="Search episodes" BackgroundColor="#F2F4F5" HeightRequest="40" PlaceholderColor="#969798" FontSize="16"></SearchBar>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" Margin="20, 11, 20, 11">
+                <Label VerticalOptions="Center" TextColor="#8F97A4" Text="49 episodes &#8226; 2 archived" FontSize="13"></Label>
+                <Image HorizontalOptions="EndAndExpand" WidthRequest="16" HeightRequest="16">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.DotsVertical}"
+                                Color="#8F97A4"
+                                />
+                        </Image.Source>
+                    </Image>
+            </StackLayout>
+
+            <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
+            <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
+                <StackLayout Orientation="Vertical" Spacing="2">
+                    <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" TextColor="#8F97A4"></Label>
+                    <Label Text="The Remote Control Brain" TextColor="#212121" FontSize="16"></Label>
+                    <Label Text="47 min" FontSize="12" TextColor="#8F97A4"></Label>
+                </StackLayout>
+                <Image WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Star}"
+                                Color="#FFCE50"
+                                />
+                        </Image.Source>
+                    </Image>
+                <Image WidthRequest="33" HeightRequest="33" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.PlayCircleOutline}"
+                                Color="#284D6D"
+                                />
+                        </Image.Source>
+                    </Image>
+            </StackLayout>
+
+                <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
+                <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
+                    <StackLayout Orientation="Vertical" Spacing="2">
+                        <Label Text="S5 E3 &#8226; 22 MARCH" FontSize="11" TextColor="#8F97A4" ></Label>
+                        <Label Text="The Weatherman" TextColor="#212121" FontSize="16"></Label>
+                        <Label Text="43 min" FontSize="12" TextColor="#8F97A4"></Label>
+                    </StackLayout>
+                    <Image WidthRequest="33" HeightRequest="33" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="30, 0, 0, 0">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.PlayCircleOutline}"
+                                Color="#284D6D"
+                                />
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+
+                <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
+                <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
+                    <StackLayout Orientation="Vertical" Spacing="2">
+                        <Label Text="S5 E2 &#8226; 15 MARCH" FontSize="11" TextColor="#8F97A4" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="#212121" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12" TextColor="#8F97A4"></Label>
+                    </StackLayout>
+                    <Image WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Star}"
+                                Color="#FFCE50"
+                                />
+                        </Image.Source>
+                    </Image>
+                    <Image WidthRequest="33" HeightRequest="33" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.PlayCircleOutline}"
+                                Color="#284D6D"
+                                />
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+
+                <BoxView HeightRequest="1" BackgroundColor="#E0E6EA"></BoxView>
+                <StackLayout Margin="20, 13" Orientation="Horizontal" Spacing="0">
+                    <StackLayout Orientation="Vertical" Spacing="2">
+                        <Label Text="S5 E4 &#8226; FRIDAY" FontSize="11" TextColor="#8F97A4" ></Label>
+                        <Label Text="The Remote Control Brain" TextColor="#212121" FontSize="16"></Label>
+                        <Label Text="47 min" FontSize="12" TextColor="#8F97A4"></Label>
+                    </StackLayout>
+                    <Image WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Star}"
+                                Color="#FFCE50"
+                                />
+                        </Image.Source>
+                    </Image>
+                    <Image WidthRequest="33" HeightRequest="33" VerticalOptions="Center" HorizontalOptions="End" Margin="30, 0, 0, 0">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.PlayCircleOutline}"
+                                Color="#284D6D"
+                                />
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+
+                <!--Spacer so that content will move past the fixed view-->
+                <BoxView AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" HeightRequest="60"></BoxView>
+
+
+            </StackLayout>
+
+            
+
+    </ScrollView>
+
+        <StackLayout Spacing="0" AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+            <!--I probably should have listened to that comment about the scrollview...-->
+            <StackLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP">0</On>
+            <On Platform="iOS">0,00,0,50</On>
+        </OnPlatform>
+            </StackLayout.Margin>
+            <Frame Margin="0" CornerRadius="0" Visual="Default" BackgroundColor="White" HeightRequest="65" Padding="0">
+                <FlexLayout Margin="10, 0" JustifyContent="SpaceBetween" AlignItems="Center">
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Frame Padding="0" HasShadow="False" CornerRadius="4" IsClippedToBounds="true">
+                            <Image Source="makingsense" WidthRequest="48" HeightRequest="48"></Image>
+                        </Frame>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="0, 0, 10, 0" WidthRequest="17" HeightRequest="17">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Replay}"
+                                Color="#D52F05"/>
+                            </Image.Source>
+                        </Image>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="48" HeightRequest="48">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.PauseCircle}"
+                                Color="#D52F05"/>
+                            </Image.Source>
+                        </Image>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="10, 0, 0, 0" WidthRequest="17" HeightRequest="17" RotationY="180">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Replay}"
+                                Color="#D52F05"/>
+                            </Image.Source>
+                        </Image>
+                    </ContentView>
+                    <ContentView WidthRequest="50" HeightRequest="50">
+                        <Image VerticalOptions="Center" WidthRequest="20" HeightRequest="20" HorizontalOptions="EndAndExpand">
+                            <Image.Source>
+                                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.PlaylistPlay}"
+                                Color="#D52F05"/>
+                            </Image.Source>
+                        </Image>
+                    </ContentView>
+                </FlexLayout>
+            </Frame>
+
+            <AbsoluteLayout AbsoluteLayout.LayoutBounds="1, 1, 1, -1" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" BackgroundColor="#F9F9F9"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="-3, 0, 32, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" CornerRadius="2" BackgroundColor="#F4E3DF"></BoxView>
+                <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Margin="-3, 0, 80, 0" AbsoluteLayout.LayoutFlags="WidthProportional" HeightRequest="4" CornerRadius="2" BackgroundColor="#D02E05"></BoxView>
+            </AbsoluteLayout>
+        </StackLayout>
+
+    </AbsoluteLayout>
+    
 </ContentPage>

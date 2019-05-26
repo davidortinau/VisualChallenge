@@ -70,6 +70,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -143,5 +144,14 @@
       <Project>{DF343C5B-66F1-4EF5-B721-6246D8F1DC39}</Project>
       <Name>VisualChallenge</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\invisibila.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\makingsense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\xamagon_preview.png" />
   </ItemGroup>
 </Project>

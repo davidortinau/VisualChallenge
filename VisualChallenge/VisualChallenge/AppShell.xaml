@@ -16,26 +16,60 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#24272B</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellBackgroundColor" Value="#24272B" />
                 <Setter Property="Shell.ShellForegroundColor" Value="White" />
                 <Setter Property="Shell.ShellTitleColor" Value="White" />
                 <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ShellTabBarBackgroundColor" Value="White" />
                 <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.ShellTabBarUnselectedColor" Value="Gray"/>
+                <Setter Property="Shell.ShellTabBarTitleColor" Value="#2196F3"/>
             </Style>
             <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
-    <FlyoutItem>
-        <Tab>
+    <ShellItem>
+
+        <ShellSection Title="Podcasts">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Apps}"/>
+            </ShellSection.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
-        </Tab>
-    </FlyoutItem>
+        </ShellSection>
+
+        <ShellSection Title="Filters">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.FilterVariant}"/>
+            </ShellSection.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+
+        <ShellSection Title="Discover">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Magnify}"/>
+            </ShellSection.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+
+        <ShellSection Title="Profile">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.AccountOutline}"/>
+            </ShellSection.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
+        </ShellSection>
+
+    </ShellItem>
 
 </Shell>

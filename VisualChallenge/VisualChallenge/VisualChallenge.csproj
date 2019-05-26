@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LiveXAML" Version="2.1.70" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.293082-pre8" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.293082-pre8" />  
   </ItemGroup>
