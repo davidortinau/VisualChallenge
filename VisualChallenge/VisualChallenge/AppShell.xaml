@@ -34,19 +34,39 @@
 
     <ShellItem>
 
-        <ShellSection Title="Podcasts" Icon="xamagon_preview">
+        <ShellSection Title="Podcasts">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Apps}"/>
+            </ShellSection.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
         </ShellSection>
 
-        <ShellSection Title="Filters" Icon="xamagon_preview">
+        <ShellSection Title="Filters">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.FilterVariant}"/>
+            </ShellSection.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
         </ShellSection>
 
-        <ShellSection Title="Discover" Icon="xamagon_preview">
+        <ShellSection Title="Discover">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.Magnify}"/>
+            </ShellSection.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
         </ShellSection>
 
-        <ShellSection Title="Profile" Icon="xamagon_preview">
+        <ShellSection Title="Profile">
+            <ShellSection.Icon>
+                <FontImageSource
+                                FontFamily="{DynamicResource MaterialFontFamily}"
+                                Glyph="{x:Static local:MaterialFontIcons.AccountOutline}"/>
+            </ShellSection.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallengePage}"/>
         </ShellSection>
 
